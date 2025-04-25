@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base48 - Brněnský hackerspace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo-container">
+                <img src="img/logo.svg" alt="Base48 Logo" class="logo">
+            </div>
+            <h1 style="display: none;">Base48 - Brněnský hackerspace</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#herobox">O nás</a></li>
+                <li><a href="#membership">Členství</a></li>
+                <li><a href="#contact">Kontakt & Mapa</a></li>                
+            </ul>
+        </nav>
+        <div id="google-translate-element" class="translate-element"></div>
+    </header>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle js-only" aria-label="Přepnout téma" title="Přepnout téma">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="content-wrapper">
+        <main>
+            <section id="herobox" class="hero-section">
+                <div class="hero-columns">
+                    <div class="hero-column">
+                        <h2>O nás</h2>
+                        <p>Base48 je komunitně provozovaný fyzický prostor - hackerspace, kde se setkávají lidé s různými zájmy,
+                            spolupracují na projektech a sdílejí znalosti a zkušenosti.</p>
+                        <p>Náš hackerspace je:</p>
+                        <ul>
+                            <li>Dobře vybavená laboratoř</li>
+                            <li>Klub</li>
+                            <li>Místo pro setkávání</li>
+                            <li>Místo pro přednášky</li>
+                            <li>Skupina lidí se společnými zájmy</li>
+                        </ul>
+
+                        <h3>Proč číslo 48?</h3>
+                        <p>Protože náš původní prostor byl na ulici Čápkova s orientačním číslem 48 a protože s názvem base64
+                            bychom měli problém s preferencí vyhledávačů.</p>
+                        
+                        <a href="#place" class="pixel-btn">
+                            <span class="pixel-btn-inner">Kde nás najdeš?</span>
+                        </a>
+                    </div>
+                    <div class="hero-column">
+                        <h2>Zaměření</h2>
+                        <ul>
+                            <li>Elektronika</li>
+                            <li>Robotika</li>
+                            <li>3D tisk</li>
+                            <li>Umělá inteligence</li>
+                            <li>Kyberbezpečnost</li>
+                            <li>Dřevodílna</li>
+                            <li>Kovodílna</li>
+                            <li>Keramika</li>
+                            <li>Penetrační testování</li>
+                            <li>Open source software a hardware</li>
+                            <li>Podpora organizací se sdílenými cíli</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pixel-btn-container">
+                    <a href="#membership" class="pixel-btn pixel-btn-blue pixel-btn-animated">
+                        <span class="pixel-btn-inner">Chci se stát členem</span>
+                    </a>
+                    <a href="#contact" class="pixel-btn pixel-btn-green">
+                        <span class="pixel-btn-inner">Kontaktuj nás</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Kontakt</h2>
+                <p>Naše aktuální komunikační kanály najdeš na na <a href="https://wiki.base48.cz/wiki/Hackerspace"
+                        target="_blank">wiki</a>.
+
+                <h3>Zdroje</h3>
+                <ul>
+                    <li>wiki: <a href="https://wiki.base48.cz" target="_blank">wiki.base48.cz</a></li>
+                    <li>mailing listy: <a href="https://lists.base48.cz" target="_blank">lists.base48.cz</a></li>
+                    <li>github: <a href="https://github.com/base48" target="_blank">github.com/base48</a></li>
+                </ul>
+                
+                <div class="pixel-btn-container">
+                    <a href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank" class="pixel-btn">
+                        <span class="pixel-btn-inner">Navštiv naši Wiki</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="place">
+                <h2>Adresa</h2>
+                <p>Nacházíme se na adrese:</p>
+                <address>
+                    Mojmírovo náměstí 17<br>
+                    Brno 612 00
+                </address>
+
+                <p>Naše výhodnější adresa z druhé strany je:</p>
+                <address>
+                    Palackého třída 742/82
+                </address>
+
+                <p>Jsme blízko zastávek tramvaje, autobusu a trolejbusu na Palackého třídě a Husitské ulici:</p>
+                <ul>
+                    <li>název zastávky: Husitská</li>
+                    <li>tramvaje: 1 a 6</li>
+                    <li>autobusy: 53, 84 a 44</li>
+                    <li>trolejbus: 30</li>
+                </ul>
+
+                <p>Budete potřebovat upozornit někoho v hackerspace, aby vás pustil dovnitř z Palackého tř., protože
+                    zatím nemáme zvonek.</p>
+
+                <h3>Mapa</h3>
+                <p><a href="https://maps.google.com/maps?q=Mojm%C3%ADrovo+n%C3%A1m%C4%9Bst%C3%AD+17,+Brno"
+                        target="_blank">Google Maps</a> | <a
+                        href="https://maps.google.com/maps?q=Mojm%C3%ADrovo+n%C3%A1m%C4%9Bst%C3%AD+17,+Brno&amp;output=embed&amp;z=16"
+                        target="_blank">Větší mapa</a></p>
+            </section>
+
+            <section id="support">
+                <h2>Podpora</h2>
+                <p>Přijímáme finanční podporu a dary ve formě vybavení, které by pro nás mohlo být užitečné. Jelikož se
+                    snažíme zůstat co nejvíce neutrální, pravděpodobně nebudeme schopni poskytnout mnoho na oplátku.</p>
+            </section>
+
+            <section id="membership">
+                <h2>Členství</h2>
+                <p>I když lidé mohou navštěvovat a využívat hackerspace víceméně bez omezení, pravidelné členství
+                    přináší některé výhody, jako je neomezený přístup k fyzické i virtuální infrastruktuře, kterou
+                    poskytujeme. Finanční prostředky, které získáváme od našich členů, jsou používány na pokrytí nákladů
+                    na provoz hackerspace a na nákup nového vybavení.</p>
+                <p>Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.</p>
+                <p>V individuálních případech může rada rozhodnout o snížení nebo prominutí poplatku.</p>
+                
+                <div class="pixel-btn-container">
+                    <a href="https://wiki.base48.cz/wiki/Membership" target="_blank" class="pixel-btn pixel-btn-red pixel-btn-blink">
+                        <span class="pixel-btn-inner">Staň se členem</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <h3>informace</h3>
+            <p>Naše právní forma je base48, z.s.,
+                registrováno: 6. 8. 2010,
+                IČ: 22859802,
+                bankovní účet: 2900086515/2010
+            </p>
+            <p>&copy; 2023 Base48, z.s. Všechna práva vyhrazena.</p>
+        </div>
+        <div class="footer-right">
+            <h3>Partneři</h3>
+            <p><a href="https://vpsfree.cz" target="_blank"><img src="img/vpsfree.png" alt="vpsfree.cz"
+                        style="width: 100px; height: auto;"></a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
