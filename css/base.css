@@ -1,0 +1,41 @@
+/* Base styles and resets */
+
+/* Theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+}
+
+.content-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--background-color);
+}
+
+/* Remove the background-related before pseudo-element */
+.content-wrapper::before {
+    display: none;
+}
+
+/* Hide elements with JS disabled */
+.js-only {
+    display: none;
+} 

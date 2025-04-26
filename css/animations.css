@@ -1,0 +1,77 @@
+/* Animations and keyframes */
+
+/* Animated pulse effect for main CTAs */
+.pixel-btn.pixel-btn-animated {
+    animation: pixel-btn-pulse 2s infinite;
+}
+
+@keyframes pixel-btn-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Blink animation for text */
+.pixel-btn.pixel-btn-blink .pixel-btn-inner {
+    animation: pixel-text-blink 3s infinite;
+}
+
+@keyframes pixel-text-blink {
+    0%, 80%, 100% {
+        opacity: 1;
+    }
+    40%, 43% {
+        opacity: 0.7;
+    }
+}
+
+/* Satellite sprite animation */
+@keyframes float-rtl {
+    0% {
+        right: -60px;
+        /* Start from off-screen right */
+        top: 120px;
+    }
+    25% {
+        right: 25%;
+        /* Quarter way across screen */
+        top: 135px;
+    }
+    50% {
+        right: 50%;
+        /* Half way across screen */
+        top: 120px;
+    }
+    75% {
+        right: 75%;
+        /* Three quarters across screen */
+        top: 105px;
+    }
+    100% {
+        right: 110%;
+        /* Slightly past the left edge */
+        top: 120px;
+    }
+}
+
+/* Popup appear animation */
+@keyframes popup-appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.satellite-popup.show {
+    animation: popup-appear 0.3s ease-out;
+} 

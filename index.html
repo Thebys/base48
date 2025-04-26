@@ -23,8 +23,8 @@
         <nav>
             <ul>
                 <li><a href="#herobox">O nás</a></li>
-                <li><a href="#membership">Členství</a></li>
-                <li><a href="#contact">Kontakt & Mapa</a></li>                
+                <li><a href="#membership">Členství a&nbsp;podpora</a></li>
+                <li><a href="#contact">Kontakt &&nbsp;Mapa</a></li>                
             </ul>
         </nav>
         <div id="google-translate-element" class="translate-element"></div>
@@ -37,6 +37,11 @@
 
     <!-- Satellite sprite -->
     <img src="img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
+    <div class="satellite-popup" id="satellite-popup">
+        <span class="close-popup">&times;</span>
+        <h3>Proč číslo 48?</h3>
+        <p>Protože náš původní prostor byl na ulici Čápkova s&nbsp;orientačním číslem 48 a&nbsp;protože s&nbsp;názvem base64 bychom měli problém s&nbsp;preferencí vyhledávačů.</p>        
+    </div>
 
     <div class="content-wrapper">
         <main>
@@ -44,61 +49,94 @@
                 <div class="hero-columns">
                     <div class="hero-column">
                         <h2>O nás</h2>
-                        <p>Base48 je komunitně provozovaný fyzický prostor - hackerspace, kde se setkávají lidé s různými zájmy,
-                            spolupracují na projektech a sdílejí znalosti a zkušenosti.</p>
+                        <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se setkávají lidé s&nbsp;různými zájmy,
+                            spolupracují na&nbsp;projektech a&nbsp;sdílejí znalosti a&nbsp;zkušenosti.</p>
                         <p>Náš hackerspace je:</p>
                         <ul>
+                            <li>Skupina lidí se&nbsp;společnými zájmy</li>
+                            <li>Místo pro&nbsp;setkávání a&nbsp;přednášky</li>
                             <li>Dobře vybavená laboratoř</li>
-                            <li>Klub</li>
-                            <li>Místo pro setkávání</li>
-                            <li>Místo pro přednášky</li>
-                            <li>Skupina lidí se společnými zájmy</li>
+                            <li>Klub a&nbsp;Third place</li>                            
                         </ul>
-
-                        <h3>Proč číslo 48?</h3>
-                        <p>Protože náš původní prostor byl na ulici Čápkova s orientačním číslem 48 a protože s názvem base64
-                            bychom měli problém s preferencí vyhledávačů.</p>
-                        
-                        <a href="#place" class="pixel-btn">
-                            <span class="pixel-btn-inner">Kde nás najdeš?</span>
-                        </a>
                     </div>
                     <div class="hero-column">
                         <h2>Zaměření</h2>
                         <ul>
-                            <li>Elektronika</li>
-                            <li>Robotika</li>
+                            <li>Elektronika</li>                            
                             <li>3D tisk</li>
-                            <li>Umělá inteligence</li>
-                            <li>Kyberbezpečnost</li>
-                            <li>Dřevodílna</li>
-                            <li>Kovodílna</li>
-                            <li>Keramika</li>
-                            <li>Penetrační testování</li>
-                            <li>Open source software a hardware</li>
-                            <li>Podpora organizací se sdílenými cíli</li>
+                            <li>Software, Umělá inteligence a robotika</li>
+                            <li>Kyberbezpečnost, pentesting, DFIR</li>
+                            <li>Práce se dřevem a kovy - dřevodílna, CNC, …</li>
+                            <li>Keramika a umčo</li>
+                            <li>Speleologie</li>
+                            <li>Podpora partnerských organizací</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="pixel-btn-container">
-                    <a href="#membership" class="pixel-btn pixel-btn-blue pixel-btn-animated">
-                        <span class="pixel-btn-inner">Chci se stát členem</span>
+                    <a href="#membership" class="pixel-btn pixel-btn-blue">
+                        <span class="pixel-btn-inner">Informace o členství</span>
                     </a>
                     <a href="#contact" class="pixel-btn pixel-btn-green">
-                        <span class="pixel-btn-inner">Kontaktuj nás</span>
+                        <span class="pixel-btn-inner">Chci přijít</span>
                     </a>
                 </div>
             </section>
 
+            
+            <section id="membership">
+                <h2>Členství & Podpora</h2>
+                
+                <div class="membership-columns">
+                    <div class="membership-column">
+                        <h3>Členství</h3>
+                        <p>I když lidé mohou navštěvovat a&nbsp;využívat hackerspace víceméně bez omezení, pravidelné členství
+                            přináší některé výhody, jako je neomezený přístup k&nbsp;fyzické i&nbsp;virtuální infrastruktuře, kterou
+                            poskytujeme. Finanční prostředky, které získáváme od&nbsp;našich členů, jsou používány na&nbsp;pokrytí nákladů
+                            na&nbsp;provoz hackerspace a&nbsp;na&nbsp;nákup nového vybavení.</p>
+                        <p>Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.</p>
+                        <p>V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí poplatku.</p>
+                        
+                        <div class="pixel-btn-container">
+                            <a href="https://wiki.base48.cz/wiki/Membership" target="_blank" class="pixel-btn pixel-btn-green pixel-btn-animated">
+                                <span class="pixel-btn-inner">Chci se stát členem</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="membership-column">
+                        <h3>Podpora</h3>
+                        <p>Přijímáme také finanční podporu a&nbsp;dary ve&nbsp;formě vybavení, které by pro nás mohlo být užitečné. Jelikož se
+                            snažíme zůstat co nejvíce neutrální, pravděpodobně nebudeme schopni poskytnout mnoho na&nbsp;oplátku.</p>
+                        
+                        <h4>Způsoby podpory</h4>
+                        <ul>
+                            <li>Finanční dary</li>
+                            <li>Darování vybavení</li>
+                            <li>Dobrovolnictví</li>
+                            <li>Sdílení znalostí</li>
+                        </ul>
+                        
+                        <p>Pro více informací o&nbsp;možnostech podpory nás neváhejte kontaktovat.</p>
+                        
+                        <div class="pixel-btn-container">
+                            <a href="#contact" class="pixel-btn pixel-btn-gold">
+                                <span class="pixel-btn-inner">Chci podpořit Base48</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contact">
-                <h2>Kontakt & Mapa</h2>
+                <h2>Kontakty & Mapa</h2>
                 
                 <div class="contact-columns">
                     <div class="contact-column">
                         <h3>Komunikační kanály</h3>
-                        <p>Naše aktuální komunikační kanály najdeš na na <a href="https://wiki.base48.cz/wiki/Hackerspace"
-                                target="_blank">wiki</a>.
+                        <p>Naše aktuální komunikační kanály najdeš na&nbsp;<a href="https://wiki.base48.cz/wiki/Hackerspace"
+                                target="_blank">wiki</a>.</p>
 
                         <h4>Zdroje</h4>
                         <ul>
@@ -116,66 +154,37 @@
                     
                     <div class="contact-column">
                         <h3>Adresa</h3>
-                        <p>Nacházíme se na adrese:</p>
+                        <p>Nacházíme se na&nbsp;adrese:</p>
                         <address>
                             Mojmírovo náměstí 17<br>
                             Brno 612 00
                         </address>
 
-                        <p>Naše výhodnější adresa z druhé strany je:</p>
+                        <p>Naše výhodnější adresa z&nbsp;druhé strany je:</p>
                         <address>
                             Palackého třída 742/82
                         </address>
 
                         <h4>Doprava</h4>
-                        <p>Jsme blízko zastávek tramvaje, autobusu a trolejbusu na Palackého třídě a Husitské ulici:</p>
+                        <p>Jsme blízko zastávek tramvaje, autobusu a&nbsp;trolejbusu na&nbsp;Palackého třídě a&nbsp;Husitské ulici:</p>
                         <ul>
                             <li>název zastávky: Husitská</li>
-                            <li>tramvaje: 1 a 6</li>
-                            <li>autobusy: 53, 84 a 44</li>
+                            <li>tramvaje: 1 a&nbsp;6</li>
+                            <li>autobusy: 53, 84 a&nbsp;44</li>
                             <li>trolejbus: 30</li>
                         </ul>
 
-                        <p>Budete potřebovat upozornit někoho v hackerspace, aby vás pustil dovnitř z Palackého tř., protože
+                        <p>Budete potřebovat upozornit někoho v&nbsp;hackerspace, aby vás pustil dovnitř z&nbsp;Palackého tř., protože
                             zatím nemáme zvonek.</p>
-                    </div>
-                    
-                    <div class="contact-column">
+
                         <h3>Mapa</h3>
-                        <p><a href="https://maps.google.com/maps?q=Mojm%C3%ADrovo+n%C3%A1m%C4%9Bst%C3%AD+17,+Brno"
-                                target="_blank">Google Maps</a> | <a
-                                href="https://maps.google.com/maps?q=Mojm%C3%ADrovo+n%C3%A1m%C4%9Bst%C3%AD+17,+Brno&amp;output=embed&amp;z=16"
-                                target="_blank">Větší mapa</a></p>
                         <div class="map-container">
-                            <iframe src="https://maps.google.com/maps?q=Mojm%C3%ADrovo+n%C3%A1m%C4%9Bst%C3%AD+17,+Brno&amp;output=embed&amp;z=16" 
-                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <a target="_blank" href="https://mapy.cz/s/mezekuzahu"><img src="img/base48_kudy_pixel.webp" alt="Mapa k Base48" class="location-map"></a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="support">
-                <h2>Podpora</h2>
-                <p>Přijímáme finanční podporu a dary ve formě vybavení, které by pro nás mohlo být užitečné. Jelikož se
-                    snažíme zůstat co nejvíce neutrální, pravděpodobně nebudeme schopni poskytnout mnoho na oplátku.</p>
-            </section>
-
-            <section id="membership">
-                <h2>Členství</h2>
-                <p>I když lidé mohou navštěvovat a využívat hackerspace víceméně bez omezení, pravidelné členství
-                    přináší některé výhody, jako je neomezený přístup k fyzické i virtuální infrastruktuře, kterou
-                    poskytujeme. Finanční prostředky, které získáváme od našich členů, jsou používány na pokrytí nákladů
-                    na provoz hackerspace a na nákup nového vybavení.</p>
-                <p>Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.</p>
-                <p>V individuálních případech může rada rozhodnout o snížení nebo prominutí poplatku.</p>
-                
-                <div class="pixel-btn-container">
-                    <a href="https://wiki.base48.cz/wiki/Membership" target="_blank" class="pixel-btn pixel-btn-red pixel-btn-blink">
-                        <span class="pixel-btn-inner">Staň se členem</span>
-                    </a>
-                </div>
-            </section>
         </main>
     </div>
     <style>

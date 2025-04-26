@@ -1,0 +1,340 @@
+/* Layout styles for header, main content, and footer */
+
+/* Header styles */
+header {
+    width: var(--site-width);
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bg);
+    z-index: 100;
+    position: relative;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Logo styling */
+.logo-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    color: var(--header-color);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: var(--address-bg);
+}
+
+/* Main content */
+main {
+    width: var(--site-width);
+    margin: 0 auto;
+    padding: 60px 20px 40px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--section-bg);
+    box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+section h3 {
+    color: var(--secondary-color);
+    margin: 20px 0 10px;
+    font-size: 1.4rem;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: circle;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: var(--address-bg);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    width: 100%;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    background-color: rgba(38, 52, 56, 0.9);
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    margin: 0 15px;
+    max-width: 400px;
+    width: 42%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle hover effect */
+.footer-left:hover,
+.footer-right:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Improved contrast for footer text */
+.footer-left h3,
+.footer-right h3 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .footer-left,
+[data-theme="dark"] .footer-right {
+    background-color: rgba(25, 30, 35, 0.9);
+}
+
+.footer-left p,
+.footer-right p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer-right a {
+    color: #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.footer-right a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    transform: translateX(3px);
+}
+
+.footer-right a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Style for images in footer links */
+.footer-right a img {
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+
+.footer-right a:hover img {
+    transform: scale(1.05);
+}
+
+/* Add gradient above footer */
+.base48-building {
+    position: relative;
+    padding-bottom: 0;
+}
+
+.base48-building::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 440px;
+    background: #FFFFFF00;
+    background: linear-gradient(180deg, transparent 0%, rgba(71, 98, 103, 1) 50%, rgba(71, 98, 103, 1) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.base48-building img {
+    position: relative;
+    z-index: 1;
+    vertical-align: bottom;
+    margin-bottom: -5px;
+}
+
+/* Hero section styling */
+#herobox {
+    position: relative;
+    border-top: none;
+    padding-top: 40px;
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px var(--section-shadow);
+    border-radius: 8px;
+    overflow: visible;
+    margin-top: 20px;
+}
+
+#herobox::before {
+    display: none;
+}
+
+.roof-container {
+    display: none;
+}
+
+.roof-image {
+    display: none;
+}
+
+#herobox h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+#herobox p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+#herobox ul {
+    margin: 20px 0;
+}
+
+/* Special styling for the hero section */
+.hero-section {
+    text-align: left;
+    padding: 40px 30px 50px;
+}
+
+.hero-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 100%;
+}
+
+.hero-column {
+    flex: 1;
+}
+
+.hero-column h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero-column h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.hero-section ul {
+    display: block;
+    text-align: left;
+    margin: 15px 0;
+    list-style-type: circle;
+    padding-left: 25px;
+}
+
+.hero-section ul li {
+    margin-bottom: 8px;
+} 

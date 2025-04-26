@@ -125,6 +125,166 @@ document.addEventListener('DOMContentLoaded', function() {
         footerYear.innerHTML = footerYear.innerHTML.replace('2023', currentYear);
     }
     
+    // Satellite popup functionality
+    const satellite = document.querySelector('.satellite-sprite');
+    const satellitePopup = document.getElementById('satellite-popup');
+    const overlay = document.getElementById('satellite-overlay');
+    const closePopup = document.querySelector('.close-popup');
+    
+    console.log('Satellite elements:', { 
+        satellite: satellite, 
+        popup: satellitePopup, 
+        overlay: overlay, 
+        closeBtn: closePopup 
+    });
+    
+    // Show popup when satellite is clicked
+    if (satellite && satellitePopup) {
+        // Add a visible indicator that satellite is clickable
+        satellite.title = "Klikni pro informaci";
+        
+        // Function to update satellite size based on position
+        function updateSatelliteSize() {
+            if (satellite) {
+                // Get viewport width
+                const viewportWidth = window.innerWidth;
+                
+                // Get satellite's horizontal position
+                const satelliteRect = satellite.getBoundingClientRect();
+                const satelliteCenter = satelliteRect.left + (satelliteRect.width / 2);
+                
+                // Calculate distance from center as a percentage (0 = center, 1 = edge)
+                const centerX = viewportWidth / 2;
+                const distanceFromCenter = Math.abs(satelliteCenter - centerX) / centerX;
+                
+                // Calculate scale based on position:
+                // - At edge (distanceFromCenter = 1): scale = 0.8
+                // - At center (distanceFromCenter = 0): scale = 1.5
+                const scale = 1.5 - (distanceFromCenter * 0.7);
+                
+                // Get current satellite animation position to determine rotation
+                // Change rotation based on position in animation cycle
+                const rightPosition = parseFloat(window.getComputedStyle(satellite).right);
+                const rightPercentage = rightPosition / viewportWidth;
+                const normalizedPosition = 1 - (rightPosition % viewportWidth) / viewportWidth;
+                
+                // Calculate rotation angle (-15 to 15 degrees)
+                let rotation = 0;
+                if (normalizedPosition < 0.25) {
+                    rotation = 15 - normalizedPosition * 120; // 15 to -15
+                } else if (normalizedPosition < 0.5) {
+                    rotation = -15 + (normalizedPosition - 0.25) * 120; // -15 to 15
+                } else if (normalizedPosition < 0.75) {
+                    rotation = 15 - (normalizedPosition - 0.5) * 120; // 15 to -15
+                } else {
+                    rotation = -15 + (normalizedPosition - 0.75) * 120; // -15 to 15
+                }
+                
+                // Apply the scale and rotation
+                satellite.style.transform = `scale(${scale}) rotate(${rotation}deg)`;
+            }
+            
+            // Request next animation frame if not showing popup
+            if (!satellitePopup.classList.contains('show')) {
+                requestAnimationFrame(updateSatelliteSize);
+            }
+        }
+        
+        // Start updating satellite size
+        updateSatelliteSize();
+        
+        // Function to update popup position to follow satellite
+        function updatePopupPosition() {
+            if (satellitePopup.classList.contains('show')) {
+                // Get satellite position
+                const satelliteRect = satellite.getBoundingClientRect();
+                
+                // Position popup relative to satellite's document position
+                // Place it at the center-bottom of the satellite
+                const satelliteCenter = satelliteRect.left + (satelliteRect.width / 2);
+                
+                // Update popup position
+                satellitePopup.style.top = (window.scrollY + satelliteRect.bottom) + 'px';
+                satellitePopup.style.left = (window.scrollX + satelliteCenter) + 'px';
+                
+                // Request next animation frame
+                requestAnimationFrame(updatePopupPosition);
+            }
+        }
+        
+        satellite.addEventListener('click', function(e) {
+            console.log('Satellite clicked!');
+            satellitePopup.classList.add('show');
+            
+            // Attach popup to satellite
+            satellitePopup.style.position = 'absolute';
+            updatePopupPosition();
+            
+            // Pause satellite animation and size updates
+            satellite.style.animationPlayState = 'paused';
+            
+            e.stopPropagation(); // Prevent event bubbling
+        });
+        
+        // Close popup when close button is clicked
+        closePopup.addEventListener('click', function(e) {
+            console.log('Close button clicked!');
+            satellitePopup.classList.remove('show');
+            
+            // Resume satellite animation and size updates
+            satellite.style.animationPlayState = 'running';
+            updateSatelliteSize(); // Restart size updates
+            
+            e.stopPropagation(); // Prevent event bubbling
+        });
+        
+        // Close popup when clicking anywhere else
+        document.addEventListener('click', function(e) {
+            if (satellitePopup.classList.contains('show') && 
+                !satellitePopup.contains(e.target) && 
+                e.target !== satellite) {
+                console.log('Document clicked - closing popup');
+                satellitePopup.classList.remove('show');
+                
+                // Resume satellite animation and size updates
+                satellite.style.animationPlayState = 'running';
+                updateSatelliteSize(); // Restart size updates
+            }
+        });
+        
+        // Close popup when ESC key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && satellitePopup.classList.contains('show')) {
+                console.log('ESC key pressed!');
+                satellitePopup.classList.remove('show');
+                
+                // Resume satellite animation and size updates
+                satellite.style.animationPlayState = 'running';
+                updateSatelliteSize(); // Restart size updates
+            }
+        });
+        
+        // Add alternate way to trigger popup for testing
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 's' && !satellitePopup.classList.contains('show')) {
+                console.log('S key pressed - showing popup!');
+                satellitePopup.classList.add('show');
+                
+                // Attach popup to satellite
+                satellitePopup.style.position = 'absolute';
+                updatePopupPosition();
+                
+                // Pause satellite animation
+                satellite.style.animationPlayState = 'paused';
+            }
+        });
+    } else {
+        console.error('Missing satellite elements:', { 
+            satellite: !!satellite, 
+            popup: !!satellitePopup
+        });
+    }
+    
     // Simple console message
     console.log('Base48 hackerspace website loaded successfully!');
 }); 
