@@ -44,7 +44,7 @@
     .translate-element {
         flex: 0 0 auto;
     }
-    
+
     .hero-columns {
         flex-direction: row;
         align-items: flex-start;
@@ -63,7 +63,7 @@
     .hero-column:last-child {
         padding-left: 30px;
     }
-    
+
     .translate-element {
         margin-left: 15px;
     }
@@ -115,7 +115,7 @@
     .roof-container {
         padding: 0 10px;
     }
-    
+
     footer {
         flex-direction: column;
         padding: 30px 15px;
@@ -128,13 +128,13 @@
         width: 90%;
         margin: 10px 0;
     }
-    
+
     .translate-element {
         margin: 15px 0;
         width: 100%;
         text-align: center;
     }
-    
+
     .pixel-btn-container {
         flex-direction: column;
         align-items: center;
@@ -148,7 +148,7 @@
     .pixel-btn-inner {
         width: 100%;
     }
-    
+
     .satellite-sprite {
         width: 48px;
         top: 60px;
@@ -179,4 +179,27 @@
     .hero-column h2 {
         font-size: 1.6rem;
     }
-} 
+}
+
+/* Responsive styles for pixel buttons and base image */
+@media (max-width: 768px) {
+    .hero-section .pixel-btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hero-section .pixel-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .base48-building img {
+        max-width: 100%;
+        height: auto;
+        /* Scale down further on very small screens */
+        max-height: 360px;
+        object-fit: contain;
+    }
+}
