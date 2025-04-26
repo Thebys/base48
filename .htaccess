@@ -87,8 +87,3 @@ ErrorDocument 404 /404.html
     Header set Cache-Control "max-age=0, must-revalidate"
   </FilesMatch>
 </IfModule>
-
-# Enable HTTP/2 if available
-<IfModule mod_http2.c>
-    Protocols h2 h2c http/1.1
-</IfModule>
