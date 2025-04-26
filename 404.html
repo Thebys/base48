@@ -16,14 +16,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 80vh;
             text-align: center;
             padding: 1rem;
             max-width: 90vw;
             margin: 0 auto;
             overflow: visible;
         }
-        
+
         .error-title {
             font-family: 'Press Start 2P', cursive;
             margin-bottom: 2rem;
@@ -36,18 +35,16 @@
             animation: typing 3.5s steps(40, end) 1s forwards, blink-caret 0.75s step-end infinite;
             margin: 0 auto 2rem;
         }
-        
+
         .satellite-container {
             position: relative;
             width: 100vw;
             height: 300px;
             margin: 2rem 0;
-            overflow: visible;
-            left: 50%;
-            transform: translateX(-25%);
+            overflow: visible;            
             opacity: 1;
         }
-        
+
         .error-satellite {
             position: absolute;
             width: 150px;
@@ -58,7 +55,7 @@
             z-index: 100;
             transform-origin: center center;
         }
-        
+
         @keyframes errorSatelliteFly {
             0% {
                 left: 0vw;
@@ -66,41 +63,49 @@
                 transform: scale(0.8) rotate(-15deg);
                 opacity: 0;
             }
+
             4% {
                 opacity: 1;
                 transform: scale(0.8) rotate(-12deg);
                 left: 10vw;
             }
+
             20% {
                 left: 30vw;
                 top: 70px;
                 transform: scale(1.2) rotate(0deg);
             }
+
             35% {
                 left: 55vw;
                 top: 110px;
                 transform: scale(2.0) rotate(5deg);
             }
+
             50% {
                 left: 75vw;
                 top: 150px;
                 transform: scale(3) rotate(0deg);
             }
+
             65% {
                 left: 95vw;
                 top: 110px;
                 transform: scale(2.0) rotate(-5deg);
             }
+
             80% {
                 left: 120vw;
                 top: 70px;
                 transform: scale(1.2) rotate(0deg);
             }
+
             96% {
                 opacity: 1;
                 transform: scale(0.8) rotate(12deg);
-                left: 140vw; 
+                left: 140vw;
             }
+
             100% {
                 left: 150vw;
                 top: 50px;
@@ -108,7 +113,7 @@
                 opacity: 0;
             }
         }
-        
+
         .typing-text {
             font-family: monospace;
             white-space: nowrap;
@@ -120,21 +125,29 @@
             max-width: 90%;
             opacity: 0;
         }
-        
+
         @keyframes typing {
-            0% { 
+            0% {
                 width: 0;
                 opacity: 1;
             }
-            100% { 
+
+            100% {
                 width: 100%;
                 opacity: 1;
             }
         }
-        
+
         @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--accent-color) }
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--accent-color)
+            }
         }
 
         .home-link {
@@ -144,8 +157,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @media (max-width: 600px) {
@@ -196,31 +214,36 @@
     <button class="theme-toggle js-only" aria-label="Přepnout téma" title="Přepnout téma">
         <i class="fas fa-moon"></i>
     </button>
+    
+        <div class="content-wrapper">
 
-    <div class="content-wrapper">
-        <main>
             <div class="error-container">
                 <h1 class="error-title">Chyba 404 - Vesmír nenalezen</h1>
-                
-                <div class="satellite-container">
-                    <img src="img/satellite_pixel_1.webp" alt="Satellite" class="error-satellite" id="error-satellite">
-                </div>
-                
+
+            </div>
+        </div>
+        <div class="satellite-container">
+            <img src="img/satellite_pixel_1.webp" alt="Satellite" class="error-satellite" id="error-satellite">
+        </div>
+        <div class="content-wrapper">
+            <div class="error-container">
+
                 <p class="typing-text">Houstone, máme problém. Stránka, kterou hledáme, se ztratila ve vesmíru.</p>
-                
+
                 <div class="pixel-btn-container home-link">
                     <a href="index.html" class="pixel-btn pixel-btn-blue">
                         <span class="pixel-btn-inner">Zpět na domovskou stránku</span>
                     </a>
                 </div>
             </div>
-        </main>
-    </div>
 
+        </div>
+    
     <div class="satellite-popup" id="satellite-popup">
         <span class="close-popup">&times;</span>
         <h3>Cíl nenalezen!</h3>
-        <p>Náš satelit zachytil signál s&nbsp;požadavkem, ale&nbsp;hledaný cíl se&nbsp;nepodařilo lokalizovat. Zdravím pozemšťany, hack the planet! Přepínám.</p>        
+        <p>Náš satelit zachytil signál s&nbsp;požadavkem, ale&nbsp;hledaný cíl se&nbsp;nepodařilo lokalizovat. Zdravím
+            pozemšťany, hack the planet! Přepínám.</p>
     </div>
 
     <footer style="display: none;">
@@ -235,21 +258,21 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Show JS-only elements
             document.querySelectorAll('.js-only').forEach(el => {
                 el.style.display = 'flex';
             });
-            
+
             // Update copyright year
             document.getElementById('current-year').textContent = new Date().getFullYear();
-            
+
             // Theme switching functionality
             const themeToggle = document.querySelector('.theme-toggle');
             const themeIcon = themeToggle.querySelector('i');
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
             const logo = document.querySelector('.logo');
-            
+
             // Function to update logo based on theme
             function updateLogo(theme) {
                 if (theme === 'dark') {
@@ -258,7 +281,7 @@
                     logo.src = 'img/logo.svg';
                 }
             }
-            
+
             // Check for saved theme preference or use system preference
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark' || (savedTheme === null && prefersDarkScheme.matches)) {
@@ -270,11 +293,11 @@
                 themeIcon.classList.replace('fa-sun', 'fa-moon');
                 updateLogo('light');
             }
-            
+
             // Toggle theme when button is clicked
-            themeToggle.addEventListener('click', function() {
+            themeToggle.addEventListener('click', function () {
                 const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-                
+
                 if (currentTheme === 'light') {
                     document.documentElement.setAttribute('data-theme', 'dark');
                     localStorage.setItem('theme', 'dark');
@@ -287,49 +310,49 @@
                     updateLogo('light');
                 }
             });
-            
+
             // Satellite popup functionality
             const satellite = document.querySelector('.error-satellite');
             const satellitePopup = document.getElementById('satellite-popup');
             const closePopup = document.querySelector('.close-popup');
-            
+
             // Show popup when satellite is clicked
             if (satellite && satellitePopup) {
                 // Add a visible indicator that satellite is clickable
                 satellite.title = "Klikni pro informaci";
-                
-                satellite.addEventListener('click', function(e) {
+
+                satellite.addEventListener('click', function (e) {
                     satellite.style.animationPlayState = 'paused';
                     satellitePopup.classList.add('show');
-                    
+
                     // Position popup near satellite
                     const satelliteRect = satellite.getBoundingClientRect();
                     satellitePopup.style.position = 'absolute';
                     satellitePopup.style.top = (window.scrollY + satelliteRect.bottom) + 'px';
-                    satellitePopup.style.left = (window.scrollX + satelliteRect.left + satelliteRect.width/2) + 'px';
-                    
+                    satellitePopup.style.left = (window.scrollX + satelliteRect.left + satelliteRect.width / 2) + 'px';
+
                     e.stopPropagation();
                 });
-                
+
                 // Close popup when close button is clicked
-                closePopup.addEventListener('click', function(e) {
+                closePopup.addEventListener('click', function (e) {
                     satellitePopup.classList.remove('show');
                     satellite.style.animationPlayState = 'running';
                     e.stopPropagation();
                 });
-                
+
                 // Close popup when clicking anywhere else
-                document.addEventListener('click', function(e) {
-                    if (satellitePopup.classList.contains('show') && 
-                        !satellitePopup.contains(e.target) && 
+                document.addEventListener('click', function (e) {
+                    if (satellitePopup.classList.contains('show') &&
+                        !satellitePopup.contains(e.target) &&
                         e.target !== satellite) {
                         satellitePopup.classList.remove('show');
                         satellite.style.animationPlayState = 'running';
                     }
                 });
-                
+
                 // Close popup when ESC key is pressed
-                document.addEventListener('keydown', function(e) {
+                document.addEventListener('keydown', function (e) {
                     if (e.key === 'Escape' && satellitePopup.classList.contains('show')) {
                         satellitePopup.classList.remove('show');
                         satellite.style.animationPlayState = 'running';

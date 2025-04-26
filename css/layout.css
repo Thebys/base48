@@ -81,7 +81,7 @@ nav ul li a:hover {
 main {
     width: var(--site-width);
     margin: 0 auto;
-    padding: 60px 20px 40px;
+    padding: 20px;
     overflow-x: hidden;
 }
 
