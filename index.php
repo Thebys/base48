@@ -15,8 +15,7 @@ require 'templates/header.php';
     <div class="content-wrapper">
         <main>
             <section id="herobox" class="hero-section">
-                <div class="hero-columns">
-                    <div class="hero-column">
+                <div class="column">                    
                         <h2>O nás</h2>
                         <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se
                             setkávají lidé s&nbsp;různými zájmy,
@@ -32,30 +31,59 @@ require 'templates/header.php';
                             <a href="#membership" class="pixel-btn pixel-btn-blue">
                                 <span class="pixel-btn-inner">Informace o členství</span>
                             </a>
+                        </div>                                    
+                </div>
+
+                <h2>Zaměření</h2>
+                <div class="crt-grid">
+                    <div class="crt-row">
+                        <div class="crt-screen">
+                            <img src="/img/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">3D tisk </span>
+                                <img src="/img/3d_printing_corner.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
+                        </div>
+                        <div class="crt-screen">
+                            <img src="/img/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">Elektrolab </span>
+                                <img src="/img/elektro_laborator.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
+                        </div>
+                        <div class="crt-screen">
+                            <img src="/img/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">Chill</span>
+                                <img src="/img/zahradka_grilovacka.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
                         </div>
                     </div>
-                    <div class="hero-column">
-                        <h2>Zaměření</h2>
-                        <ul>
-                            <li>Elektronika</li>
-                            <li>3D tisk</li>
-                            <li>Software, Umělá inteligence a robotika</li>
-                            <li>Kyberbezpečnost, pentesting, DFIR</li>
-                            <li>Práce se dřevem a kovy - dřevodílna, CNC, …</li>
-                            <li>Keramika a umčo</li>
-                            <li>Speleologie</li>
-                            <li>Podpora partnerských organizací</li>
-                        </ul>
-
-                        <div class="pixel-btn-container">
-                            <a href="#contact" class="pixel-btn pixel-btn-green">
-                                <span class="pixel-btn-inner">Chci přijít</span>
-                            </a>
+                    <div class="crt-row">
+                        <div class="crt-screen">
+                            <img src="/img/crt_frame_4.webp" alt="CRT Frame" class="crt-frame">
+                             <div class="crt-content scanlines">
+                                <span class="crt-title">Prostor </span>
+                                <img src="/img/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
+                        </div>
+                        <div class="crt-screen">
+                            <img src="/img/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">Dílna </span>
+                                <img src="/img/dilna.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
+                        </div>
+                        <div class="crt-screen">
+                            <img src="/img/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                             <div class="crt-content scanlines">
+                                <span class="crt-title">Tvůj projekt  </span>
+                                <img src="/img/otaznik_transparent_left.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
 
             <section id="membership">
                 <h2>Členství & Podpora</h2>
