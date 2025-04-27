@@ -54,7 +54,7 @@ require 'templates/header.php'; ?>
                                     <span class="pixel-btn-inner">Na co se zaměřujeme</span>
                                 </a>
                                 <a href="#clenstvi" class="pixel-btn pixel-btn-green">
-                                    <span class="pixel-btn-inner">Členství v Bas48</span>
+                                    <span class="pixel-btn-inner">Členství v Base48</span>
                                 </a>
                                 <a href="#kontakt" class="pixel-btn pixel-btn-blue">
                                     <span class="pixel-btn-inner">Kontakt & Mapa</span>
