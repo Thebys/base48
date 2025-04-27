@@ -35,8 +35,9 @@ $theme = $_COOKIE['theme'] ?? (isset($_SERVER['HTTP_SEC_CH_PREFERS_COLOR_SCHEME'
         <nav>
             <ul>
                 <li><a href="/#herobox">O nás</a></li>
-                <li><a href="/#membership">Členství a&nbsp;podpora</a></li>
-                <li><a href="/#contact">Kontakt &&nbsp;Mapa</a></li>
+                <li><a href="/#zamereni">Zaměření</a></li>
+                <li><a href="/#clenstvi">Členství a&nbsp;podpora</a></li>
+                <li><a href="/#kontakt">Kontakt &&nbsp;Mapa</a></li>
             </ul>
         </nav>
     </header>

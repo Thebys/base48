@@ -77,7 +77,6 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s ease;
     padding: 5px 10px;
-    border-radius: 4px;
 }
 
 nav ul li a:hover {
@@ -95,11 +94,28 @@ main {
 section {
     margin-bottom: 40px;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: var(--section-bg);
     box-shadow: 0 4px 8px var(--section-shadow);
 }
+section:first-of-type{
+    border-radius: 0px 0px 8px 8px;
+}
 
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px;
+
+    position: relative;
+    border-top: none;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: visible;
+
+}
 section h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -284,19 +300,6 @@ footer {
     line-height: 1.7;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 100%;
-    padding: 20px;
-
-    position: relative;
-    border-top: none;
-    background-color: var(--card-bg);
-    overflow: visible;
-
-}
 
 .hero-columns {
     display: flex;

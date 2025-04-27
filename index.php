@@ -52,13 +52,13 @@ require 'templates/header.php';
                         <div>
                             <div class="pixel-btn-container"
                                 style="display: flex; flex-direction: column;">
-                                <a href="#focus-areas" class="pixel-btn pixel-btn-gold">
+                                <a href="#zamereni" class="pixel-btn pixel-btn-gold">
                                     <span class="pixel-btn-inner">Na co se zaměřujeme</span>
                                 </a>
-                                <a href="#membership" class="pixel-btn pixel-btn-green">
+                                <a href="#clenstvi" class="pixel-btn pixel-btn-green">
                                     <span class="pixel-btn-inner">Členství v Bas48</span>
                                 </a>
-                                <a href="#contact" class="pixel-btn pixel-btn-blue">
+                                <a href="#kontakt" class="pixel-btn pixel-btn-blue">
                                     <span class="pixel-btn-inner">Kontakt & Mapa</span>
                                 </a>
                             </div>
@@ -67,7 +67,7 @@ require 'templates/header.php';
                 </div>
         </section>
 
-        <section id="focus-areas">
+        <section id="zamereni">
             <div class="column">
                 <h2>Zaměření</h2>
                 <div class="crt-grid" style="position: relative;">
@@ -106,7 +106,7 @@ require 'templates/header.php';
 
         </section>
 
-        <section id="membership">
+        <section id="clenstvi">
             <div class="column">
                 <h2>Členství & Podpora</h2>
 
@@ -159,7 +159,7 @@ require 'templates/header.php';
             </div>
         </section>
 
-        <section id="contact">
+        <section id="kontakt">
             <div class="column">
                 <h2>Kontakty & Mapa</h2>
 
