@@ -26,7 +26,7 @@ $theme = $_COOKIE['theme'] ?? (isset($_SERVER['HTTP_SEC_CH_PREFERS_COLOR_SCHEME'
         <div class="header-left">
             <div class="logo-container">
                  <a href="/">
-                    <img src="/img/logo.svg" alt="Base48 Logo" class="logo">
+                    <img src="/img/logo/logo.svg" alt="Base48 Logo" class="logo">
                  </a>
             </div>
              <!-- Hide H1 visually but keep for SEO/Accessibility -->

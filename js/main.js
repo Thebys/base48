@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to update logo based on theme
     function updateLogo(theme) {
         if (theme === 'dark') {
-            logo.src = 'img/logo_bw.svg';
+            logo.src = 'img/logo/logo_bw.svg';
         } else {
-            logo.src = 'img/logo.svg';
+            logo.src = 'img/logo/logo.svg';
         }
     }
 

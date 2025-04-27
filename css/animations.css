@@ -74,4 +74,96 @@
 
 .satellite-popup.show {
     animation: popup-appear 0.3s ease-out;
+}
+
+/* Error page animations */
+@keyframes errorSatelliteFly {
+    0% {
+        left: 0vw;
+        top: 50px;
+        transform: scale(0.8) rotate(-15deg);
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+        transform: scale(0.8) rotate(-12deg);
+        left: 10vw;
+    }
+
+    20% {
+        left: 30vw;
+        top: 70px;
+        transform: scale(1.2) rotate(0deg);
+    }
+
+    35% {
+        left: 55vw;
+        top: 110px;
+        transform: scale(2.0) rotate(5deg);
+    }
+
+    50% {
+        left: 75vw;
+        top: 150px;
+        transform: scale(3) rotate(0deg);
+    }
+
+    65% {
+        left: 95vw;
+        top: 110px;
+        transform: scale(2.0) rotate(-5deg);
+    }
+
+    80% {
+        left: 120vw;
+        top: 70px;
+        transform: scale(1.2) rotate(0deg);
+    }
+
+    96% {
+        opacity: 1;
+        transform: scale(0.8) rotate(12deg);
+        left: 140vw;
+    }
+
+    100% {
+        left: 150vw;
+        top: 50px;
+        transform: scale(0.8) rotate(15deg);
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent-color)
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 } 

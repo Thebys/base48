@@ -184,3 +184,33 @@
         object-fit: contain;
     }
 }
+
+/* Error page responsive styles */
+@media (max-width: 600px) {
+    .error-title {
+        white-space: normal;
+        font-size: 1.5rem;
+        border-right: none;
+        width: auto;
+        animation: none;
+        margin-bottom: 1rem;
+        opacity: 1;
+    }
+
+    .typing-text {
+        white-space: normal;
+        border-right: none;
+        width: auto;
+        animation: fadeIn 1s ease-in 1s forwards;
+        opacity: 0;
+    }
+
+    .satellite-container {
+        height: 200px;
+    }
+
+    .error-satellite {
+        width: 100px;
+        height: 100px;
+    }
+}

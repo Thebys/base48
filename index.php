@@ -38,47 +38,47 @@ require 'templates/header.php';
                 <div class="crt-grid">
                     <div class="crt-row">
                         <div class="crt-screen">
-                            <img src="/img/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">3D tisk </span>
-                                <img src="/img/3d_printing_corner.webp" alt="Placeholder Content" class="crt-content-image">
+                                <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content" class="crt-content-image">
                             </div>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Elektrolab </span>
-                                <img src="/img/elektro_laborator.webp" alt="Placeholder Content" class="crt-content-image">
+                                <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content" class="crt-content-image">
                             </div>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Chill</span>
-                                <img src="/img/zahradka_grilovacka.webp" alt="Placeholder Content" class="crt-content-image">
+                                <img src="/img/screen/zahradka_grilovacka.webp" alt="Placeholder Content" class="crt-content-image">
                             </div>
                         </div>
                     </div>
                     <div class="crt-row">
                         <div class="crt-screen">
-                            <img src="/img/crt_frame_4.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_4.webp" alt="CRT Frame" class="crt-frame">
                              <div class="crt-content scanlines">
                                 <span class="crt-title">Prostor </span>
-                                <img src="/img/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
+                                <img src="/img/screen/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
                             </div>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Dílna </span>
-                                <img src="/img/dilna.webp" alt="Placeholder Content" class="crt-content-image">
+                                <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
                             </div>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
                              <div class="crt-content scanlines">
                                 <span class="crt-title">Tvůj projekt  </span>
-                                <img src="/img/otaznik_transparent_left.webp" alt="Placeholder Content" class="crt-content-image">
+                                <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content" class="crt-content-image">
                             </div>
                         </div>
                     </div>

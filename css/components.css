@@ -501,4 +501,68 @@
     100% {
         background-position: 0 4px; /* Shift by the height of the background-size */
     }
+}
+
+/* Error Page Components */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    max-width: 90vw;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.error-title {
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 2rem;
+    font-size: 1.95rem;
+    text-shadow: 0 0 10px var(--text-glow-color);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--accent-color);
+    width: 0;
+    animation: typing 3.5s steps(40, end) 1s forwards, blink-caret 0.75s step-end infinite;
+    margin: 20px 0;
+}
+
+.satellite-container {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    margin: 0;
+    overflow: visible;
+    opacity: 1;
+}
+
+.error-satellite {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    animation: errorSatelliteFly 96s linear infinite;
+    filter: drop-shadow(0 0 10px var(--accent-color));
+    cursor: pointer;
+    z-index: 100;
+    transform-origin: center center;
+}
+
+.typing-text {
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--accent-color);
+    width: 0;
+    animation: typing 3.5s steps(40, end) 6s forwards, blink-caret 0.75s step-end infinite;
+    margin: 0 auto;
+    max-width: 90%;
+    opacity: 0;
+}
+
+.home-link {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 9.5s forwards;
 } 
