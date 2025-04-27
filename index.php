@@ -1,42 +1,10 @@
-<!DOCTYPE html>
-<html lang="cs">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base48 - Brněnský hackerspace</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <header>
-        <div class="header-left">
-            <div class="logo-container">
-                <img src="img/logo.svg" alt="Base48 Logo" class="logo">
-            </div>
-            <h1 style="display: none;">Base48 - Brněnský hackerspace</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#herobox">O nás</a></li>
-                <li><a href="#membership">Členství a&nbsp;podpora</a></li>
-                <li><a href="#contact">Kontakt &&nbsp;Mapa</a></li>
-            </ul>
-        </nav>
-        <div id="google-translate-element" class="translate-element"></div>
-    </header>
-
-    <!-- Theme toggle button -->
-    <button class="theme-toggle js-only" aria-label="Přepnout téma" title="Přepnout téma">
-        <i class="fas fa-moon"></i>
-    </button>
+<?php
+$pageTitle = 'Base48 - Brněnský hackerspace';
+require 'templates/header.php';
+?>
 
     <!-- Satellite sprite -->
-    <img src="img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
+    <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
     <div class="satellite-popup" id="satellite-popup">
         <span class="close-popup">&times;</span>
         <h3>Proč číslo 48?</h3>
@@ -193,7 +161,7 @@
 
                         <h3>Mapa</h3>
                         <div class="map-container">
-                            <a target="_blank" href="https://mapy.cz/s/mezekuzahu"><img src="img/base48_kudy_pixel.webp"
+                            <a target="_blank" href="https://mapy.cz/s/mezekuzahu"><img src="/img/base48_kudy_pixel.webp"
                                     alt="Mapa k Base48" class="location-map"></a>
                         </div>
                     </div>
@@ -202,29 +170,7 @@
 
         </main>
     </div>
-    <div class="base48-building"><img id="base48-building" src="img/base48_pixel_2.webp" alt="Base48 Building"></div>
-    <footer>
-        <div class="footer-left">
-            <h3>Informace</h3>
-            <p>
-                Base48, z.s.<br>
-                IČ: 22859802<br>
-                Registrováno: 6. 8. 2010
-            </p>
-            <p>Bankovní účet:<br>2900086515/2010</p>
-            <p>&copy; 2023 Base48, z.s. Všechna práva vyhrazena.</p>
-        </div>
-        <div class="footer-right">
-            <h3>Partneři</h3>
-            <p><a href="https://vpsfree.cz" target="_blank"><img src="img/vpsfree.png" alt="vpsfree.cz"
-                        style="width: 100px; height: auto;"></a></p>
-            <p>
-                <a href="https://github.com/base48" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+    <div class="base48-building"><img id="base48-building" src="/img/base48_pixel_3_day.webp" alt="Base48 Building"></div>
+<?php
+require 'templates/footer.php';
+?>

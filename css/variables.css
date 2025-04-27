@@ -4,7 +4,9 @@
     --site-width: 960px;
 
     /* Light theme (default) */
-    --primary-color: #0077cc;
+    --primary-color: #cb0000;
+    --green-color: #8EA604;
+    --gold-color: #F5BB00;
     --secondary-color: #333;
     --background-color: #f9f9f9;
     --text-color: #1F1F1F;
@@ -21,7 +23,7 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-    --primary-color: #4dabf7;
+    --primary-color: #cb0000;
     --secondary-color: #e0e0e0;
     --background-color: #121212;
     --text-color: #e0e0e0;

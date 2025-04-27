@@ -58,7 +58,8 @@
     font-family: 'Press Start 2P', 'Courier New', monospace;
     font-weight: bold;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
+    text-decoration: none;
     font-size: 14px;
     letter-spacing: 1px;
     box-shadow:
@@ -81,8 +82,8 @@
 .pixel-btn-inner::after {
     content: '';
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     background: #000;
 }
 
@@ -117,6 +118,7 @@
 }
 
 .pixel-btn:hover .pixel-btn-inner {
+    scale: 1.06;
     background-color: var(--primary-color);
     box-shadow:
         inset -4px -4px 0px 0px rgba(0, 0, 0, 0.5),
@@ -124,6 +126,7 @@
 }
 
 [data-theme="dark"] .pixel-btn:hover .pixel-btn-inner {
+    scale: 1.06;
     box-shadow:
         inset -4px -4px 0px 0px rgba(0, 0, 0, 0.6),
         inset 4px 4px 0px 0px rgba(255, 255, 255, 0.3);
@@ -145,16 +148,16 @@
 }
 
 .pixel-btn.pixel-btn-green .pixel-btn-inner {
-    background-color: #48c93c;
+    background-color: var(--green-color);
 }
 
 .pixel-btn.pixel-btn-gold .pixel-btn-inner {
-    background-color: #ffd700;
+    background-color: var(--gold-color);
     color: #000;
 }
 
 .pixel-btn.pixel-btn-red .pixel-btn-inner {
-    background-color: #d32f2f;
+    background-color: var(--primary-color);
 }
 
 /* Button container for group of buttons */

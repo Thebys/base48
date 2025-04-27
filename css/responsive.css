@@ -41,10 +41,6 @@
         justify-content: center;
     }
 
-    .translate-element {
-        flex: 0 0 auto;
-    }
-
     .hero-columns {
         flex-direction: row;
         align-items: flex-start;
@@ -62,10 +58,6 @@
 
     .hero-column:last-child {
         padding-left: 30px;
-    }
-
-    .translate-element {
-        margin-left: 15px;
     }
 }
 
@@ -122,12 +114,6 @@
         max-width: 100%;
         width: 90%;
         margin: 10px 0;
-    }
-
-    .translate-element {
-        margin: 15px 0;
-        width: 100%;
-        text-align: center;
     }
 
     .pixel-btn-container {
