@@ -24,11 +24,10 @@ header {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     @media (max-width: 768px) {
         flex-direction: column !important;
-
     }
 }
 
@@ -161,7 +160,7 @@ section ul li {
     margin-bottom: 5px;
 }
 
-section a {
+a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;

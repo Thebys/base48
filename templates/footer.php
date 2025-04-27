@@ -6,7 +6,7 @@
                 IČ: 22859802<br>
                 Registrováno: 6. 8. 2010
             </p>
-            <p>Bankovní účet:<br>2900086515/2010</p>
+            <p>Bankovní účet:<br><a href="https://ib.fio.cz/ib/transparent?a=2900086515" target="_blank">2900086515/2010</a></p>
             <p>&copy; <?php echo date('Y'); ?> Base48, z.s. Všechna práva vyhrazena.</p>
         </div>
         <div class="footer-right">
