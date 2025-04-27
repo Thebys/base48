@@ -35,7 +35,7 @@
     position: relative;
     background: transparent;
     border: none;
-    margin: 20px 0;
+    margin: 0;
     text-decoration: none;
     cursor: pointer;
     image-rendering: pixelated;
@@ -165,8 +165,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    margin: 25px 0;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .pixel-btn-container {
+        gap: 20px;
+    }
 }
 
 .pixel-btn-container a {
@@ -298,33 +302,13 @@
     display: none;
 }
 
-/* CRT Grid Section */
-#focus-areas {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: var(--dark-bg-color); /* Assuming a dark background */
-    color: var(--light-text-color); /* Assuming light text */
-}
-
-#focus-areas h2 {
-    margin-bottom: 30px;
-    font-size: 2.5em;
-    color: var(--accent-color-blue); /* Example color */
-}
-
 .crt-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px; /* Space between rows */
-    align-items: center; /* Center rows if they don't fill width */
-}
-
-.crt-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between screens */
-    width: 100%;
-    max-width: 1200px; /* Adjust max-width as needed */
+    justify-content: flex-end;
+    float: right;
 }
 
 .crt-screen {
@@ -389,22 +373,22 @@
 
 /* --- Scanline Delay --- */
 /* Apply delays to the :before pseudo-element within each screen */
-.crt-row:nth-child(1) .crt-screen:nth-child(1) .crt-content:before {
+.crt-grid:nth-child(1) .crt-screen:nth-child(1) .crt-content:before {
     animation-delay: -0.8s;
 }
-.crt-row:nth-child(1) .crt-screen:nth-child(2) .crt-content:before {
+.crt-grid:nth-child(1) .crt-screen:nth-child(2) .crt-content:before {
     animation-delay: -1.6s;
 }
-.crt-row:nth-child(1) .crt-screen:nth-child(3) .crt-content:before {
+.crt-grid:nth-child(1) .crt-screen:nth-child(3) .crt-content:before {
     animation-delay: -0.4s;
 }
-.crt-row:nth-child(2) .crt-screen:nth-child(1) .crt-content:before {
+.crt-grid:nth-child(2) .crt-screen:nth-child(1) .crt-content:before {
     animation-delay: -2.5s;
 }
-.crt-row:nth-child(2) .crt-screen:nth-child(2) .crt-content:before {
+.crt-grid:nth-child(2) .crt-screen:nth-child(2) .crt-content:before {
     animation-delay: -1.2s;
 }
-.crt-row:nth-child(2) .crt-screen:nth-child(3) .crt-content:before {
+.crt-grid:nth-child(2) .crt-screen:nth-child(3) .crt-content:before {
     animation-delay: -0.2s;
 }
 /* --- End Scanline Delay --- */
@@ -455,7 +439,7 @@
 
 /* Basic responsiveness */
 @media (max-width: 900px) {
-    .crt-row {
+    .crt-grid {
         flex-wrap: wrap; /* Allow wrapping */
     }
     .crt-screen {
@@ -466,14 +450,11 @@
 
 @media (max-width: 600px) {
     .crt-screen {
-        width: calc(100% - 20px); /* 1 column on very small screens */
+        width: calc(40% - 20px); /* 1 column on very small screens */
         max-width: none;
     }
     .crt-content {
-        font-size: 0.8em;
-    }
-    #focus-areas h2 {
-        font-size: 2em;
+        font-size: 0.30em;
     }
     .crt-title {
         font-size: 1.2em; /* Larger font size on mobile */

@@ -121,11 +121,6 @@
         align-items: center;
     }
 
-    .pixel-btn {
-        width: 80%;
-        max-width: 300px;
-    }
-
     .pixel-btn-inner {
         width: 100%;
     }
@@ -153,7 +148,7 @@
 
 /* Adjustments for very small screens */
 @media (max-width: 480px) {
-    .hero-section {
+    .ction {
         padding: 30px 20px 40px;
     }
 
@@ -168,12 +163,6 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        margin-top: 20px;
-    }
-
-    .hero-section .pixel-btn {
-        width: 100%;
-        max-width: 280px;
     }
 
     .base48-building img {

@@ -20,7 +20,15 @@ header {
     align-items: center;
     margin-bottom: 15px;
 }
-
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @media (max-width: 768px) {
+        flex-direction: column !important;
+        
+    }
+}
 /* Logo styling */
 .logo-container {
     margin-bottom: 15px;
@@ -106,8 +114,8 @@ section h3 {
     font-size: 1.4rem;
 }
 
-section p {
-    margin-bottom: 15px;
+section .column {
+    margin-top: 20px;
 }
 
 section ul {
@@ -231,7 +239,8 @@ footer {
 .footer-right a:hover img {
     transform: scale(1.05);
 }
-.base48-building {    
+
+.base48-building {
     padding-bottom: 0;
     top: 0;
     left: 0;
@@ -248,21 +257,9 @@ footer {
     position: relative;
     max-width: 100%;
     height: auto;
-    margin: 0 auto;    
+    margin: 0 auto;
     z-index: 10;
     margin-bottom: -5px;
-}
-
-/* Hero section styling */
-#herobox {
-    position: relative;
-    border-top: none;
-    padding-top: 40px;
-    background-color: var(--card-bg);
-    box-shadow: 0 5px 15px var(--section-shadow);
-    border-radius: 8px;
-    overflow: visible;
-    margin-top: 20px;
 }
 
 #herobox::before {
@@ -287,14 +284,18 @@ footer {
     line-height: 1.7;
 }
 
-#herobox ul {
-    margin: 20px 0;
-}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px;
 
-/* Special styling for the hero section */
-.hero-section {
-    text-align: left;
-    padding: 40px 30px 50px;
+    position: relative;
+    border-top: none;
+    background-color: var(--card-bg);
+    overflow: visible;
+
 }
 
 .hero-columns {
@@ -332,4 +333,4 @@ footer {
 
 .hero-section ul li {
     margin-bottom: 8px;
-} 
+}

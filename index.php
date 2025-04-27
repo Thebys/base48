@@ -3,89 +3,111 @@ $pageTitle = 'Base48 - Brněnský hackerspace';
 require 'templates/header.php';
 ?>
 
-    <!-- Satellite sprite -->
-    <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
-    <div class="satellite-popup" id="satellite-popup">
-        <span class="close-popup">&times;</span>
-        <h3>Proč číslo 48?</h3>
-        <p>Protože náš původní prostor byl na ulici Čápkova s&nbsp;orientačním číslem 48 a&nbsp;protože s&nbsp;názvem
-            base64 bychom měli problém s&nbsp;preferencí vyhledávačů.</p>
-    </div>
+<!-- Satellite sprite -->
+<img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
+<div class="satellite-popup" id="satellite-popup">
+    <span class="close-popup">&times;</span>
+    <h3>Proč číslo 48?</h3>
+    <p>Protože náš původní prostor byl na&nbsp;ulici Čápkova s&nbsp;orientačním číslem 48 a&nbsp;protože s&nbsp;názvem
+        base64 bychom měli problém s&nbsp;preferencí vyhledávačů.</p>
+</div>
 
-    <div class="content-wrapper">
-        <main>
-            <section id="herobox" class="hero-section">
-                <div class="column">                    
-                        <h2>O nás</h2>
-                        <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se
-                            setkávají lidé s&nbsp;různými zájmy,
-                            spolupracují na&nbsp;projektech a&nbsp;sdílejí znalosti a&nbsp;zkušenosti.</p>
-                        <p>Náš hackerspace je:</p>
-                        <ul>
-                            <li>Skupina lidí se&nbsp;společnými zájmy</li>
-                            <li>Místo pro&nbsp;setkávání a&nbsp;přednášky</li>
-                            <li>Dobře vybavená laboratoř</li>
-                            <li>Klub a&nbsp;Third place</li>
-                        </ul>
-                        <div class="pixel-btn-container">
-                            <a href="#membership" class="pixel-btn pixel-btn-blue">
-                                <span class="pixel-btn-inner">Informace o členství</span>
-                            </a>
-                        </div>                                    
-                </div>
-
-                <h2>Zaměření</h2>
+<div class="content-wrapper">
+    <main>
+        <section id="herobox" class="hero-section">
+            <div class="column">
+                <h2>Hackerspace Base48 - O&nbsp;nás</h2>
                 <div class="crt-grid">
-                    <div class="crt-row">
-                        <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
-                            <div class="crt-content scanlines">
-                                <span class="crt-title">3D tisk </span>
-                                <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content" class="crt-content-image">
-                            </div>
-                        </div>
-                        <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
-                            <div class="crt-content scanlines">
-                                <span class="crt-title">Elektrolab </span>
-                                <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content" class="crt-content-image">
-                            </div>
-                        </div>
-                        <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
-                            <div class="crt-content scanlines">
-                                <span class="crt-title">Chill</span>
-                                <img src="/img/screen/zahradka_grilovacka.webp" alt="Placeholder Content" class="crt-content-image">
-                            </div>
+                    <div class="crt-screen">
+                        <img src="/img/frame/crt_frame_4.webp" alt="CRT Frame" class="crt-frame">
+                        <div class="crt-content scanlines">
+                            <span class="crt-title">Prostor </span>
+                            <img src="/img/screen/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
                         </div>
                     </div>
-                    <div class="crt-row">
-                        <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_4.webp" alt="CRT Frame" class="crt-frame">
-                             <div class="crt-content scanlines">
-                                <span class="crt-title">Prostor </span>
-                                <img src="/img/screen/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
-                            </div>
+                    <div class="crt-screen">
+                        <img src="/img/frame/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
+                        <div class="crt-content scanlines">
+                            <span class="crt-title">Chill</span>
+                            <img src="/img/screen/zahradka_grilovacka.webp" alt="Placeholder Content"
+                                class="crt-content-image">
                         </div>
-                        <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
-                            <div class="crt-content scanlines">
-                                <span class="crt-title">Dílna </span>
-                                <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
-                            </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se
+                        setkávají lidé s&nbsp;různými zájmy,
+                        spolupracují na&nbsp;projektech a&nbsp;sdílejí znalosti a&nbsp;zkušenosti.</p>
+                    <p>Náš hackerspace je:</p>
+                    <div class="container"
+                        style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                        <div>
+                            <ul>
+                                <li>Skupina lidí se&nbsp;společnými zájmy</li>
+                                <li>Místo pro&nbsp;setkávání a&nbsp;přednášky</li>
+                                <li>Dobře vybavená laboratoř</li>
+                                <li>Klub a&nbsp;Third place</li>
+                            </ul>
                         </div>
-                        <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
-                             <div class="crt-content scanlines">
-                                <span class="crt-title">Tvůj projekt  </span>
-                                <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content" class="crt-content-image">
+                        <div>
+                            <div class="pixel-btn-container"
+                                style="display: flex; flex-direction: column;">
+                                <a href="#focus-areas" class="pixel-btn pixel-btn-gold">
+                                    <span class="pixel-btn-inner">Na co se zaměřujeme</span>
+                                </a>
+                                <a href="#membership" class="pixel-btn pixel-btn-green">
+                                    <span class="pixel-btn-inner">Členství v Bas48</span>
+                                </a>
+                                <a href="#contact" class="pixel-btn pixel-btn-blue">
+                                    <span class="pixel-btn-inner">Kontakt & Mapa</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+        </section>
 
-            <section id="membership">
+        <section id="focus-areas">
+            <div class="column">
+                <h2>Zaměření</h2>
+                <div class="crt-grid" style="position: relative;">
+                    <div class="crt-screen">
+                        <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
+                        <div class="crt-content scanlines">
+                            <span class="crt-title">3D tisk </span>
+                            <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content"
+                                class="crt-content-image">
+                        </div>
+                    </div>
+                    <div class="crt-screen">
+                        <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                        <div class="crt-content scanlines">
+                            <span class="crt-title">Elektrolab </span>
+                            <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content"
+                                class="crt-content-image">
+                        </div>
+                    </div>
+                    <div class="crt-screen">
+                        <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
+                        <div class="crt-content scanlines">
+                            <span class="crt-title">Dílna </span>
+                            <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
+                        </div>
+                    </div>
+                    <div class="crt-screen">
+                        <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                        <div class="crt-content scanlines">
+                            <span class="crt-title">Tvůj projekt  </span>
+                            <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content"
+                                class="crt-content-image">
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <section id="membership">
+            <div class="column">
                 <h2>Členství & Podpora</h2>
 
                 <div class="membership-columns">
@@ -134,9 +156,11 @@ require 'templates/header.php';
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="contact">
+        <section id="contact">
+            <div class="column">
                 <h2>Kontakty & Mapa</h2>
 
                 <div class="contact-columns">
@@ -189,16 +213,17 @@ require 'templates/header.php';
 
                         <h3>Mapa</h3>
                         <div class="map-container">
-                            <a target="_blank" href="https://mapy.cz/s/mezekuzahu"><img src="/img/base48_kudy_pixel.webp"
-                                    alt="Mapa k Base48" class="location-map"></a>
+                            <a target="_blank" href="https://mapy.cz/s/mezekuzahu"><img
+                                    src="/img/base48_kudy_pixel.webp" alt="Mapa k Base48" class="location-map"></a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-        </main>
-    </div>
-    <div class="base48-building"><img id="base48-building" src="/img/base48_pixel_3_day.webp" alt="Base48 Building"></div>
+    </main>
+</div>
+<div class="base48-building"><img id="base48-building" src="/img/base48_pixel_3_day.webp" alt="Base48 Building"></div>
 <?php
 require 'templates/footer.php';
 ?>
