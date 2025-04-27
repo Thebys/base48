@@ -1,14 +1,14 @@
 <?php
 $pageTitle = 'Base48 - Brněnský hackerspace';
-require 'templates/header.php';
-?>
+require 'templates/header.php'; ?>
 
 <!-- Satellite sprite -->
 <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
 <div class="satellite-popup" id="satellite-popup">
     <span class="close-popup">&times;</span>
     <h3>Proč číslo 48?</h3>
-    <p>Protože náš původní prostor byl na&nbsp;ulici Čápkova s&nbsp;orientačním číslem 48 a&nbsp;protože s&nbsp;názvem
+    <p>Protože náš původní prostor byl na&nbsp;ulici Čápkova s&nbsp;orientačním číslem 48 a&nbsp;protože
+        s&nbsp;názvem
         base64 bychom měli problém s&nbsp;preferencí vyhledávačů.</p>
 </div>
 
@@ -25,7 +25,7 @@ require 'templates/header.php';
                             <img src="/img/screen/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
                         </div>
                     </div>
-                    <div class="crt-screen">
+                    <div class="crt-screen hide-on-mobile">
                         <img src="/img/frame/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Chill</span>
@@ -38,9 +38,8 @@ require 'templates/header.php';
                     <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se
                         setkávají lidé s&nbsp;různými zájmy,
                         spolupracují na&nbsp;projektech a&nbsp;sdílejí znalosti a&nbsp;zkušenosti.</p>
-                    <p>Náš hackerspace je:</p>
-                    <div class="container"
-                        style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                    <p><strong>Base48 hackerspace</strong> je:</p>
+                    <div class="container" style="display: flex; flex-direction: row; justify-content: space-evenly;">
                         <div>
                             <ul>
                                 <li>Skupina lidí se&nbsp;společnými zájmy</li>
@@ -50,8 +49,7 @@ require 'templates/header.php';
                             </ul>
                         </div>
                         <div>
-                            <div class="pixel-btn-container"
-                                style="display: flex; flex-direction: column;">
+                            <div class="pixel-btn-container" style="display: flex; flex-direction: column;">
                                 <a href="#zamereni" class="pixel-btn pixel-btn-gold">
                                     <span class="pixel-btn-inner">Na co se zaměřujeme</span>
                                 </a>
@@ -70,40 +68,76 @@ require 'templates/header.php';
         <section id="zamereni">
             <div class="column">
                 <h2>Zaměření</h2>
-                <div class="crt-grid" style="position: relative;">
-                    <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
-                        <div class="crt-content scanlines">
-                            <span class="crt-title">3D tisk </span>
-                            <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content"
-                                class="crt-content-image">
+                <div class="grid-zamereni">
+                    <div class="grid-zamereni-item">
+                        <div class="grid-zamereni-item">
+                            <div class="info">
+                                <h3>3D tisk</h3>
+                                <p>V našem 3D koutku tečou plasty proudem. Non-stop. Několik různých tiskáren paralelně
+                                    v provozu. K dispozici pro opravy, návrhy, rapidní prototypování. Udržujeme zásobu
+                                    komunitního filamentu.</p>
+                            </div>
+                            <div class="crt-screen">
+                                <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
+                                <div class="crt-content scanlines">
+                                    <span class="crt-title">3D tisk </span>
+                                    <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content"
+                                        class="crt-content-image">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
-                        <div class="crt-content scanlines">
-                            <span class="crt-title">Elektrolab </span>
-                            <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content"
-                                class="crt-content-image">
+
+                    <div class="grid-zamereni-item">
+                        <div class="info">
+                            <h3>Elektro laboratoř</h3>
+                            <p>Kvalitní světlo je základ našeho arzenálu, máme mimo jiné osciloskopy, zdroje,
+                                mikropájky i horkovzduch. K dispozici stovky druhů běžných součástek a běžné elektro
+                                nářadí.
+                            </p>
+                        </div>
+                        <div class="crt-screen">
+                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">Elektrolab </span>
+                                <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content"
+                                    class="crt-content-image">
+                            </div>
                         </div>
                     </div>
-                    <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
-                        <div class="crt-content scanlines">
-                            <span class="crt-title">Dílna </span>
-                            <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
+
+                    <div class="grid-zamereni-item">
+                        <div class="info">
+                            <h3>Dílna</h3>
+                            <p>V dílně se dá pracovat se dřevem a kovem. Taky je tu cyklodílna, CNC, hromada nářadí a
+                                dokonce i nějaký ten materiál.</p>
+                        </div>
+
+                        <div class="crt-screen">
+                            <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">Dílna </span>
+                                <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
+                            </div>
                         </div>
                     </div>
-                    <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
-                        <div class="crt-content scanlines">
-                            <span class="crt-title">Tvůj projekt  </span>
-                            <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content"
-                                class="crt-content-image">
+
+                    <div class="grid-zamereni-item">
+                        <div class="info">
+                            <h3>Tvůj projekt</h3>
+                            <p>Base48 je skvělé místo kde se věnovat širokému spektru DYI projektů a činností. Máme tu vše, co potřebuješ k tomu, abys mohl/a začít se svým novým projektem!</p>
+                        </div>
+                        <div class="crt-screen">
+                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <div class="crt-content scanlines">
+                                <span class="crt-title">Tvůj projekt  </span>
+                                <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content"
+                                    class="crt-content-image">
+                            </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
         </section>
 
         <section id="clenstvi">
@@ -113,7 +147,8 @@ require 'templates/header.php';
                 <div class="membership-columns">
                     <div class="membership-column">
                         <h3>Členství</h3>
-                        <p>I když lidé mohou navštěvovat a&nbsp;využívat hackerspace víceméně bez omezení, pravidelné
+                        <p>I když lidé mohou navštěvovat a&nbsp;využívat hackerspace víceméně bez omezení,
+                            pravidelné
                             členství
                             přináší některé výhody, jako je neomezený přístup k&nbsp;fyzické i&nbsp;virtuální
                             infrastruktuře, kterou
@@ -121,7 +156,8 @@ require 'templates/header.php';
                             na&nbsp;pokrytí nákladů
                             na&nbsp;provoz hackerspace a&nbsp;na&nbsp;nákup nového vybavení.</p>
                         <p>Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.</p>
-                        <p>V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí poplatku.
+                        <p>V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí
+                            poplatku.
                         </p>
 
                         <div class="pixel-btn-container">
@@ -134,7 +170,8 @@ require 'templates/header.php';
 
                     <div class="membership-column">
                         <h3>Podpora</h3>
-                        <p>Přijímáme také finanční podporu a&nbsp;dary ve&nbsp;formě vybavení, které by pro nás mohlo
+                        <p>Přijímáme také finanční podporu a&nbsp;dary ve&nbsp;formě vybavení, které by pro nás
+                            mohlo
                             být užitečné. Jelikož se
                             snažíme zůstat co nejvíce neutrální, pravděpodobně nebudeme schopni poskytnout mnoho
                             na&nbsp;oplátku.</p>
@@ -174,7 +211,8 @@ require 'templates/header.php';
                             <li>wiki: <a href="https://wiki.base48.cz" target="_blank">wiki.base48.cz</a></li>
                             <li>mailing listy: <a href="https://lists.base48.cz" target="_blank">lists.base48.cz</a>
                             </li>
-                            <li>github: <a href="https://github.com/base48" target="_blank">github.com/base48</a></li>
+                            <li>github: <a href="https://github.com/base48" target="_blank">github.com/base48</a>
+                            </li>
                         </ul>
 
                         <div class="pixel-btn-container">
@@ -223,7 +261,8 @@ require 'templates/header.php';
 
     </main>
 </div>
-<div class="base48-building"><img id="base48-building" src="/img/base48_pixel_3_day.webp" alt="Base48 Building"></div>
+<div class="base48-building"><img id="base48-building" src="/img/base48_pixel_3_day.webp" alt="Base48 Building">
+</div>
 <?php
 require 'templates/footer.php';
 ?>

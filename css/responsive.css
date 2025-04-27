@@ -119,6 +119,8 @@
     .pixel-btn-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        margin-top: 20px;
     }
 
     .pixel-btn-inner {
@@ -159,12 +161,6 @@
 
 /* Responsive styles for pixel buttons and base image */
 @media (max-width: 768px) {
-    .hero-section .pixel-btn-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
     .base48-building img {
         max-width: 100%;
         height: auto;

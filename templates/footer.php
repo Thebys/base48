@@ -11,7 +11,7 @@
         </div>
         <div class="footer-right">
             <h3>Partneři</h3>
-            <p><a href="https://vpsfree.cz" target="_blank"><img src="/img/vpsfree.png" alt="vpsfree.cz"
+            <p><a href="https://vpsfree.cz" target="_blank"><img src="/img/logo/vpsfree.png" alt="vpsfree.cz"
                         style="width: 100px; height: auto;"></a></p>
             <p>
                 <a href="https://github.com/base48" target="_blank"><i class="fab fa-github"></i> GitHub</a>

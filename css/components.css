@@ -166,6 +166,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin: 20px 0;
 }
 @media (max-width: 768px) {
     .pixel-btn-container {
@@ -444,14 +445,15 @@
     }
     .crt-screen {
         width: calc(50% - 10px); /* 2 columns on smaller screens */
-        max-width: 300px;
+        max-width: 300px;        
     }
 }
 
 @media (max-width: 600px) {
     .crt-screen {
-        width: calc(40% - 20px); /* 1 column on very small screens */
+        width: calc(80% - 20px); /* 1 column on very small screens */
         max-width: none;
+        
     }
     .crt-content {
         font-size: 0.30em;
