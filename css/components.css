@@ -165,13 +165,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin: 20px 0;
 }
 
 @media (max-width: 768px) {
     .pixel-btn-container {
-        gap: 20px;
+        gap: 40px;
     }
 }
 
@@ -597,4 +597,115 @@
     margin-top: 2rem;
     opacity: 0;
     animation: fadeIn 1s ease-in 9.5s forwards;
+}
+
+/* Contact section styles */
+.contact-grid {
+    overflow: hidden;
+    padding: 20px !important;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px var(--section-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: var(--address-bg);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+    transform: translateX(5px);
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none !important;
+}
+
+.contact-link i {
+    font-size: 1.2em;
+    width: 24px;
+    text-align: center;
+}
+
+.addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.address-block address {
+    margin: 0;
+}
+
+.transport-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.transport-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: var(--address-bg);
+    border-radius: 6px;
+}
+
+.transport-item i {
+    color: var(--primary-color);
+}
+
+.note {
+    font-size: 0.9rem;
+    padding: 10px;
+    background: var(--address-bg);
+    border-radius: 6px;
+    border-left: 3px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        max-height: none;
+        overflow: visible;
+    }
 }

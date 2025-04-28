@@ -38,7 +38,7 @@ require 'templates/header.php'; ?>
                     <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se
                         setkávají lidé s&nbsp;různými zájmy,
                         spolupracují na&nbsp;projektech a&nbsp;sdílejí znalosti a&nbsp;zkušenosti.</p>
-                    <h3><strong>Base48 hackerspace</strong> je:</h3>
+                    <h3>Base48 hackerspace je:</h3>
                     <div class="container" style="display: flex; flex-direction: row;">
                         <div>
                             <ul>
@@ -163,6 +163,9 @@ require 'templates/header.php'; ?>
                                 class="pixel-btn pixel-btn-green pixel-btn-animated">
                                 <span class="pixel-btn-inner">Chci se stát členem</span>
                             </a>
+                            <a href="https://m.base48.cz/auth/login" target="_blank" class="pixel-btn pixel-btn-blue">
+                                <span class="pixel-btn-inner">Členský portál</span>
+                            </a>
                         </div>
                     </div>
 
@@ -205,24 +208,42 @@ require 'templates/header.php'; ?>
         </section>
 
         <section id="kontakt">
-            <div class="column">
+            <div class="column contact-grid">
                 <h2>Kontakty & Mapa</h2>
 
-                <div class="contact-columns">
-                    <div class="contact-column">
+                <div class="contact-info-grid">
+                    <div class="contact-card communication">
                         <h3>Komunikační kanály</h3>
-                        <p>Naše aktuální komunikační kanály najdeš na&nbsp;<a
+                        <div class="contact-links">
+                            <a href="https://wiki.base48.cz" target="_blank" class="contact-link">
+                                <i class="fas fa-book"></i>
+                                <span>wiki.base48.cz</span>
+                            </a>
+                            <a href="https://lists.base48.cz" target="_blank" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>lists.base48.cz</span>
+                            </a>
+                            <a href="https://github.com/base48" target="_blank" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/base48</span>
+                            </a>
+                            <a href="https://www.facebook.com/Base48.cz/" target="_blank" class="contact-link">
+                                <i class="fab fa-facebook"></i>
+                                <span>facebook.com/Base48.cz</span>
+                            </a>
+                            <a href="https://www.instagram.com/base48cz/" target="_blank" class="contact-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>instagram.com/base48cz</span>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank"
+                                class="contact-link">
+                                <i class="fab fa-youtube"></i>
+                                <span>youtube.com/channel/base48</span>
+                            </a>
+                        </div>
+
+                        <p class="note">Naše další komunikační kanály a aktuální informace najdeš na <a
                                 href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank">wiki</a>.</p>
-
-                        <h4>Zdroje</h4>
-                        <ul>
-                            <li>wiki: <a href="https://wiki.base48.cz" target="_blank">wiki.base48.cz</a></li>
-                            <li>mailing listy: <a href="https://lists.base48.cz" target="_blank">lists.base48.cz</a>
-                            </li>
-                            <li>github: <a href="https://github.com/base48" target="_blank">github.com/base48</a>
-                            </li>
-                        </ul>
-
                         <div class="pixel-btn-container">
                             <a href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank" class="pixel-btn">
                                 <span class="pixel-btn-inner">Navštívit Wiki</span>
@@ -230,31 +251,61 @@ require 'templates/header.php'; ?>
                         </div>
                     </div>
 
-                    <div class="contact-column">
+                    <div class="contact-card location">
                         <h3>Adresa</h3>
-                        <p>Nacházíme se na&nbsp;adrese:</p>
-                        <address>
-                            Mojmírovo náměstí 17<br>
-                            Brno 612 00
-                        </address>
+                        <div class="addresses">
+                            <div class="address-block primary">
+                                <address>
+                                    Mojmírovo náměstí&nbsp;17<br>
+                                    Brno 612&nbsp;00
+                                </address>
+                            </div>
+                            <div class="address-block secondary">
+                                <p>Výhodnější vchod z&nbsp;druhé strany:</p>
+                                <address>
+                                    Palackého třída 742/82
+                                </address>
+                                <p class="note" style="margin-top: 10px;">
+                                    Pro průchod z&nbsp;Palackého může být potřeba upozornit někoho v&nbsp;hackerspace,
+                                    aby
+                                    přišel otevřít. Brána z&nbsp;Palackého není vždy otevřená a&nbsp;nemáme tam zvonek.
+                                </p>
+                            </div>
+                        </div>
 
-                        <p>Naše výhodnější adresa z&nbsp;druhé strany je:</p>
-                        <address>
-                            Palackého třída 742/82
-                        </address>
-
-                        <h4>Doprava</h4>
-                        <p>Jsme blízko zastávek tramvaje, autobusu a&nbsp;trolejbusu na&nbsp;Palackého třídě
-                            a&nbsp;Husitské ulici:</p>
-                        <ul>
-                            <li>název zastávky: Husitská</li>
-                            <li>tramvaje: 1 a&nbsp;6</li>
-                            <li>autobusy: 53, 84 a&nbsp;44</li>
-                            <li>trolejbus: 30</li>
-                        </ul>
-
-                        <p>Můžete potřebovat upozornit někoho v&nbsp;hackerspace, aby vás pustil dovnitř, brána z
-                            Palackého není vždy otevřená a nemáme tam zvonek.</p>
+                        <div class="transport-info">
+                            <h4>Doprava</h4>
+                            <div class="transport-grid" style="font-size: .9rem;">
+                                <div class="transport-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Husitská,<br> Slovanské náměstí</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-train"></i>
+                                    <span>Šaliny:<br> 1, 6</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Autobusy:<br> 53, 67, 44, 84</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Trolejbusy:<br> 30, 32</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card" style="align-items: center;">
+                    <h3>Mapy</h3>
+                    <div class="pixel-btn-container">
+                        <a href="https://mapy.cz/s/bosesamuva" target="_blank" class="pixel-btn pixel-btn-green">
+                            <span class="pixel-btn-inner">Mapy.cz</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir//Mojm%C3%ADrovo+n%C3%A1m.+17,+612+00+Brno-Kr%C3%A1lovo+Pole/@49.2243066,16.5939131,343m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x47129440c7cff175:0x746297c25f280f66!2m2!1d16.595491!2d49.2242141?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="pixel-btn pixel-btn-blue">
+                            <span class="pixel-btn-inner">Google Maps</span>
+                        </a>
                     </div>
                 </div>
             </div>
