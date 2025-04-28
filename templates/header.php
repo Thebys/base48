@@ -14,6 +14,7 @@ $theme = $_COOKIE['theme'] ?? (isset($_SERVER['HTTP_SEC_CH_PREFERS_COLOR_SCHEME'
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <script>
         // Immediately set theme based on determined value to prevent FOUC
@@ -37,7 +38,7 @@ $theme = $_COOKIE['theme'] ?? (isset($_SERVER['HTTP_SEC_CH_PREFERS_COLOR_SCHEME'
                 <li><a href="/#herobox">O nás</a></li>
                 <li><a href="/#zamereni">Zaměření</a></li>
                 <li><a href="/#clenstvi">Členství a&nbsp;podpora</a></li>
-                <li><a href="/#kontakt">Kontakt &&nbsp;Mapa</a></li>
+                <li><a href="/#kontakt">Kontakty</a></li>
             </ul>
         </nav>
     </header>

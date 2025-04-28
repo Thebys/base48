@@ -38,7 +38,7 @@ require 'templates/header.php'; ?>
                     <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>, kde se
                         setkávají lidé s&nbsp;různými zájmy,
                         spolupracují na&nbsp;projektech a&nbsp;sdílejí znalosti a&nbsp;zkušenosti.</p>
-                    <p><strong>Base48 hackerspace</strong> je:</p>
+                    <h3><strong>Base48 hackerspace</strong> je:</h3>
                     <div class="container" style="display: flex; flex-direction: row;">
                         <div>
                             <ul>
@@ -253,15 +253,8 @@ require 'templates/header.php'; ?>
                             <li>trolejbus: 30</li>
                         </ul>
 
-                        <p>Budete potřebovat upozornit někoho v&nbsp;hackerspace, aby vás pustil dovnitř
-                            z&nbsp;Palackého tř., protože
-                            zatím nemáme zvonek.</p>
-
-                        <h3>Mapa</h3>
-                        <div class="map-container">
-                            <a target="_blank" href="https://mapy.cz/s/mezekuzahu"><img
-                                    src="/img/base48_kudy_pixel.webp" alt="Mapa k Base48" class="location-map"></a>
-                        </div>
+                        <p>Můžete potřebovat upozornit někoho v&nbsp;hackerspace, aby vás pustil dovnitř, brána z
+                            Palackého není vždy otevřená a nemáme tam zvonek.</p>
                     </div>
                 </div>
             </div>
