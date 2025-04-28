@@ -125,7 +125,7 @@ require 'templates/header.php'; ?>
                     <div class="grid-zamereni-item">
                         <div class="info">
                             <h3>Tvůj projekt</h3>
-                            <p>Base48 je skvělé místo kde se věnovat širokému spektru DYI projektů a činností. Máme tu
+                            <p>Base48 je skvělé místo kde se věnovat širokému spektru DIY projektů a činností. Máme tu
                                 vše, co potřebuješ k tomu, abys mohl/a začít se svým novým projektem!</p>
                         </div>
                         <div class="crt-screen">
