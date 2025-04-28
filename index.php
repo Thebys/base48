@@ -63,7 +63,7 @@ function getRandomFrame()
                                     <span class="pixel-btn-inner">Na co se zaměřujeme</span>
                                 </a>
                                 <a href="#clenstvi" class="pixel-btn pixel-btn-green">
-                                    <span class="pixel-btn-inner">Členství v Base48</span>
+                                    <span class="pixel-btn-inner">členství v Base48</span>
                                 </a>
                                 <a href="#kontakt" class="pixel-btn pixel-btn-blue">
                                     <span class="pixel-btn-inner">Kontakt & Mapa</span>
@@ -179,7 +179,7 @@ function getRandomFrame()
 
                         </p>
 
-                        <div class="pixel-btn-container">
+                        <div class="pixel-btn-container" style="margin: 40px 0 60px 0;">
                             <a href="https://wiki.base48.cz/wiki/Membership" target="_blank"
                                 class="pixel-btn pixel-btn-green pixel-btn-animated">
                                 <span class="pixel-btn-inner">Chci se stát členem</span>
@@ -233,7 +233,7 @@ function getRandomFrame()
 
         <section id="kontakt">
             <div class="column contact-grid">
-                <h2>Kontakty & Mapa</h2>
+                <h2>Odkazy a Kontakty</h2>
 
                 <div class="contact-info-grid">
                     <div class="contact-card communication">
@@ -277,7 +277,7 @@ function getRandomFrame()
 
                     <div class="contact-card location">
                         <h3>Adresa</h3>
-                        <div class="addresses">
+                        <div class="addresses" style="display: flex; flex-direction: row; gap: 20px;">
                             <div class="address-block primary">
                                 <address>
                                     Mojmírovo náměstí&nbsp;17<br>
@@ -285,20 +285,20 @@ function getRandomFrame()
                                 </address>
                             </div>
                             <div class="address-block secondary">
-                                <p>Výhodnější vchod z&nbsp;druhé strany:</p>
-                                <address>
-                                    Palackého třída 742/82
+                                <address class="">
+                                    Palackého třída 742/82<br>
+                                    (vchod z&nbsp;Palackého třídy.)
                                 </address>
-                                <p class="note" style="margin-top: 10px;">
-                                    Pro průchod z&nbsp;Palackého může být potřeba upozornit někoho v&nbsp;hackerspace,
-                                    aby
-                                    přišel otevřít. Brána z&nbsp;Palackého není vždy otevřená a&nbsp;nemáme tam zvonek.
-                                </p>
+
                             </div>
                         </div>
-
+                        <p class="note" style="margin-top: 10px;">
+                            Pro průchod z&nbsp;Palackého může být potřeba upozornit někoho v&nbsp;hackerspace,
+                            aby
+                            přišel otevřít. Brána z&nbsp;Palackého není vždy otevřená a&nbsp;nemáme tam zvonek.
+                        </p>
                         <div class="transport-info">
-                            <h4>Doprava</h4>
+                            <h4>Doprava 🐉</h4>
                             <div class="transport-grid" style="font-size: .9rem;">
                                 <div class="transport-item">
                                     <i class="fas fa-map-marker-alt"></i>
