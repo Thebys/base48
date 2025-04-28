@@ -170,7 +170,7 @@ function getRandomFrame()
                         </p>
                         <p class="note">
                             Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.<br>
-                            Finanční prostředky používáme na&nbsp;pokrytí provozních nákladů a&nbsp;na&nbsp;nákup nového
+                            Finanční prostředky používáme na&nbsp;pokrytí provozních nákladů a&nbsp;nákup nového
                             vybavení.<br>
                             V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí
                             poplatku.<br>
