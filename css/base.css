@@ -23,7 +23,7 @@ body {
     background-color: var(--background-color);
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -35,7 +35,7 @@ img{
     position: relative;
     z-index: 1;
     background-color: var(--background-color);
-    padding-bottom: 200px;
+    padding-bottom: 80px;
 }
 
 /* Remove the background-related before pseudo-element */
@@ -46,4 +46,4 @@ img{
 /* Hide elements with JS disabled */
 .js-only {
     display: none;
-} 
+}

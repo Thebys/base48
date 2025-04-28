@@ -282,8 +282,23 @@ footer {
     padding: 0;
     overflow: hidden;
     position: relative;
-    margin-top: -400px;
+    margin-top: -300px;
     z-index: 1;
+}
+@media (max-width: 1024px) {
+    .base48-building-container {
+        margin-top: -250px;
+    }
+}
+@media (max-width: 768px) {
+    .base48-building-container {
+        margin-top: -150px;
+    }
+}
+@media (max-width: 480px) {
+    .base48-building-container {
+        margin-top: -100px;
+    }
 }
 
 /* Make the base building image responsive by default */
@@ -393,8 +408,7 @@ footer {
     width: var(--site-width);
     margin: 0 auto;
     padding: 0 20px;
-    z-index: 2;
-    margin-top: -150px;
+    z-index: 2;    
     flex-wrap: wrap;
     gap: 20px;
 }
