@@ -1,9 +1,10 @@
 <?php
 $pageTitle = 'Base48 - Brněnský hackerspace';
-require 'templates/header.php'; 
+require 'templates/header.php';
 
 // Function to get a random frame number
-function getRandomFrame() {
+function getRandomFrame()
+{
     return rand(1, 5);
 }
 ?>
@@ -25,14 +26,16 @@ function getRandomFrame() {
                 <h2>Hackerspace Base48 - O&nbsp;nás</h2>
                 <div class="crt-grid">
                     <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                            class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Prostor </span>
                             <img src="/img/screen/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
                         </div>
                     </div>
                     <div class="crt-screen hide-on-mobile">
-                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                            class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Chill</span>
                             <img src="/img/screen/zahradka_grilovacka.webp" alt="Placeholder Content"
@@ -84,7 +87,8 @@ function getRandomFrame() {
                                     komunitního filamentu.</p>
                             </div>
                             <div class="crt-screen">
-                                <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                                <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                    class="crt-frame">
                                 <div class="crt-content scanlines">
                                     <span class="crt-title">3D tisk </span>
                                     <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content"
@@ -103,7 +107,8 @@ function getRandomFrame() {
                             </p>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Elektrolab </span>
                                 <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content"
@@ -120,7 +125,8 @@ function getRandomFrame() {
                         </div>
 
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Dílna </span>
                                 <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
@@ -135,7 +141,8 @@ function getRandomFrame() {
                                 vše, co potřebuješ k tomu, abys mohl/a začít se svým novým projektem!</p>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Tvůj projekt  </span>
                                 <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content"
@@ -167,8 +174,8 @@ function getRandomFrame() {
                             vybavení.<br>
                             V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí
                             poplatku.<br>
-                            Široká veřejnost navštěvovat hackerspace prakticky bez omezení, nejlépe v&nbsp;doprovodu
-                            existujících členů.
+                            Široká veřejnost může navštěvovat hackerspace prakticky bez omezení, nejlépe
+                            v&nbsp;doprovodu existujících členů.
 
                         </p>
 
@@ -208,11 +215,13 @@ function getRandomFrame() {
                             </div>
                             <div class="container" style="align-items: center;">
                                 <div class="crt-screen" style="width: 100%;">
-                                    <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
+                                    <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                        class="crt-frame">
                                     <div class="crt-content scanlines">
                                         <span class="crt-title" style="color: var(--primary-color);">QR platba</span>
                                         <img src="img/qr_dar_12345.png" alt="QR kód pro darování na bankovní účet"
-                                            class="crt-content-image" style="margin-left: 20px; margin-top:-40px; width: 65%;">
+                                            class="crt-content-image"
+                                            style="margin-left: 20px; margin-top:-40px; width: 65%;">
                                     </div>
                                 </div>
                             </div>
