@@ -109,6 +109,16 @@
         align-items: center;
     }
 
+    .footer-container {
+        margin-top: -100px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .base48-building-container {
+        margin-top: -30px;
+    }
+    
     .footer-left,
     .footer-right {
         max-width: 100%;
@@ -157,17 +167,10 @@
     .hero-column h2 {
         font-size: 1.6rem;
     }
-}
-
-/* Responsive styles for pixel buttons and base image */
-@media (max-width: 768px) {
-    .base48-building img {
-        max-width: 100%;
-        height: auto;
-        /* Scale down further on very small screens */
-        max-height: 360px;
-        object-fit: contain;
-    }
+    
+    .footer-container {
+        margin-top: -80px;
+    }    
 }
 
 /* Error page responsive styles */

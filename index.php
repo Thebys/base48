@@ -313,8 +313,6 @@ require 'templates/header.php'; ?>
 
     </main>
 </div>
-<div class="base48-building"><img id="base48-building" src="/img/base48_pixel_3_day.webp" alt="Base48 Building">
-</div>
 <?php
 require 'templates/footer.php';
 ?>

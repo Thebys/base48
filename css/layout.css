@@ -185,11 +185,11 @@ address {
 /* Footer styles */
 footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     justify-content: center;
     text-align: center;
-    padding: 30px 20px;
+    padding: 100px 20px;
     background-color: var(--footer-bg);
     color: var(--footer-color);
     width: 100%;
@@ -275,22 +275,22 @@ footer {
     transform: scale(1.05);
 }
 
-.base48-building {
-    padding-bottom: 0;
-    top: 0;
-    left: 0;
+.base48-building-container {
     text-align: center;
     width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
+    margin-top: -400px;
+    z-index: 1;
 }
 
 /* Make the base building image responsive by default */
-.base48-building img {
+.base48-building-container img {
     display: block;
     position: relative;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     margin: 0 auto;
     z-index: 10;
@@ -384,4 +384,17 @@ footer {
     .info {
         max-width: 100%;
     }
+}
+
+.footer-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: var(--site-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+    margin-top: -150px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
