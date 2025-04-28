@@ -1,31 +1,60 @@
 /* Component styles */
 
-/* Theme toggler styles */
-.theme-toggle {
+/* Common styles for fixed action buttons (Theme toggle, Scroll-to-top) */
+.fixed-action-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background: var(--primary-color);
-    color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;  /* Standardized size */
+    height: 40px; /* Standardized size */
     cursor: pointer;
-    display: flex;
+    display: none; /* Hide by default, JS/Specific rules will show */
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
 }
 
-.theme-toggle:hover {
+.fixed-action-button:hover {
     transform: scale(1.1);
 }
 
-.theme-toggle i {
-    font-size: 24px;
+.fixed-action-button i {
+    font-size: 1.2rem; /* Standardized icon size */
+}
+
+/* Theme toggler specific styles */
+.theme-toggle {
+    /* Inherits from .fixed-action-button */
+    display: flex; /* Override display: none from common class */
+    right: 20px; /* Closer to edge */
+    background: var(--primary-color);
+    color: white;
+    z-index: 1001; /* Slightly higher than scroll button if needed */
+}
+
+/* Scroll-to-top specific styles - Moved from responsive.css */
+.scroll-to-top {
+    /* Inherits from .fixed-action-button */
+    /* display: none; is handled by common class + JS */
+    right: 70px; /* Further from edge */
+    background-color: var(--gold-color); /* Using accent color for differentiation */
+    color: var(--background-color);
+    opacity: 0;
+    visibility: hidden;
+    /* z-index is inherited */
+}
+
+.scroll-to-top.visible {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+    /* transform: scale(1.1); is inherited */
 }
 
 /* Pixel Art CTA Buttons */

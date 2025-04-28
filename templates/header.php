@@ -33,18 +33,23 @@ $theme = $_COOKIE['theme'] ?? (isset($_SERVER['HTTP_SEC_CH_PREFERS_COLOR_SCHEME'
              <!-- Hide H1 visually but keep for SEO/Accessibility -->
             <h1 style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Base48 - Brněnský hackerspace</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/#herobox">O nás</a></li>
-                <li><a href="/#zamereni">Zaměření</a></li>
-                <li><a href="/#clenstvi">Členství a&nbsp;podpora</a></li>
-                <li><a href="/#kontakt">Kontakty</a></li>
-            </ul>
-        </nav>
+        <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-icon"></span>
+        </button>
+        <div class="nav-wrapper" id="main-nav">
+            <nav>
+                <ul>
+                    <li><a href="/#herobox">O nás</a></li>
+                    <li><a href="/#zamereni">Zaměření</a></li>
+                    <li><a href="/#clenstvi">Členství a&nbsp;podpora</a></li>
+                    <li><a href="/#kontakt">Kontakty</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Theme toggle button -->
-    <button class="theme-toggle js-only" aria-label="Přepnout téma" title="Přepnout téma">
+    <button class="theme-toggle fixed-action-button js-only" aria-label="Přepnout téma" title="Přepnout téma">
         <i class="fas <?php echo $theme === 'dark' ? 'fa-sun' : 'fa-moon'; ?>"></i>
     </button>
 

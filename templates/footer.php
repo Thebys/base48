@@ -27,6 +27,11 @@
     </div>
 </footer>
 
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" class="scroll-to-top fixed-action-button js-only" title="Nahoru">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <script src="/js/main.js"></script>
 </body>
 

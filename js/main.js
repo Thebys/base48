@@ -50,27 +50,44 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Smooth scrolling for all anchor links (not just from nav)
-    const allAnchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+    // Smooth scrolling for anchor links pointing to the current page
+    const allAnchorLinks = document.querySelectorAll('a[href*="#"]:not([href="#"])');
 
     function smoothScrollToAnchor(e) {
-        e.preventDefault();
+        const targetHref = this.href; // Get full URL (e.g., http://.../#id)
+        const currentHref = window.location.href; // Get current full URL
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        // Basic check: Compare the part of the URL before the hash
+        const targetPath = targetHref.split('#')[0];
+        const currentPath = currentHref.split('#')[0];
 
-        if (targetElement) {
-            // Calculate header height for better offset
-            const header = document.querySelector('header');
-            const headerHeight = header ? header.offsetHeight : 0;
-            const offset = 20; // Additional offset
-            const totalOffset = headerHeight + offset;
+        // Only proceed if the link points to the current page path
+        if (targetPath === currentPath || targetPath === '') { // '' handles href="#id"
+            e.preventDefault(); // Only prevent default for same-page links
 
-            // Get position with scrollY instead of pageYOffset (which is deprecated)
-            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - totalOffset;
+            const targetId = this.hash; // Gets the # part (e.g., #clenstvi)
+            if (!targetId) {        
+                return; // Exit if hash is somehow empty
+            }
 
-            // Use a custom smooth scroll implementation for better control
-            smoothScrollTo(targetPosition, 800);
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Calculate header height for better offset
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const offset = 20; // Additional offset
+                const totalOffset = headerHeight + offset;
+
+                // Get position with scrollY instead of pageYOffset (which is deprecated)
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - totalOffset;
+
+                // Use a custom smooth scroll implementation for better control
+                smoothScrollTo(targetPosition, 800);
+            } else {                
+            }
+        } else {            
+            // Let the browser handle navigation to a different page
         }
     }
 
@@ -112,15 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Satellite popup functionality
     const satellite = document.querySelector('.satellite-sprite');
     const satellitePopup = document.getElementById('satellite-popup');
-    const overlay = document.getElementById('satellite-overlay');
     const closePopup = document.querySelector('.close-popup');
-
-    console.log('Satellite elements:', {
-        satellite: satellite,
-        popup: satellitePopup,
-        overlay: overlay,
-        closeBtn: closePopup
-    });
 
     // Show popup when satellite is clicked
     if (satellite && satellitePopup) {
@@ -197,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         satellite.addEventListener('click', function (e) {
-            console.log('Satellite clicked!');
             satellitePopup.classList.add('show');
 
             // Attach popup to satellite
@@ -212,7 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Close popup when close button is clicked
         closePopup.addEventListener('click', function (e) {
-            console.log('Close button clicked!');
             satellitePopup.classList.remove('show');
 
             // Resume satellite animation and size updates
@@ -227,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (satellitePopup.classList.contains('show') &&
                 !satellitePopup.contains(e.target) &&
                 e.target !== satellite) {
-                console.log('Document clicked - closing popup');
                 satellitePopup.classList.remove('show');
 
                 // Resume satellite animation and size updates
@@ -239,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Close popup when ESC key is pressed
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && satellitePopup.classList.contains('show')) {
-                console.log('ESC key pressed!');
                 satellitePopup.classList.remove('show');
 
                 // Resume satellite animation and size updates
@@ -251,7 +256,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add alternate way to trigger popup for testing
         document.addEventListener('keydown', function (e) {
             if (e.key === 's' && !satellitePopup.classList.contains('show')) {
-                console.log('S key pressed - showing popup!');
                 satellitePopup.classList.add('show');
 
                 // Attach popup to satellite
@@ -269,6 +273,67 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Simple console message
-    console.log('Base48 hackerspace website loaded successfully!');
+    // Scroll to Top Button Logic
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    const scrollThreshold = 200; // Pixels scrolled before button appears
+
+    if (scrollToTopButton) {
+
+        // Show/hide button based on scroll position (Simplified)
+        window.addEventListener('scroll', () => {
+            const isBelowThreshold = window.scrollY > scrollThreshold;
+
+            if (isBelowThreshold) {
+                scrollToTopButton.style.display = 'flex'; // Use flex to center icon
+                scrollToTopButton.style.opacity = '0.8';
+                scrollToTopButton.style.visibility = 'visible';
+            } else {
+                // Rely on default display:none from CSS, just control opacity/visibility for transition
+                scrollToTopButton.style.opacity = '0';
+                scrollToTopButton.style.visibility = 'hidden';
+                 // Optional: Set display back to none after transition if needed, but might not be necessary
+                 // setTimeout(() => { scrollToTopButton.style.display = 'none'; }, 300);
+            }
+        });
+
+        // Scroll to top on click
+        scrollToTopButton.addEventListener('click', () => {
+            smoothScrollTo(0, 800); // Use existing smooth scroll function
+        });
+    }
+
+
+    // Hamburger Menu Toggle
+    const hamburgerButton = document.querySelector('.hamburger-menu');
+    const navWrapper = document.getElementById('main-nav');
+
+    if (hamburgerButton && navWrapper) {
+        hamburgerButton.addEventListener('click', () => {
+            const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+            hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+            navWrapper.classList.toggle('is-active');
+            // Optional: Toggle body class to prevent scrolling when menu is open
+            // document.body.classList.toggle('no-scroll', !isExpanded);
+        });
+
+        // Optional: Close menu when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!navWrapper.contains(event.target) && !hamburgerButton.contains(event.target) && navWrapper.classList.contains('is-active')) {
+                 hamburgerButton.setAttribute('aria-expanded', 'false');
+                 navWrapper.classList.remove('is-active');
+                 // document.body.classList.remove('no-scroll');
+            }
+        });
+
+        // Optional: Close menu when a nav link is clicked
+        navWrapper.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navWrapper.classList.contains('is-active')) {
+                    hamburgerButton.setAttribute('aria-expanded', 'false');
+                    navWrapper.classList.remove('is-active');
+                    // document.body.classList.remove('no-scroll');
+                }
+            });
+        });
+    }
 }); 
