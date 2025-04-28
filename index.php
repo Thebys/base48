@@ -1,6 +1,12 @@
 <?php
 $pageTitle = 'Base48 - Brněnský hackerspace';
-require 'templates/header.php'; ?>
+require 'templates/header.php'; 
+
+// Function to get a random frame number
+function getRandomFrame() {
+    return rand(1, 5);
+}
+?>
 
 <!-- Satellite sprite -->
 <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
@@ -19,14 +25,14 @@ require 'templates/header.php'; ?>
                 <h2>Hackerspace Base48 - O&nbsp;nás</h2>
                 <div class="crt-grid">
                     <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_4.webp" alt="CRT Frame" class="crt-frame">
+                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Prostor </span>
                             <img src="/img/screen/hackerspace.webp" alt="Placeholder Content" class="crt-content-image">
                         </div>
                     </div>
                     <div class="crt-screen hide-on-mobile">
-                        <img src="/img/frame/crt_frame_1.webp" alt="CRT Frame" class="crt-frame">
+                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Chill</span>
                             <img src="/img/screen/zahradka_grilovacka.webp" alt="Placeholder Content"
@@ -78,7 +84,7 @@ require 'templates/header.php'; ?>
                                     komunitního filamentu.</p>
                             </div>
                             <div class="crt-screen">
-                                <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame" class="crt-frame">
+                                <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                                 <div class="crt-content scanlines">
                                     <span class="crt-title">3D tisk </span>
                                     <img src="/img/screen/3d_printing_corner.webp" alt="Placeholder Content"
@@ -97,7 +103,7 @@ require 'templates/header.php'; ?>
                             </p>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Elektrolab </span>
                                 <img src="/img/screen/elektro_laborator.webp" alt="Placeholder Content"
@@ -114,7 +120,7 @@ require 'templates/header.php'; ?>
                         </div>
 
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Dílna </span>
                                 <img src="/img/screen/dilna.webp" alt="Placeholder Content" class="crt-content-image">
@@ -129,7 +135,7 @@ require 'templates/header.php'; ?>
                                 vše, co potřebuješ k tomu, abys mohl/a začít se svým novým projektem!</p>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Tvůj projekt  </span>
                                 <img src="/img/screen/otaznik_transparent_left_bg.webp" alt="Placeholder Content"
@@ -147,15 +153,23 @@ require 'templates/header.php'; ?>
 
                 <div class="membership-columns">
                     <div class="membership-column">
-                        <h3>Členství</h3>
-                        <p>I když lidé mohou navštěvovat a&nbsp;využívat hackerspace víceméně bez omezení, pravidelné
-                            členství přináší některé výhody, jako je neomezený přístup k&nbsp;fyzické i&nbsp;virtuální
-                            infrastruktuře, kterou poskytujeme. Finanční prostředky, které získáváme od&nbsp;našich
-                            členů, jsou používány na&nbsp;pokrytí nákladů na&nbsp;provoz hackerspace
-                            a&nbsp;na&nbsp;nákup nového vybavení.</p>
-                        <p>Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč. V&nbsp;individuálních
-                            případech může rada rozhodnout o&nbsp;snížení nebo prominutí
-                            poplatku.
+                        <h3>Členství přináší výhody</h3>
+                        <ul>
+                            <li>Neomezený přístup k&nbsp;naší fyzické i&nbsp;virtuální infrastruktuře.</li>
+                            <li>Možnost použít naše vybavení pro své vlastní projekty.</li>
+                            <li>Možnost mít v prostoru svůj úložný prostor.</li>
+                            <li>Vstupy na naše i partnerské akce.</li>
+                        </ul>
+                        </p>
+                        <p class="note">
+                            Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.<br>
+                            Finanční prostředky používáme na&nbsp;pokrytí provozních nákladů a&nbsp;na&nbsp;nákup nového
+                            vybavení.<br>
+                            V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí
+                            poplatku.<br>
+                            Široká veřejnost navštěvovat hackerspace prakticky bez omezení, nejlépe v&nbsp;doprovodu
+                            existujících členů.
+
                         </p>
 
                         <div class="pixel-btn-container">
@@ -171,9 +185,10 @@ require 'templates/header.php'; ?>
 
                     <div class="membership-column">
                         <h3>Podpora</h3>
-                        <p>Přijímáme také finanční podporu a&nbsp;dary ve&nbsp;formě vybavení, které by pro nás mohlo
-                            být užitečné. Jelikož se snažíme zůstat co nejvíce neutrální, pravděpodobně nebudeme schopni
-                            poskytnout mnoho na&nbsp;oplátku. Pro více informací o&nbsp;možnostech podpory nás neváhejte
+                        <p>Přijímáme finanční a materiální podporu (hodnotné vybavení, elektro, 3D tisk, dílna,
+                            ...).<br>
+                            Zakládáme si na neutralitě a nezaručujeme žádnou protislužbu nebo protiplnění.<br>
+                            Pro více informací o&nbsp;možnostech podpory nás neváhejte
                             kontaktovat.</p>
 
                         <div class="container" style="padding: 20px;">
@@ -193,11 +208,11 @@ require 'templates/header.php'; ?>
                             </div>
                             <div class="container" style="align-items: center;">
                                 <div class="crt-screen" style="width: 100%;">
-                                    <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame" class="crt-frame">
+                                    <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame" class="crt-frame">
                                     <div class="crt-content scanlines">
                                         <span class="crt-title" style="color: var(--primary-color);">QR platba</span>
                                         <img src="img/qr_dar_12345.png" alt="QR kód pro darování na bankovní účet"
-                                            class="crt-content-image" style="margin-left: -5px; width: 85%;">
+                                            class="crt-content-image" style="margin-left: 20px; margin-top:-40px; width: 65%;">
                                     </div>
                                 </div>
                             </div>
