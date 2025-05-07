@@ -1,14 +1,50 @@
-<?php
-$pageTitle = 'Base48 - Brněnský hackerspace';
-require 'templates/header.php';
 
-// Function to get a random frame number
-function getRandomFrame()
-{
-    return rand(1, 5);
-}
-?>
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base48 - Brněnský hackerspace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo-container">
+                 <a href="/">
+                    <img src="/img/logo/logo.svg" alt="Base48 Logo" class="logo">
+                 </a>
+            </div>
+             <!-- Hide H1 visually but keep for SEO/Accessibility -->
+            <h1 style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Base48 - Brněnský hackerspace</h1>
+        </div>
+        <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-icon"></span>
+        </button>
+        <div class="nav-wrapper" id="main-nav">
+            <nav>
+                <ul>
+                    <li><a href="/#herobox">O nás</a></li>
+                    <li><a href="/#zamereni">Zaměření</a></li>
+                    <li><a href="/#clenstvi">Členství a&nbsp;podpora</a></li>
+                    <li><a href="/#kontakt">Kontakty</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle fixed-action-button js-only" aria-label="Přepnout téma" title="Přepnout téma">
+        <i class="fas fa-sun"></i>
+    </button>
+    
 <!-- Satellite sprite -->
 <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
 <div class="satellite-popup" id="satellite-popup">
@@ -26,7 +62,7 @@ function getRandomFrame()
                 <h2>Hackerspace Base48 - O&nbsp;nás</h2>
                 <div class="crt-grid">
                     <div class="crt-screen">
-                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                        <img src="/img/frame/crt_frame_1.webp" alt="CRT Frame"
                             class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Prostor </span>
@@ -34,7 +70,7 @@ function getRandomFrame()
                         </div>
                     </div>
                     <div class="crt-screen hide-on-mobile">
-                        <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                        <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame"
                             class="crt-frame">
                         <div class="crt-content scanlines">
                             <span class="crt-title">Chill</span>
@@ -87,7 +123,7 @@ function getRandomFrame()
                                     komunitního filamentu.</p>
                             </div>
                             <div class="crt-screen">
-                                <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                <img src="/img/frame/crt_frame_3.webp" alt="CRT Frame"
                                     class="crt-frame">
                                 <div class="crt-content scanlines">
                                     <span class="crt-title">3D tisk </span>
@@ -107,7 +143,7 @@ function getRandomFrame()
                             </p>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                            <img src="/img/frame/crt_frame_4.webp" alt="CRT Frame"
                                 class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Elektrolab </span>
@@ -125,7 +161,7 @@ function getRandomFrame()
                         </div>
 
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                            <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame"
                                 class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Dílna </span>
@@ -141,7 +177,7 @@ function getRandomFrame()
                                 vše, co potřebuješ k tomu, abys mohl/a začít se svým novým projektem!</p>
                         </div>
                         <div class="crt-screen">
-                            <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                            <img src="/img/frame/crt_frame_2.webp" alt="CRT Frame"
                                 class="crt-frame">
                             <div class="crt-content scanlines">
                                 <span class="crt-title">Tvůj projekt  </span>
@@ -215,7 +251,7 @@ function getRandomFrame()
                             </div>
                             <div class="container" style="align-items: center;">
                                 <div class="crt-screen" style="width: 100%;">
-                                    <img src="/img/frame/crt_frame_<?php echo getRandomFrame(); ?>.webp" alt="CRT Frame"
+                                    <img src="/img/frame/crt_frame_5.webp" alt="CRT Frame"
                                         class="crt-frame">
                                     <div class="crt-content scanlines">
                                         <span class="crt-title" style="color: var(--primary-color);">QR platba</span>
@@ -337,6 +373,40 @@ function getRandomFrame()
 
     </main>
 </div>
-<?php
-require 'templates/footer.php';
-?>
+<footer>
+    <div class="base48-building-container">
+        <img id="base48-building" src="/img/base48_pixel_3_day_v2.webp" alt="Base48 Building">
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>Informace</h3>
+            <p>
+                Base48, z.s.<br>
+                IČ: 22859802<br>
+                Registrováno: 6. 8. 2010
+            </p>
+            <p>Bankovní účet:<br><a href="https://ib.fio.cz/ib/transparent?a=2900086515"
+                    target="_blank">2900086515/2010</a>
+            </p>
+            <p>&copy; <?php echo date('Y'); ?> Base48, z.s.<br> Některá práva vyhrazena.</p>
+        </div>
+
+        <div class="footer-right">
+            <h3>Partneři</h3>
+            <p><a href="https://vpsfree.cz" target="_blank"><img src="/img/logo/vpsfree.png" alt="vpsfree.cz"
+                        style="width: 100px; height: auto;"></a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" class="scroll-to-top fixed-action-button js-only" title="Nahoru">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="/js/main.js"></script>
+</body>
+
+</html>

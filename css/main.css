@@ -5,8 +5,10 @@
 @import 'variables.css';
 @import 'base.css';
 @import 'layout.css';
-@import 'components.css';
 @import 'responsive.css';
 @import 'animations.css';
-@import 'vendor.css'; 
 @import 'utilities.css';
+@import 'components.css';
+@import 'buttons.css';
+@import 'crt-effect.css';
+@import 'satellite.css';
