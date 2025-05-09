@@ -1,50 +1,84 @@
-
-.crt-grid {
+.frame-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     /* Space between rows */
     justify-content: flex-end;
-    float: right;
 }
 
-.crt-screen {
+.frame-container {
     position: relative;
-    /* Needed for absolute positioning of content */
-    width: calc(33.333% - 14px);
-    /* 3 columns with gap, adjust calc as needed */
-    max-width: 350px;
-    /* Max width for a screen */
-    aspect-ratio: 4 / 3;
     /* Maintain aspect ratio */
     display: flex;
     /* Use flexbox for internal alignment */
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    max-width: 40%;
     /* Hide content overflow */
 }
 
-.crt-frame {
+.flipped {
+    transform: scaleX(-1);
+}
+
+.flipped .frame-content {
+    transform: scaleX(-1);
+}
+
+.frame-container.portrait {
+    width: 800px;
+    aspect-ratio: 4 / 3;
+}
+
+.frame-container.landscape {
+    width: 800px;
+    height: 450px;
+    aspect-ratio: 16 / 9;
+}
+
+.frame-frame {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 3;
     /* Frame is above the content and scanlines */
     pointer-events: none;
     /* Allow clicks through the frame */
 }
 
-.crt-content {
+.frame-container.portrait .frame-frame {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.frame-container.landscape .frame-frame {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.frame-container.portrait .frame-content {
+    width: 72%;
+    height: 70%;
+    left: 14%;
+    top: 10%;
+}
+
+.frame-container.landscape .frame-content {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+}
+
+
+.frame-content {
     z-index: 0;
-    width: 75%;
-    height: 75%;
     position: absolute;
-    left: 25px;
-    top: 25px;
+
     /* Needed for pseudo-elements */
     /* Content container */
     padding: 0;
@@ -53,9 +87,9 @@
     /* Keep this to contain scanlines */
 }
 
-/* Apply scanline pseudo-elements directly to crt-content */
-.crt-content:before,
-.crt-content:after {
+/* Apply scanline pseudo-elements directly to frame-content */
+.frame-content:before,
+.frame-content:after {
     display: block;
     pointer-events: none;
     content: "";
@@ -68,7 +102,7 @@
 }
 
 /* Moving scanline */
-.crt-content:before {
+.frame-content:before {
     height: 2px;
     /* Height of the moving line */
     z-index: 2;
@@ -78,36 +112,50 @@
     animation: scanline 6s linear infinite;
 }
 
+.frame-content-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    /* Allow full width */
+    max-height: 100%;
+    /* Allow full height */
+    margin-bottom: 0;
+    /* Remove margin */
+    object-fit: cover;
+    /* Scale image nicely */
+}
+
 /* --- Scanline Delay --- */
 /* Apply delays to the :before pseudo-element within each screen */
-.crt-grid:nth-child(1) .crt-screen:nth-child(1) .crt-content:before {
+.frame-grid:nth-child(1) .frame-screen:nth-child(1) .frame-content:before {
     animation-delay: -0.8s;
 }
 
-.crt-grid:nth-child(1) .crt-screen:nth-child(2) .crt-content:before {
+.frame-grid:nth-child(1) .frame-screen:nth-child(2) .frame-content:before {
     animation-delay: -1.6s;
 }
 
-.crt-grid:nth-child(1) .crt-screen:nth-child(3) .crt-content:before {
+.frame-grid:nth-child(1) .frame-screen:nth-child(3) .frame-content:before {
     animation-delay: -0.4s;
 }
 
-.crt-grid:nth-child(2) .crt-screen:nth-child(1) .crt-content:before {
+.frame-grid:nth-child(2) .frame-screen:nth-child(1) .frame-content:before {
     animation-delay: -2.5s;
 }
 
-.crt-grid:nth-child(2) .crt-screen:nth-child(2) .crt-content:before {
+.frame-grid:nth-child(2) .frame-screen:nth-child(2) .frame-content:before {
     animation-delay: -1.2s;
 }
 
-.crt-grid:nth-child(2) .crt-screen:nth-child(3) .crt-content:before {
+.frame-grid:nth-child(2) .frame-screen:nth-child(3) .frame-content:before {
     animation-delay: -0.2s;
 }
 
 /* --- End Scanline Delay --- */
 
 /* Static scanlines */
-.crt-content:after {
+.frame-content:after {
     z-index: 1;
     /* Above image, below moving scanline and frame */
     background: linear-gradient(to bottom,
@@ -121,12 +169,13 @@
     /* Faster flicker? */
 }
 
-.crt-title {
+.frame-title {
     position: absolute;
-    top: 25px;
+    top: calc(60% - 10px);
     /* Adjust vertical position */
     left: 0;
     right: 0;
+    margin: 0 auto;
     text-align: center;
     color: #e0e0e0;
     /* Lighter green for title */
@@ -145,51 +194,15 @@
     /* Don't interfere with hover on screen */
 }
 
-.crt-screen:hover .crt-title {
+.flipped .frame-title {
+    top: calc(40% - 10px);
+    left: 45px;
+    right: auto;
+}
+
+.frame-content:hover .frame-title {
     opacity: 1;
     visibility: visible;
-}
-
-.crt-content-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    /* Allow full width */
-    max-height: 100%;
-    /* Allow full height */
-    margin-bottom: 0;
-    /* Remove margin */
-    object-fit: cover;
-    /* Scale image nicely */
-}
-
-/* Basic responsiveness */
-@media (max-width: 900px) {
-    .crt-grid {
-        flex-wrap: wrap;
-        /* Allow wrapping */
-    }
-
-    .crt-screen {
-        width: calc(50% - 10px);
-        /* 2 columns on smaller screens */
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 600px) {
-    .crt-screen {
-        width: calc(80% - 20px);
-        /* 1 column on very small screens */
-        max-width: none;
-    }
-
-    .crt-content {
-        width: 70%;
-        height: 70%;
-        top: 10%;
-    }
 }
 
 /* Scanline Animations */
