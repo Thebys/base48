@@ -128,27 +128,27 @@
 
 /* --- Scanline Delay --- */
 /* Apply delays to the :before pseudo-element within each screen */
-.frame-grid:nth-child(1) .frame-screen:nth-child(1) .frame-content:before {
+.frame-grid:nth-child(1) .frame-container:nth-child(1) .frame-content:before {
     animation-delay: -0.8s;
 }
 
-.frame-grid:nth-child(1) .frame-screen:nth-child(2) .frame-content:before {
+.frame-grid:nth-child(1) .frame-container:nth-child(2) .frame-content:before {
     animation-delay: -1.6s;
 }
 
-.frame-grid:nth-child(1) .frame-screen:nth-child(3) .frame-content:before {
+.frame-grid:nth-child(1) .frame-container:nth-child(3) .frame-content:before {
     animation-delay: -0.4s;
 }
 
-.frame-grid:nth-child(2) .frame-screen:nth-child(1) .frame-content:before {
+.frame-grid:nth-child(2) .frame-container:nth-child(1) .frame-content:before {
     animation-delay: -2.5s;
 }
 
-.frame-grid:nth-child(2) .frame-screen:nth-child(2) .frame-content:before {
+.frame-grid:nth-child(2) .frame-container:nth-child(2) .frame-content:before {
     animation-delay: -1.2s;
 }
 
-.frame-grid:nth-child(2) .frame-screen:nth-child(3) .frame-content:before {
+.frame-grid:nth-child(2) .frame-container:nth-child(3) .frame-content:before {
     animation-delay: -0.2s;
 }
 
@@ -191,7 +191,6 @@
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     pointer-events: none;
-    /* Don't interfere with hover on screen */
 }
 
 .flipped .frame-title {
@@ -208,7 +207,7 @@
 /* Scanline Animations */
 @keyframes scanline {
     0% {
-        /* Start off-screen */
+        /* Start off-content */
         transform: translate3d(0, -100%, 0);
     }
 
