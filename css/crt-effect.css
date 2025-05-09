@@ -19,6 +19,12 @@
     /* Hide content overflow */
 }
 
+@media screen and (max-width: 768px) {
+    .frame-container {
+        max-width: 100%;
+    }
+}
+
 .flipped {
     transform: scaleX(-1);
 }
@@ -193,13 +199,20 @@
     pointer-events: none;
 }
 
+@media screen and (max-width: 768px) {
+    .frame-title {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .flipped .frame-title {
     top: calc(40% - 10px);
     left: 45px;
     right: auto;
 }
 
-.frame-content:hover .frame-title {
+.frame-container:hover .frame-title {
     opacity: 1;
     visibility: visible;
 }

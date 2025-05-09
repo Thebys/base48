@@ -114,6 +114,12 @@
     border-radius: 6px;
     transition: all 0.2s ease;
 }
+.contact-link i{
+color: var(--primary-color);
+}
+.contact-link span{
+color: var(--secondary-color);
+}
 
 .contact-link:hover {
     transform: translateX(5px);

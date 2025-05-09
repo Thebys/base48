@@ -11,7 +11,9 @@ header {
     align-items: center;
     background-color: var(--card-bg);
     z-index: 100;
-    position: relative;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-left {
@@ -91,6 +93,7 @@ main {
     width: var(--site-width);
     margin: 0 auto;
     overflow-x: hidden;
+    padding-top: 100px;
 }
 
 section {
