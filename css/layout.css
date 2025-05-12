@@ -2,7 +2,6 @@
 
 /* Header styles */
 header {
-    width: var(--site-width);
     margin: 0 auto;
     padding: 20px;
     border-bottom: 1px solid var(--border-color);
@@ -46,6 +45,7 @@ header {
     height: auto;
     transition: transform 0.3s ease;
     display: block;
+    margin-left: 20px;
 }
 
 .logo:hover {
@@ -90,18 +90,30 @@ nav ul li a:hover {
 
 /* Main content */
 main {
-    width: var(--site-width);
-    margin: 0 auto;
-    overflow-x: hidden;
     padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 60px;
 }
 
 section {
+    flex: 0 1 auto;
+    width: 48%;
     margin-bottom: 40px;
     padding: 30px;
     border-radius: 4px;
     background-color: var(--section-bg);
     box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+@media (max-width: 1200px) {
+    section {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
 }
 
 section:first-of-type {
@@ -136,10 +148,18 @@ section:first-of-type {
     gap: 60px;
 }
 
+h1, h2, h3 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem; /* Not used. */
+}
+
 h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
 }

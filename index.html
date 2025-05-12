@@ -43,9 +43,6 @@
     </header>
 
     <!-- Theme toggle button -->
-    <button class="theme-toggle fixed-action-button js-only" aria-label="Přepnout téma" title="Přepnout téma">
-        <i class="fas fa-sun"></i>
-    </button>
 
     <!-- Satellite sprite -->
     <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
@@ -95,20 +92,124 @@
                                 </ul>
                             </div>
                             <div>
-                                <div class="pixel-btn-container" style="display: flex; flex-direction: column;">
-                                    <a href="#zamereni" class="pixel-btn pixel-btn-gold">
-                                        <span class="pixel-btn-inner">Na co se zaměřujeme</span>
+                                <div class="button-container" style="display: flex; flex-direction: column;">
+                                    <a href="#zamereni" class="button">
+                                        <i class="fas fa-sun"></i>
+                                        <span class="button-inner">Zaměření hackerspace Base48</span>
                                     </a>
-                                    <a href="#clenstvi" class="pixel-btn pixel-btn-green">
-                                        <span class="pixel-btn-inner">členství v&nbsp;Base48</span>
+                                    <a href="#clenstvi" class="button">
+                                        <i class="fas fa-user"></i>
+                                        <span class="button-inner">Výhody členství v&nbsp;Base48</span>
                                     </a>
-                                    <a href="#kontakt" class="pixel-btn pixel-btn-blue">
-                                        <span class="pixel-btn-inner">Kontakt a&nbsp;Mapa</span>
+                                    <a href="#kontakt" class="button">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="button-inner">Kontakty a&nbsp;Mapa</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+            </section>
+
+            <section id="kontakt">
+                <div class="column contact-grid">
+                    <h2>Odkazy a Kontakty</h2>
+
+                    <div class="contact-info-grid">
+                        <div class="contact-card communication">
+                            <h3>Komunikační kanály</h3>
+                            <div class="buttons">
+                                <a href="https://wiki.base48.cz" target="_blank" class="button">
+                                    <i class="fas fa-book"></i>
+                                    <span>wiki.base48.cz</span>
+                                </a>
+                                <a href="https://lists.base48.cz" target="_blank" class="button">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>lists.base48.cz</span>
+                                </a>
+                                <a href="https://github.com/base48" target="_blank" class="button">
+                                    <i class="fab fa-github"></i>
+                                    <span>github base48</span>
+                                </a>
+                                <a href="https://www.facebook.com/Base48.cz/" target="_blank" class="button">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook Base48.cz</span>
+                                </a>
+                                <a href="https://www.instagram.com/base48cz/" target="_blank" class="button">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram base48cz</span>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank"
+                                    class="button">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Youtube Base48</span>
+                                </a>
+                            </div>
+
+                            <p class="note">Naše další komunikační kanály a aktuální informace najdeš na <a
+                                    href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank">wiki</a>.</p>
+                        </div>
+
+                        <div class="contact-card location">
+                            <h3>Adresa</h3>
+                            <div class="addresses" style="display: flex; flex-direction: row; gap: 20px;">
+                                <div class="address-block primary">
+                                    <address>
+                                        Mojmírovo náměstí&nbsp;17<br>
+                                        Brno 612&nbsp;00
+                                    </address>
+                                </div>
+                                <div class="address-block secondary">
+                                    <address class="">
+                                        Palackého třída 742/82<br>
+                                        (průchod z&nbsp;Palackého třídy.)
+                                    </address>
+
+                                </div>
+                            </div>
+                            <p style="margin-top: 10px;" class="note">
+                                Pro průchod z&nbsp;Palackého může být potřeba upozornit někoho v&nbsp;hackerspace,
+                                aby
+                                přišel otevřít. Brána z&nbsp;Palackého není vždy otevřená a&nbsp;nemáme tam zvonek.
+                            </p>
+                            <div class="transport-info">
+                                <h4>Doprava 🐉</h4>
+                                <div class="transport-grid" style="font-size: .9rem;">
+                                    <div class="transport-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Husitská,<br> Slovanské náměstí</span>
+                                    </div>
+                                    <div class="transport-item">
+                                        <i class="fas fa-train"></i>
+                                        <span>Šaliny:<br> 1, 6</span>
+                                    </div>
+                                    <div class="transport-item">
+                                        <i class="fas fa-bus"></i>
+                                        <span>Autobusy:<br> 53, 67, 44, 84</span>
+                                    </div>
+                                    <div class="transport-item">
+                                        <i class="fas fa-bus"></i>
+                                        <span>Trolejbusy:<br> 30, 32</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="align-items: center;">
+                        <h3>Mapy</h3>
+                        <div class="button-container">
+                            <a href="https://mapy.cz/s/bosesamuva" target="_blank" class="button">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="button-inner">Mapy.cz</span>
+                            </a>
+                            <a href="https://www.google.com/maps/dir//Mojm%C3%ADrovo+n%C3%A1m.+17,+612+00+Brno-Kr%C3%A1lovo+Pole/@49.2243066,16.5939131,343m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x47129440c7cff175:0x746297c25f280f66!2m2!1d16.595491!2d49.2242141?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank" class="button">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="button-inner">Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="zamereni">
@@ -203,7 +304,7 @@
                             </ul>
                             </p>
                             <p class="note">
-                                Měsíční poplatek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.<br>
+                                Členský příspěvek pro běžné členy je 1000 Kč. Pro studenty 600 Kč.<br>
                                 Finanční prostředky používáme na&nbsp;pokrytí provozních nákladů a&nbsp;nákup nového
                                 vybavení.<br>
                                 V&nbsp;individuálních případech může rada rozhodnout o&nbsp;snížení nebo prominutí
@@ -213,14 +314,16 @@
 
                             </p>
 
-                            <div class="pixel-btn-container" style="margin: 40px 0 60px 0;">
+                            <div class="button-container" style="flex-direction: row; gap: 10px; margin: 20px 0;">
                                 <a href="https://wiki.base48.cz/wiki/Membership" target="_blank"
-                                    class="pixel-btn pixel-btn-green pixel-btn-animated">
-                                    <span class="pixel-btn-inner">Chci se stát členem</span>
+                                    class="button">
+                                    <i class="fas fa-user"></i>
+                                    <span class="button-inner">Chci se stát členem</span>
                                 </a>
                                 <a href="https://m.base48.cz/auth/login" target="_blank"
-                                    class="pixel-btn pixel-btn-blue">
-                                    <span class="pixel-btn-inner">Členský portál</span>
+                                    class="button">
+                                    <i class="fas fa-user"></i>
+                                    <span class="button-inner">Členský portál</span>
                                 </a>
                             </div>
                         </div>
@@ -242,15 +345,15 @@
                                         <li>Dobrovolnictví</li>
                                         <li>Sdílení znalostí</li>
                                     </ul>
-                                    <div class="pixel-btn-container">
-                                        <a href="#kontakt" class="pixel-btn pixel-btn-gold">
-                                            <span class="pixel-btn-inner">Podpořit Base48</span>
+                                    <div class="button-container">
+                                        <a href="#kontakt" class="button">
+                                            <i class="fas fa-hand-holding-usd"></i>
+                                            <span class="button-inner">Podpořit Base48</span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="frame-container portrait"> <img
-                                        src="img/frame/43_frame_1_crt.webp" alt="CRT Frame: 43_frame_1_crt.webp"
-                                        class="frame-frame">
+                                <div class="frame-container portrait"> <img src="img/frame/43_frame_1_crt.webp"
+                                        alt="CRT Frame: 43_frame_1_crt.webp" class="frame-frame">
                                     <div class="frame-content scanlines"> <img src="img/screen/qr_dar_12345.webp"
                                             alt="Screen Content: qr_dar_12345.webp" class="frame-content-image"> </div>
                                 </div>
@@ -260,109 +363,7 @@
                 </div>
             </section>
 
-            <section id="kontakt">
-                <div class="column contact-grid">
-                    <h2>Odkazy a Kontakty</h2>
 
-                    <div class="contact-info-grid">
-                        <div class="contact-card communication">
-                            <h3>Komunikační kanály</h3>
-                            <div class="contact-links">
-                                <a href="https://wiki.base48.cz" target="_blank" class="contact-link">
-                                    <i class="fas fa-book"></i>
-                                    <span>wiki.base48.cz</span>
-                                </a>
-                                <a href="https://lists.base48.cz" target="_blank" class="contact-link">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>lists.base48.cz</span>
-                                </a>
-                                <a href="https://github.com/base48" target="_blank" class="contact-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>github base48</span>
-                                </a>
-                                <a href="https://www.facebook.com/Base48.cz/" target="_blank" class="contact-link">
-                                    <i class="fab fa-facebook"></i>
-                                    <span>Facebook Base48.cz</span>
-                                </a>
-                                <a href="https://www.instagram.com/base48cz/" target="_blank" class="contact-link">
-                                    <i class="fab fa-instagram"></i>
-                                    <span>Instagram base48cz</span>
-                                </a>
-                                <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank"
-                                    class="contact-link">
-                                    <i class="fab fa-youtube"></i>
-                                    <span>Youtube Base48</span>
-                                </a>
-                            </div>
-
-                            <p class="note">Naše další komunikační kanály a aktuální informace najdeš na <a
-                                    href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank">wiki</a>.</p>
-                            <div class="pixel-btn-container">
-                                <a href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank" class="pixel-btn">
-                                    <span class="pixel-btn-inner">Navštívit Wiki</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="contact-card location">
-                            <h3>Adresa</h3>
-                            <div class="addresses" style="display: flex; flex-direction: row; gap: 20px;">
-                                <div class="address-block primary">
-                                    <address>
-                                        Mojmírovo náměstí&nbsp;17<br>
-                                        Brno 612&nbsp;00
-                                    </address>
-                                </div>
-                                <div class="address-block secondary">
-                                    <address class="">
-                                        Palackého třída 742/82<br>
-                                        (průchod z&nbsp;Palackého třídy.)
-                                    </address>
-
-                                </div>
-                            </div>
-                            <p class="note" style="margin-top: 10px;">
-                                Pro průchod z&nbsp;Palackého může být potřeba upozornit někoho v&nbsp;hackerspace,
-                                aby
-                                přišel otevřít. Brána z&nbsp;Palackého není vždy otevřená a&nbsp;nemáme tam zvonek.
-                            </p>
-                            <div class="transport-info">
-                                <h4>Doprava 🐉</h4>
-                                <div class="transport-grid" style="font-size: .9rem;">
-                                    <div class="transport-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Husitská,<br> Slovanské náměstí</span>
-                                    </div>
-                                    <div class="transport-item">
-                                        <i class="fas fa-train"></i>
-                                        <span>Šaliny:<br> 1, 6</span>
-                                    </div>
-                                    <div class="transport-item">
-                                        <i class="fas fa-bus"></i>
-                                        <span>Autobusy:<br> 53, 67, 44, 84</span>
-                                    </div>
-                                    <div class="transport-item">
-                                        <i class="fas fa-bus"></i>
-                                        <span>Trolejbusy:<br> 30, 32</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-card" style="align-items: center;">
-                        <h3>Mapy</h3>
-                        <div class="pixel-btn-container">
-                            <a href="https://mapy.cz/s/bosesamuva" target="_blank" class="pixel-btn pixel-btn-green">
-                                <span class="pixel-btn-inner">Mapy.cz</span>
-                            </a>
-                            <a href="https://www.google.com/maps/dir//Mojm%C3%ADrovo+n%C3%A1m.+17,+612+00+Brno-Kr%C3%A1lovo+Pole/@49.2243066,16.5939131,343m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x47129440c7cff175:0x746297c25f280f66!2m2!1d16.595491!2d49.2242141?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
-                                target="_blank" class="pixel-btn pixel-btn-blue">
-                                <span class="pixel-btn-inner">Google Maps</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
         </main>
     </div>
@@ -397,10 +398,23 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="scroll-to-top fixed-action-button js-only" title="Nahoru">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
+
+    <div class="fixed-action-buttons">
+        <!-- Scroll to Top -->
+        <button id="scroll-to-top" class="scroll-to-top fixed-action-button js-only" title="Nahoru">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <!-- Theme Toggle -->
+        <button class="theme-toggle fixed-action-button js-only" aria-label="Přepnout téma" title="Přepnout téma">
+            <i class="fas fa-sun"></i>
+        </button>
+        <!-- New Pixel CTA Button -->
+        <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" class="pixel-cta-button" title="Staň se členem">
+            <span>Staň se členem</span>
+        </a>
+
+    </div>
     <script src="/js/main.js"></script>
 </body>
 
