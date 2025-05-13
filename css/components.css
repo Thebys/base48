@@ -7,12 +7,9 @@
     border: none;
     border-radius: 50%;
     width: 40px;
-    /* Standardized size */
     height: 40px;
-    /* Standardized size */
     cursor: pointer;
     display: none;
-    /* Hide by default, JS/Specific rules will show */
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -26,20 +23,15 @@
 
 .fixed-action-button i {
     font-size: 1.2rem;
-    /* Standardized icon size */
 }
 
 /* Theme toggler specific styles */
 .theme-toggle {
-    /* Inherits from .fixed-action-button */
     display: flex;
-    /* Override display: none from common class */
     right: 20px;
-    /* Closer to edge */
     background: var(--primary-color);
     color: white;
     z-index: 1001;
-    /* Slightly higher than scroll button if needed */
 }
 
 /* Scroll-to-top specific styles - Moved from responsive.css */
@@ -79,20 +71,19 @@
 /* Contact section styles */
 .contact-grid {
     overflow: hidden;
-    padding: 20px !important;
+    padding: var(--padding-small);
 }
 
 .contact-info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin-top: 20px;
 }
 
 .contact-card {
     background: var(--card-bg);
     border-radius: 8px;
-    padding: 20px;
+    padding: var(--padding-small);
     box-shadow: 0 2px 4px var(--section-shadow);
     display: flex;
     flex-direction: column;

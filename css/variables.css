@@ -2,6 +2,10 @@
 :root {
     /* Common variables */
     --site-width: 960px;
+    --padding-small: 1rem;
+    --padding-medium: 2rem;
+    --padding-large: 3rem;
+    --border-radius: 5px;
 
     /* Light theme (default) */
     --primary-color: #cb0000;
@@ -13,8 +17,8 @@
     --header-color: #333;
     --section-bg: rgba(232, 232, 232, 0.8);
     --section-shadow: rgba(0, 0, 0, 0.1);
-    --footer-bg: #61726a;
-    --footer-color: white;
+    --footer-bg: var(--section-bg);
+    --footer-color: #1F1F1F88;
     --card-bg: rgba(220, 220, 220, 1.0);
     --border-color: #eee;
     --overlay-color: rgba(245, 245, 245, 0.7);
@@ -30,9 +34,9 @@
     --header-color: #e0e0e0;
     --section-bg: rgba(30, 30, 30, 0.8);
     --section-shadow: rgba(0, 0, 0, 0.3);
-    --footer-bg: #61726a;
-    --footer-color: #e0e0e0;
-    --card-bg: rgba(40, 40, 40, 0.9);
+    --footer-bg: var(--section-bg);
+    --footer-color: #e0e0e088;
+    --card-bg: rgba(40, 40, 40, 1);
     --border-color: #333;
     --overlay-color: rgba(20, 20, 20, 0.8);
     --address-bg: rgba(75, 171, 247, 0.15);

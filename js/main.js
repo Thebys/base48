@@ -336,19 +336,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    // Adjust main content padding based on header height
-    const header = document.querySelector('header');
-    const mainContent = document.querySelector('main');
-
-    if (header && mainContent) {
-        const headerHeight = header.offsetHeight;
-        mainContent.style.paddingTop = `${headerHeight}px`;
-
-        // Optional: Adjust padding on window resize if header height might change
-        window.addEventListener('resize', () => {
-            const newHeaderHeight = header.offsetHeight;
-            mainContent.style.paddingTop = `${newHeaderHeight}px`;
-        });
-    }
 }); 

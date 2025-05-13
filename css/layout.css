@@ -75,7 +75,7 @@ nav ul li {
     margin-right: 20px;
 }
 
-nav ul li a {
+b nav ul li a {
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: bold;
@@ -89,35 +89,46 @@ nav ul li a:hover {
 }
 
 /* Main content */
+.content-wrapper {
+    width: 100%;
+    margin-inline: auto;
+    z-index: 1;
+    background-color: var(--background-color);
+}
+
+/* Remove the background-related before pseudo-element */
+.content-wrapper::before {
+    display: none;
+}
+
 main {
-    padding-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 60px;
+    padding: var(--padding-large);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: var(--padding-small);
+    }
+}
+
+.sections {
+    display: grid;
+    gap: clamp(.75rem, 1.5vw, 2rem);
+    grid-template-columns:
+        repeat(auto-fit, minmax(48%, 1fr));    
+}
+
+@media screen and (max-width: 1440px) {
+    .sections {
+        grid-template-columns: 100%;
+        gap: var(--padding-small);
+    }
 }
 
 section {
-    flex: 0 1 auto;
-    width: 48%;
-    margin-bottom: 40px;
-    padding: 30px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: var(--section-bg);
-    box-shadow: 0 4px 8px var(--section-shadow);
-}
-
-@media (max-width: 1200px) {
-    section {
-        flex: 1 1 100%;
-        width: 100%;
-    }
-
-}
-
-section:first-of-type {
-    border-radius: 0px 0px 8px 8px;
+    padding: var(--padding-small);
 }
 
 .column {
@@ -125,12 +136,11 @@ section:first-of-type {
     flex-direction: column;
     gap: 20px;
     max-width: 100%;
-    padding: 20px;
+    padding: var(--padding-small);
 
-    position: relative;
     border-top: none;
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     overflow: visible;
 }
 
@@ -148,12 +158,15 @@ section:first-of-type {
     gap: 60px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Rubik', sans-serif;
 }
 
-h1{
-    font-size: 2.5rem; /* Not used. */
+h1 {
+    font-size: 2.5rem;
+    /* Not used. */
 }
 
 h2 {
@@ -169,10 +182,6 @@ h3 {
     font-size: 1.6rem;
 }
 
-section .column {
-    margin-top: 20px;
-}
-
 section ul {
     list-style-type: circle;
     padding-left: 25px;
@@ -183,8 +192,6 @@ section ul li {
     margin-bottom: 5px;
     list-style-type: disc;
 }
-
-p {}
 
 a {
     color: var(--primary-color);
@@ -197,125 +204,58 @@ section a:hover {
 }
 
 address {
-    font-style: normal;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: var(--address-bg);
-    border-radius: 4px;
     display: inline-block;
+    height: 100%;
+    padding: var(--padding-small);
+    font-style: normal;
+    background-color: var(--address-bg);
+    border-radius: var(--border-radius);
 }
 
 /* Footer styles */
 footer {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: flex-end;
     justify-content: center;
-    text-align: center;
-    padding: 100px 20px;
     background-color: var(--footer-bg);
+    padding: var(--padding-small);
+    gap: var(--padding-small);
+    font-size: 0.8rem;
     color: var(--footer-color);
-    width: 100%;
 }
 
-.footer-left,
-.footer-right {
+footer p {
+    flex: 0 1 auto;
+}
+
+.footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
-    gap: 15px;
-    background-color: rgba(38, 52, 56, 0.9);
-    padding: 25px 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    margin: 0 15px;
-    max-width: 400px;
-    width: 42%;
-}
-
-/* Improved contrast for footer text */
-.footer-left h3,
-.footer-right h3 {
-    color: #fff;
-    font-weight: bold;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 1.1rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 8px;
     width: 100%;
-}
-
-/* Dark theme adjustments */
-[data-theme="dark"] .footer-left,
-[data-theme="dark"] .footer-right {
-    background-color: rgba(25, 30, 35, 0.9);
-}
-
-.footer-left p,
-.footer-right p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    text-align: left;
-}
-
-.footer-right a {
-    color: #fff;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.footer-right a:hover {
-    color: rgba(255, 255, 255, 0.8);
-    transform: translateX(3px);
-}
-
-.footer-right a i {
-    margin-right: 8px;
-    font-size: 1.2rem;
-}
-
-/* Style for images in footer links */
-.footer-right a img {
-    transition: transform 0.3s ease;
-    border-radius: 4px;
-}
-
-.footer-right a:hover img {
-    transform: scale(1.05);
+    margin: 0 auto;
+    z-index: 2;
+    flex-wrap: wrap;
 }
 
 .base48-building-container {
-    text-align: center;
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     position: relative;
-    margin-top: -300px;
-    z-index: 1;
+    z-index: 9;
 }
 
 @media (max-width: 1024px) {
     .base48-building-container {
-        margin-top: -250px;
+        margin-top: -180px;
     }
 }
 
 @media (max-width: 768px) {
     .base48-building-container {
-        margin-top: -150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .base48-building-container {
-        margin-top: -100px;
+        margin-top: 100px;
     }
 }
 
@@ -323,11 +263,11 @@ footer {
 .base48-building-container img {
     display: block;
     position: relative;
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     z-index: 10;
-    margin-bottom: -5px;
+    margin-top: -180px;
 }
 
 #herobox::before {
@@ -367,7 +307,7 @@ footer {
     color: var(--secondary-color);
 }
 
-.hero-section ul {
+.about-section ul {
     display: block;
     text-align: left;
     margin: 15px 0;
@@ -375,7 +315,7 @@ footer {
     padding-left: 25px;
 }
 
-.hero-section ul li {
+.about-section ul li {
     margin-bottom: 8px;
 }
 
@@ -384,7 +324,6 @@ footer {
     flex-direction: row;
     gap: 60px;
 }
-
 
 .grid-zamereni-item:nth-of-type(2n) {
     flex-direction: row-reverse;
@@ -417,16 +356,4 @@ footer {
     .info {
         max-width: 100%;
     }
-}
-
-.footer-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: var(--site-width);
-    margin: 0 auto;
-    padding: 0 20px;
-    z-index: 2;
-    flex-wrap: wrap;
-    gap: 20px;
 }

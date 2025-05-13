@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
 }
+
 /* Container for fixed buttons */
 .fixed-action-buttons {
     position: fixed;
@@ -13,35 +14,41 @@
     align-items: center;
     gap: 20px;
     z-index: 1000;
+    margin-bottom: 44px;
+    /* Footer height compensation */
 }
 
 /* Remove fixed positioning from individual buttons as container handles it */
 .fixed-action-buttons .fixed-action-button {
     position: static;
-    /* Existing styles like size, border-radius, icon styling etc. should be preserved */
 }
 
 /* Styling for the new pixel CTA button */
 .pixel-cta-button {
     /* Pixel art styles */
-    background-color: var(--primary-color); /* Base48 green-ish */
+    background-color: var(--primary-color);
     color: white;
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     text-align: center;
-    font-size: 0.75rem; /* Smaller pixel font */
+    font-size: 0.75rem;
+    /* Smaller pixel font */
     border: 3px solid black;
     box-shadow: 4px 4px 0px black;
     padding: 10px 15px;
-    margin: 5px 0; /* Add some margin */
-    display: inline-block; /* Make it behave like a block but inline */
+    margin: 5px 0;
+    /* Add some margin */
+    display: inline-block;
+    /* Make it behave like a block but inline */
     cursor: pointer;
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
-    image-rendering: pixelated; /* Enhance pixel look */
+    image-rendering: pixelated;
+    /* Enhance pixel look */
 }
 
 .pixel-cta-button:hover {
-    background-color: #27ae60; /* Darker green on hover */
+    background-color: #27ae60;
+    /* Darker green on hover */
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px black;
 }
@@ -58,13 +65,17 @@
         right: 15px;
         gap: 8px;
     }
+
     .pixel-cta-button {
         padding: 8px 12px;
         font-size: 0.7rem;
     }
-     /* Adjust size of other buttons if needed */
+
+    /* Adjust size of other buttons if needed */
     .fixed-action-buttons .fixed-action-button {
-        width: 45px; /* Example size */
-        height: 45px; /* Example size */
+        width: 45px;
+        /* Example size */
+        height: 45px;
+        /* Example size */
     }
 }

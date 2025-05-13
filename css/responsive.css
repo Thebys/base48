@@ -2,12 +2,14 @@
 
 /* Hamburger Menu Styles */
 .hamburger-menu {
-    display: none; /* Hidden by default, shown on mobile */
+    display: none;
+    /* Hidden by default, shown on mobile */
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; /* Ensure it's above other elements */
+    z-index: 1001;
+    /* Ensure it's above other elements */
 }
 
 .hamburger-icon {
@@ -40,7 +42,8 @@
 
 /* Active state for hamburger (cross icon) */
 .hamburger-menu[aria-expanded="true"] .hamburger-icon {
-    background-color: transparent; /* Hide middle line */
+    background-color: transparent;
+    /* Hide middle line */
 }
 
 .hamburger-menu[aria-expanded="true"] .hamburger-icon::before {
@@ -162,11 +165,11 @@
         align-items: center;
     }
 
-    .footer-container {        
+    .footer-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .footer-left,
     .footer-right {
         max-width: 100%;
@@ -185,116 +188,67 @@
         width: 100%;
     }
 
-    .satellite-sprite {
-        width: 48px;
-        top: 60px;
-    }
-
-    .satellite-sprite::after {
-        font-size: 0.5rem;
-        padding: 3px 6px;
-        top: 100%;
-        right: 0;
-        margin-right: 0;
-        margin-top: 5px;
-    }
-
-    .satellite-popup {
-        max-width: 250px;
-        font-size: 0.7rem;
-        padding: 15px;
-    }
-
     header {
-        justify-content: space-between; /* Align logo left, button right */
-        padding-right: 15px; /* Add some padding for the button */
+        justify-content: space-between;
+        /* Align logo left, button right */
+        padding-right: 15px;
+        /* Add some padding for the button */
     }
 
     .hamburger-menu {
-        display: block; /* Show hamburger on mobile */
+        display: block;
+        /* Show hamburger on mobile */
     }
 
     .nav-wrapper {
-        display: none; /* Hide nav wrapper by default on mobile */
+        display: none;
+        /* Hide nav wrapper by default on mobile */
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 60px;
+        /* Adjust based on header height */
         left: 0;
         right: 0;
         background-color: var(--background-color);
-        padding: 20px;
+        padding: var(--padding-small);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
 
     .nav-wrapper.is-active {
-        display: block; /* Show when active */
+        display: block;
+        /* Show when active */
     }
 
     header nav ul {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column;
+        /* Stack nav items vertically */
         align-items: center;
     }
 
     header nav ul li {
-        margin: 10px 0; /* Add vertical spacing */
+        margin: 10px 0;
+        /* Add vertical spacing */
     }
 }
 
 @media (min-width: 769px) {
     .nav-wrapper {
-        display: block !important; /* Ensure nav is always visible on desktop */
-        position: static; /* Reset positioning */
+        display: block !important;
+        /* Ensure nav is always visible on desktop */
+        position: static;
+        /* Reset positioning */
         background-color: transparent;
         padding: 0;
         box-shadow: none;
     }
 
     header nav ul {
-        flex-direction: row; /* Restore horizontal layout */
+        flex-direction: row;
+        /* Restore horizontal layout */
     }
 
-     header nav ul li {
-        margin: 0 15px; /* Restore horizontal spacing */
-    }
-}
-
-/* Adjustments for very small screens */
-@media (max-width: 480px) {
-    .ction {
-        padding: 30px 20px 40px;
-    }
-
-    .hero-column h2 {
-        font-size: 1.6rem;
-    }
-}
-
-/* Error page responsive styles */
-@media (max-width: 600px) {
-    .error-title {
-        white-space: normal;
-        font-size: 1.5rem;
-        border-right: none;
-        width: auto;
-        animation: none;
-        margin-bottom: 1rem;
-        opacity: 1;
-    }
-
-    .typing-text {
-        white-space: normal;
-        border-right: none;
-        width: auto;
-        animation: fadeIn 1s ease-in 1s forwards;
-        opacity: 0;
-    }
-
-    .satellite-container {
-        height: 200px;
-    }
-
-    .error-satellite {
-        width: 100px;
-        height: 100px;
+    header nav ul li {
+        margin: 0 15px;
+        /* Restore horizontal spacing */
     }
 }

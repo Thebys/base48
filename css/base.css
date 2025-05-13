@@ -30,19 +30,6 @@ img {
     margin: 0 auto;
 }
 
-.content-wrapper {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    background-color: var(--background-color);
-    padding-bottom: 80px;
-}
-
-/* Remove the background-related before pseudo-element */
-.content-wrapper::before {
-    display: none;
-}
-
 /* Hide elements with JS disabled */
 .js-only {
     display: none;
