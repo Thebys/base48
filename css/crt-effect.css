@@ -17,6 +17,21 @@
     overflow: hidden;
     max-width: 40%;
     /* Hide content overflow */
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.frame-container:hover {
+    /* Every frame hover effect*/
+}
+
+.frame-container.glow:hover {
+    animation: frame-glow 2s ease-in-out infinite;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.frame-container.glow.flipped:hover {
+    transform: scaleX(-1.03) scaleY(1.03);
 }
 
 @media screen and (max-width: 768px) {

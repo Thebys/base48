@@ -44,3 +44,16 @@
 .satellite-popup.show {
     animation: popup-appear 0.3s ease-out;
 }
+
+/* Frame glow animation */
+@keyframes frame-glow {
+    0% {
+        filter: drop-shadow(0 0 4px #fa0) drop-shadow(0 0 8px #fa0) drop-shadow(0 0 2px #fa0);
+    }
+    50% {
+        filter: drop-shadow(0 0 8px #fa0) drop-shadow(0 0 12px #fa0) drop-shadow(0 0 6px #fa0);
+    }
+    100% {
+        filter: drop-shadow(0 0 4px #fa0) drop-shadow(0 0 8px #fa0) drop-shadow(0 0 2px #fa0);
+    }
+}
