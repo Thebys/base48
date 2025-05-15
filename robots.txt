@@ -1,0 +1,27 @@
+# Base48 Staging Environment robots.txt
+
+# Disallow all crawlers from everything
+User-agent: *
+Disallow: /
+
+# Additional specific crawler blocks
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+# Prevent caching
+Cache-control: no-cache 
