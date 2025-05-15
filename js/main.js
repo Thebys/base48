@@ -393,9 +393,14 @@ document.addEventListener('DOMContentLoaded', function () {
         currentImages = images;
         currentIndex = 0;
         
-        updateLightbox();
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        // Preload the first image before showing lightbox
+        const firstImage = new Image();
+        firstImage.onload = function() {
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+        firstImage.src = images[0].src;
     }
 
     function closeLightbox() {
@@ -407,10 +412,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateLightbox() {
         const image = currentImages[currentIndex];
-        // Only load the image when it's needed
-        lightboxImage.src = image.src;
-        lightboxImage.alt = image.alt;
-        lightboxCaption.textContent = image.alt;
+        
+        // Pre-calculate image size before showing
+        const tempImage = new Image();
+        tempImage.onload = function() {
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
+            const isLandscape = viewportWidth > viewportHeight;
+            
+            // Adjust max height based on orientation
+            const maxImageHeight = isLandscape 
+                ? viewportHeight * 0.85  // Use more height in landscape
+                : viewportHeight * 0.6;  // Keep current height in portrait
+            
+            // Set the size immediately without animation
+            if (this.naturalHeight > maxImageHeight) {
+                lightboxImage.style.maxHeight = maxImageHeight + 'px';
+            } else {
+                lightboxImage.style.maxHeight = 'none';
+            }
+            
+            // Set image source after size is calculated
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            lightboxCaption.textContent = image.alt;
+        };
+        tempImage.src = image.src;
         
         // Update navigation buttons visibility
         prevButton.classList.toggle('visible', currentIndex > 0);
