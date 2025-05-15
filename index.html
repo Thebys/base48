@@ -29,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 
 <body>
@@ -74,23 +75,34 @@
                 <div class="column">
                     <h2>Hackerspace Base48 - O nás</h2>
                     <div class="frame-grid">
-                        <div class="frame-container portrait glow">
+                        <a href="#" class="frame-container portrait glow" data-gallery="space">
                             <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame">
                             <div class="frame-content scanlines">
                                 <span class="frame-title">Prostor </span>
-                                <img src="/img/screen/43_base48_prostor.webp" alt="Placeholder Content"
+                                <img src="/img/screen/43_base48_prostor.webp" alt="Base48 Prostor"
                                     class="frame-content-image">
                             </div>
-                        </div>
+                        </a>
                         <div class="frame-container hide-on-mobile portrait">
                             <img src="/img/frame/43_frame_2_crt_vintage.webp" alt="CRT Frame" class="frame-frame">
                             <div class="frame-content scanlines">
                                 <span class="frame-title">Chill</span>
-                                <img src="/img/screen/43_zahradka_grilovacka.webp" alt="Placeholder Content"
+                                <img src="/img/screen/43_zahradka_grilovacka.webp" alt="Base48 Chill"
                                     class="frame-content-image">
                             </div>
                         </div>
                     </div>
+
+                    <!-- Hidden gallery container -->
+                    <div class="gallery-container" style="display: none;">
+                        <div class="gallery" data-gallery-id="space">
+                            <img src="/img/gallery/space/base48_space_1.webp" alt="Base48 Space 1">
+                            <img src="/img/gallery/space/base48_space_2.webp" alt="Base48 Space 2">
+                            <img src="/img/gallery/space/base48_space_3.webp" alt="Base48 Space 3">
+                            <img src="/img/gallery/space/base48_base_4.webp" alt="Base48 Space 4">
+                        </div>
+                    </div>
+
                     <div class="column">
                         <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>,
                             kde se setkávají lidé s různými zájmy,
@@ -413,6 +425,19 @@
 
     </div>
     <script src="/js/main.js"></script>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
 </body>
 
 </html>
