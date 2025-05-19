@@ -115,7 +115,7 @@ main {
     display: grid;
     gap: clamp(.75rem, 1.5vw, 2rem);
     grid-template-columns:
-        repeat(auto-fit, minmax(48%, 1fr));    
+        repeat(auto-fit, minmax(48%, 1fr));
 }
 
 @media screen and (max-width: 1440px) {
@@ -237,37 +237,6 @@ footer p {
     margin: 0 auto;
     z-index: 2;
     flex-wrap: wrap;
-}
-
-.base48-building-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 9;
-}
-
-@media (max-width: 1024px) {
-    .base48-building-container {
-        margin-top: -180px;
-    }
-}
-
-@media (max-width: 768px) {
-    .base48-building-container {
-        margin-top: 100px;
-    }
-}
-
-/* Make the base building image responsive by default */
-.base48-building-container img {
-    display: block;
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    z-index: 10;
-    margin-top: -180px;
 }
 
 #herobox::before {
