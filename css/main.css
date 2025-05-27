@@ -2,6 +2,7 @@
    Main import file */
 
 /* Import all CSS components */
+@import 'fonts.css';
 @import 'variables.css';
 @import 'base.css';
 @import 'layout.css';
