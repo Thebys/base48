@@ -2,9 +2,9 @@
 :root {
     /* Common variables */
     --site-width: 960px;
-    --padding-small: 1rem;
-    --padding-medium: 2rem;
-    --padding-large: 3rem;
+    --padding-small: .5rem;
+    --padding-medium: 1rem;
+    --padding-large: 2rem;
     --border-radius: 5px;
 
     /* Light theme (default) */

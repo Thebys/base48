@@ -74,9 +74,9 @@
     <div class="content-wrapper">
         <main class="sections">
             <section id="o-nas" class="about-section">
-                <div class="column">
-                    <h2>Hackerspace Base48 - O nás</h2>
-                    <div class="frame-grid">
+                <div class="column condensed">
+                    <h2 style="margin-bottom: 0;">Hackerspace Base48 - O nás</h2>
+                    <div class="frame-grid" id="intro-frames" style="order: 2;">
                         <a href="#" class="frame-container portrait glow" data-gallery="space">
                             <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame">
                             <div class="frame-content scanlines">
@@ -123,7 +123,7 @@
                         </div>
                     </div>
 
-                    <div class="column">
+                    <div class="column condensed">
                         <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>,
                             kde se setkávají lidé s různými zájmy,
                             spolupracují na projektech a sdílejí znalosti a zkušenosti.</p>
@@ -169,7 +169,7 @@
                             <div class="buttons">
                                 <a href="https://wiki.base48.cz" target="_blank" class="button">
                                     <i class="fas fa-book"></i>
-                                    <span>wiki.base48.cz</span>
+                                    <span>wiki<span class="hide-on-mobile">.base48.cz</span></span>
                                 </a>
                                 <a href="https://signal.group/#CjQKIHBQ1JXOJ0momxbQIsaBet-gPgFRq9hUQyvVk-BV785AEhBC8WvwTDodUmPzfBrcfbHN"
                                     target="_blank" class="button">
@@ -183,20 +183,20 @@
                                 </a>
                                 <a href="https://github.com/base48" target="_blank" class="button">
                                     <i class="fab fa-github"></i>
-                                    <span>Github base48</span>
+                                    <span>Github <span class="hide-on-mobile">base48</span></span>
                                 </a>
                                 <a href="https://www.facebook.com/Base48.cz/" target="_blank" class="button">
                                     <i class="fab fa-facebook"></i>
-                                    <span>Facebook Base48.cz</span>
+                                    <span>Facebook <span class="hide-on-mobile">/Base48.cz</span></span>
                                 </a>
                                 <a href="https://www.instagram.com/base48cz/" target="_blank" class="button">
                                     <i class="fab fa-instagram"></i>
-                                    <span>Instagram base48cz</span>
+                                    <span>Instagram <span class="hide-on-mobile">@base48cz</span></span>
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank"
                                     class="button">
                                     <i class="fab fa-youtube"></i>
-                                    <span>Youtube Base48</span>
+                                    <span>Youtube <span class="hide-on-mobile">/Base48</span></span>
                                 </a>
                             </div>
 
@@ -206,7 +206,8 @@
 
                         <div class="contact-card location">
                             <h3>Adresa</h3>
-                            <div class="addresses" style="display: flex; flex-direction: row; gap: 20px;">
+                            <div class="addresses"
+                                style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px;">
                                 <div class="address-block primary">
                                     <address>
                                         Mojmírovo náměstí 17<br>
@@ -314,8 +315,7 @@
                             <div class="info">
                                 <h3>Dílna</h3>
                                 <p>V dílně se dá pracovat se dřevem a kovem. Taky je tu cyklodílna, CNC, hromada nářadí
-                                    a
-                                    dokonce i nějaký ten materiál.</p>
+                                    a dokonce i nějaký ten materiál.</p>
                             </div>
 
                             <div class="frame-container portrait">
@@ -373,7 +373,8 @@
 
                             </p>
 
-                            <div class="button-container" style="flex-direction: row; gap: 10px; margin: 20px 0;">
+                            <div class="button-container"
+                                style="flex-direction: row; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
                                 <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" class="button">
                                     <i class="fas fa-user"></i>
                                     <span class="button-inner">Chci se stát členem</span>

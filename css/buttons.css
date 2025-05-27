@@ -61,8 +61,8 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .fixed-action-buttons {
-        bottom: 15px;
-        right: 15px;
+        bottom: 0vh;
+        right: 5vw;
         gap: 8px;
     }
 

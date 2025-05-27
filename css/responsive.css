@@ -75,7 +75,6 @@
 
     .logo-container {
         margin-bottom: 0;
-        margin-right: 20px;
     }
 
     header h1 {
@@ -130,7 +129,9 @@
     }
 
     .logo {
-        width: 100px;
+        margin: 0 auto;
+        width: 60vw;
+        max-height: 33vh;
     }
 
     nav ul {
@@ -146,13 +147,17 @@
     }
 
     section {
-        padding: 20px 15px;
+        padding: var(--padding-small);
     }
 
     #herobox::before {
         height: 40px;
         /* Smaller roof on mobile */
         top: -30px;
+    }
+
+    .condensed {
+        gap: 5px;
     }
 
     .roof-container {
@@ -195,6 +200,10 @@
         /* Add some padding for the button */
     }
 
+    a.button {
+        font-size: .8rem;
+    }
+
     .hamburger-menu {
         display: block;
         /* Show hamburger on mobile */
@@ -204,7 +213,7 @@
         display: none;
         /* Hide nav wrapper by default on mobile */
         position: absolute;
-        top: 60px;
+        top: 144px;
         /* Adjust based on header height */
         left: 0;
         right: 0;

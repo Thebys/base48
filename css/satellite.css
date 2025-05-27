@@ -117,7 +117,7 @@
 }
 
 @media (max-width: 768px) {
-        .satellite-sprite {
+    .satellite-sprite {
         width: 48px;
         top: 60px;
     }

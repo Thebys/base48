@@ -124,6 +124,12 @@ main {
         gap: var(--padding-small);
     }
 }
+@media screen and (max-width: 768px) {
+    .sections {
+        grid-template-columns: 100%;
+        gap: var(--padding-small);
+    }
+}
 
 section {
     border-radius: var(--border-radius);
@@ -139,8 +145,6 @@ section {
     padding: var(--padding-small);
 
     border-top: none;
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius);
     overflow: visible;
 }
 
