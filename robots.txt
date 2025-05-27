@@ -22,6 +22,3 @@ Disallow: /
 
 User-agent: YandexBot
 Disallow: /
-
-# Prevent caching
-Cache-control: no-cache 
