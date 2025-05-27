@@ -223,7 +223,7 @@
 
 .flipped .frame-title {
     top: calc(40% - 10px);
-    left: 45px;
+    left: 20%;
     right: auto;
 }
 

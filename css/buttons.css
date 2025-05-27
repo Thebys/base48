@@ -24,14 +24,14 @@
 }
 
 /* Styling for the new pixel CTA button */
-.pixel-cta-button {
+.main-cta-button {
     /* Pixel art styles */
     background-color: var(--primary-color);
     color: white;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Rubik", sans-serif;
     text-decoration: none;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: .8rem;
     /* Smaller pixel font */
     border: 3px solid black;
     box-shadow: 4px 4px 0px black;
@@ -46,14 +46,14 @@
     /* Enhance pixel look */
 }
 
-.pixel-cta-button:hover {
+.main-cta-button:hover {
     background-color: #27ae60;
     /* Darker green on hover */
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px black;
 }
 
-.pixel-cta-button:active {
+.main-cta-button:active {
     transform: translate(4px, 4px);
     box-shadow: 0px 0px 0px black;
 }
@@ -66,7 +66,7 @@
         gap: 8px;
     }
 
-    .pixel-cta-button {
+    .main-cta-button {
         padding: 8px 12px;
         font-size: 0.7rem;
     }
