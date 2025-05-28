@@ -57,6 +57,11 @@
                     <li><a href="/#zamereni">Zaměření</a></li>
                     <li><a href="/#clenstvi">Členství a podpora</a></li>
                     <li><a href="/#kontakt">Kontakty</a></li>
+                    <span class="hide-on-mobile hide-on-tablet">|</span>
+                    <li class="small hide-on-tablet"><a href="https://wiki.base48.cz/" target="_blank">Wiki <i
+                                class="fas fa-external-link-alt"></i></a></li>
+                    <li class="small hide-on-tablet"><a href="https://m.base48.cz/" target="_blank">Členský portál <i
+                                class="fas fa-external-link-alt"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -166,12 +171,71 @@
 
             <section id="kontakt">
                 <div class="column">
-                    <h2>Odkazy a Kontakty</h2>
+                    <h2>Adresy, kontakty a odkazy</h2>
 
                     <div class="contact-info-grid">
+                        <div class="contact-card location">
+                            <div class="transport-info">
+                                <h3>Jak se přiblížit veřejnou dopravou</h3>
+                                <div class="transport-grid" style="font-size: .9rem;">
+                                    <div class="transport-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Husitská,<br> Slovanské náměstí</span>
+                                    </div>
+                                    <div class="transport-item">
+                                        <i class="fas fa-train"></i>
+                                        <span>Šaliny: 1 a 6</span>
+                                    </div>
+                                    <div class="transport-item">
+                                        <i class="fas fa-bus"></i>
+                                        <span>Autobusy:<br> 53, 67, 44, 84</span>
+                                    </div>
+                                    <div class="transport-item">
+                                        <i class="fas fa-bus"></i>
+                                        <span>Trolejbusy: 30 a 32</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addresses"
+                                style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
+                                <h3>Jak se dostat do Base48</h3>
+                                <div class="address-block"
+                                    style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                                    <i class="fas fa-door-open"
+                                        style="position: absolute; top: 20px; right: 20px; font-size: 2rem; color: var(--primary-color);"></i>
+                                    <address>
+                                        <strong>Palackého třída 742/82</strong><br>
+                                        (průchod z Palackého třídy)
+                                    </address>
+                                    <p style="margin-top: 10px;" class="note light">
+                                        Sídlíme v mírném kopci ve vnitrobloku mezi Palackého třídou a Mojmírovo
+                                        náměstím. K Base48
+                                        se dá dostat z obou stran.
+                                        Průchodem z Palackého, ze shora, (hned vedle Amici, vpravo) je to rychlejší,
+                                        ale průchod
+                                        bývá zavřený,
+                                        pokud se to stane,
+                                        zkus napsat někomu v hackerspace, aby přišel otevřít.
+                                    </p>
+                                </div>
+                                <div class="address-block"
+                                    style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                                    <i class="fas fa-map-marker-alt address-icon"></i>
+                                    <address>
+                                        <strong>Mojmírovo náměstí 17</strong><br>
+                                        Brno, Česká republika
+                                    </address>
+                                    <p style="margin-top: 10px;" class="note light">
+                                        Z Mojmírova náměstí, ze spoda, je cesta vždy volná.
+                                        Je potřeba projít průjezdem vedle hudebního klubu Fičák směrem nahoru.
+                                        Base48 poznáš tak, že máme velká červená vrata a banner s logem.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="contact-card communication">
-                            <h3>Komunikační kanály</h3>
                             <div class="buttons">
+                                <h3>Užitečné odkazy</h3>
                                 <a href="https://wiki.base48.cz" target="_blank" class="button">
                                     <i class="fas fa-book"></i>
                                     <span>wiki<span class="hide-on-mobile">.base48.cz</span></span>
@@ -208,12 +272,9 @@
                                     <span>Mailing listy <span class="hide-on-mobile">lists.base48.cz</span></span>
                                 </a>
                             </div>
-                            <p class="note left">Naše další komunikační kanály a aktuální informace najdeš na <a
-                                    href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank">wiki</a>.</p>
                             <div class="map-info" id="map-info">
                                 <h3>Mapy</h3>
-                                <div class="button-container"
-                                    style="flex-wrap:wrap; justify-content:center; gap: 20px;">
+                                <div class="buttons">
                                     <a href="https://www.openstreetmap.org/node/11247964718" target="_blank"
                                         class="button">
                                         <i class="fas fa-map"></i>
@@ -230,67 +291,6 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="contact-card location">
-                            <h3>Jak se k nám dostat?</h3>
-                            
-                            <div class="transport-info">
-                                <h4>Veřejná doprava 🐉</h4>
-                                <div class="transport-grid" style="font-size: .9rem;">
-                                    <div class="transport-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Husitská,<br> Slovanské náměstí</span>
-                                    </div>
-                                    <div class="transport-item">
-                                        <i class="fas fa-train"></i>
-                                        <span>Šaliny: 1 a 6</span>
-                                    </div>
-                                    <div class="transport-item">
-                                        <i class="fas fa-bus"></i>
-                                        <span>Autobusy:<br> 53, 67, 44, 84</span>
-                                    </div>
-                                    <div class="transport-item">
-                                        <i class="fas fa-bus"></i>
-                                        <span>Trolejbusy: 30 a 32</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addresses"
-                                style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px;">
-                                <h4>Adresa a jak na to</h4>
-                                <div class="address-block" style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
-                                    <i class="fas fa-door-open"
-                                        style="position: absolute; top: 20px; right: 20px; font-size: 2rem; color: var(--primary-color);"></i>
-                                    <address>
-                                        <strong>Palackého třída 742/82</strong><br>
-                                        (průchod z Palackého třídy.)
-                                    </address>
-                                    <p style="margin-top: 10px;" class="note light">
-                                        Sídlíme ve vnitrobloku mezi Palackého třídou a Mojmírovo náměstím. K Base48
-                                        se dá
-                                        dostat z obou stran.
-                                        Průchodem z Palackého (hned vedle Amici, vpravo) je to rychlejší, ale průchod
-                                        bývá zavřený,
-                                        pokud se to stane,
-                                        zkus napsat někomu v hackerspace, aby přišel otevřít.
-                                    </p>
-                                </div>
-
-                                <div class="address-block" style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
-                                    <i class="fas fa-map-marker-alt address-icon"></i>
-                                    <address>
-                                        <strong>Mojmírovo náměstí 17</strong><br>
-                                        Brno, Česká republika
-                                    </address>
-                                    <p style="margin-top: 10px;" class="note light">
-                                        Z Mojmírova náměstí je potřeba projít průjezdem vedle hudebního klubu Fičák
-                                        směrem nahoru,
-                                        Base48 poznáš tak, že máme velká červená vrata a banner s logem.
-                                    </p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -380,13 +380,13 @@
                         <div class="membership-column">
                             <h3>Členství přináší výhody</h3>
                             <ul>
-                                <li>Neomezený přístup k naší fyzické i virtuální infrastruktuře.</li>
-                                <li>Možnost použít naše vybavení pro tvoje projekty.</li>
-                                <li>Možnost mít v prostoru svůj úložný prostor.</li>
+                                <li>Získáš neomezený přístup k naší fyzické i virtuální infrastruktuře.</li>
+                                <li>Můžeš využívat naše vybavení pro svoje projekty.</li>
+                                <li>Můžeš si v prostoru uložit svoje věci.</li>
                                 <li>Vstupy na naše i partnerské akce.</li>
                             </ul>
                             </p>
-                            <p class="note">
+                            <p class="note left">
                                 Měsíční členský příspěvek je 1000 Kč. Pro studenty 600 Kč.<br>
                                 Finanční prostředky používáme na pokrytí provozních nákladů a nákup nového
                                 vybavení.<br>

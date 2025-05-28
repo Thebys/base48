@@ -8,7 +8,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--card-bg);
+    background-color: var(--section-bg);
     z-index: 100;
     position: sticky;
     top: 0;
@@ -74,6 +74,11 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
+
+    &.small {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
 }
 
 b nav ul li a {
@@ -85,8 +90,7 @@ b nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
-    background-color: var(--address-bg);
+    color: var(--secondary-color);    
 }
 
 /* Main content */
@@ -94,7 +98,6 @@ nav ul li a:hover {
     width: 100%;
     margin-inline: auto;
     z-index: 1;
-    background-color: var(--background-color);
 }
 
 /* Remove the background-related before pseudo-element */
@@ -111,10 +114,9 @@ main {
         padding: var(--padding-small);
     }
 }
-
 .sections {
     display: grid;
-    gap: clamp(.75rem, 1.5vw, 2rem);
+    gap: clamp(.75rem, 1.5vw, calc(var(--padding-large) * 2));
     grid-template-columns:
         repeat(auto-fit, minmax(48%, 1fr));
 }
@@ -122,14 +124,14 @@ main {
 @media screen and (max-width: 1440px) {
     .sections {
         grid-template-columns: 100%;
-        gap: var(--padding-small);
+        gap: calc(var(--padding-large) * 2);
     }
 }
 
 @media screen and (max-width: 768px) {
     .sections {
         grid-template-columns: 100%;
-        gap: var(--padding-small);
+        gap: calc(var(--padding-large) * 2);
     }
 }
 
@@ -167,7 +169,7 @@ section ul {
 
 section ul li {
     margin-bottom: 5px;
-    list-style-type: disc;
+    list-style-type: square;
 }
 
 section a:hover {
@@ -236,10 +238,6 @@ footer p {
     margin: 15px 0;
     list-style-type: circle;
     padding-left: 25px;
-}
-
-.about-section ul li {
-    margin-bottom: 8px;
 }
 
 .grid-zamereni-item {

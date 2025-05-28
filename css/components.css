@@ -75,10 +75,8 @@
 }
 
 .contact-card {
-    background: var(--card-bg);
     border-radius: var(--border-radius);
     padding: var(--padding-small);
-    box-shadow: 0 2px 4px var(--section-shadow);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -137,7 +135,7 @@
     width: 100%;
     /*margin: 0 calc(var(--padding-medium) * -1) 0 auto;*/
     padding: var(--padding-medium) var(--padding-medium);
-    background: var(--card-note-bg);
+    background: var(--card-bg);
     border-radius: var(--border-radius);
 }
 
@@ -170,7 +168,7 @@
     align-items: center;
     gap: 10px;
     padding: 8px;
-    background: var(--card-note-bg);
+    background: var(--card-bg);
     border-radius: var(--border-radius);
 }
 
