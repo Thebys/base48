@@ -65,19 +65,19 @@
     <!-- Satellite sprite container -->
     <div class="satellite-container">
         <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
-    <div class="satellite-popup" id="satellite-popup">
-        <span class="close-popup">&times;</span>
-        <h3>Proč číslo 48?</h3>
-        <p>Base48 vznikl v roce 2010, toho času na ulici Čápkova s orientačním číslem 48.
-            A s base64 bychom měli problém s internetovými vyhledávači.</p>
-    </div>
+        <div class="satellite-popup" id="satellite-popup">
+            <span class="close-popup">&times;</span>
+            <h3>Proč číslo 48?</h3>
+            <p>Base48 vznikl v roce 2010, toho času na ulici Čápkova s orientačním číslem 48.
+                A s base64 bychom měli problém s internetovými vyhledávači.</p>
+        </div>
     </div>
 
     <div class="content-wrapper">
         <main class="sections">
             <section id="o-nas" class="about-section">
-                <div class="column condensed">
-                    <h2 style="margin-bottom: 0;">Hackerspace Base48 - O nás</h2>
+                <div class="column">
+                    <h2>Brněnský hackerspace Base48</h2>
                     <div class="frame-grid" id="intro-frames" style="order: 2;">
                         <a href="#" class="frame-container portrait glow" data-gallery="space">
                             <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame">
@@ -125,36 +125,39 @@
                         </div>
                     </div>
 
-                    <div class="column condensed">
+                    <div class="column">
                         <p>Base48 je komunitně provozovaný fyzický prostor - <strong>hackerspace</strong>,
                             kde se setkávají lidé s různými zájmy,
                             spolupracují na projektech a sdílejí znalosti a zkušenosti.</p>
-                        <h3>Base48 <span class="hide-on-mobile">hackerspace</span> je:</h3>
-                        <div class="container" style="display: flex; flex-direction: row;">
-                            <div>
-                                <ul>
-                                    <li>Skupina lidí se společnými zájmy</li>
-                                    <li>Místo pro setkávání a přednášky</li>
-                                    <li>Dobře vybavená laboratoř a dílna</li>
-                                    <li>Klub a third place</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="button-container" style="display: flex; flex-direction: column;">
-                                    <a href="#zamereni" class="button">
-                                        <i class="fas fa-sun"></i>
-                                        <span class="button-inner">Zaměření <span
-                                                class="hide-on-mobile">hackerspace</span> Base48</span></span>
-                                    </a>
-                                    <a href="#clenstvi" class="button">
-                                        <i class="fas fa-user"></i>
-                                        <span class="button-inner">Výhody členství <span
-                                                class="hide-on-mobile">v Base48</span></span>
-                                    </a>
-                                    <a href="#kontakt" class="button">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span class="button-inner">Kontakty a Mapa</span>
-                                    </a>
+                        <div class="container" style="flex-direction: column;">
+                            <h3>Base48 <span class="hide-on-mobile">hackerspace</span> je:</h3>
+                            <div class="container"
+                                style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                                <div>
+                                    <ul>
+                                        <li>Skupina lidí se společnými zájmy</li>
+                                        <li>Místo pro setkávání a přednášky</li>
+                                        <li>Dobře vybavená laboratoř a dílna</li>
+                                        <li>Klub a third place</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="button-container" style="display: flex; flex-direction: column;">
+                                        <a href="#zamereni" class="button">
+                                            <i class="fas fa-sun"></i>
+                                            <span class="button-inner">Zaměření <span
+                                                    class="hide-on-mobile">hackerspace</span> Base48</span></span>
+                                        </a>
+                                        <a href="#clenstvi" class="button">
+                                            <i class="fas fa-user"></i>
+                                            <span class="button-inner">Výhody členství <span
+                                                    class="hide-on-mobile">v Base48</span></span>
+                                        </a>
+                                        <a href="#kontakt" class="button">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span class="button-inner">Kontakty a Mapa</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +165,7 @@
             </section>
 
             <section id="kontakt">
-                <div class="column contact-grid">
+                <div class="column">
                     <h2>Odkazy a Kontakty</h2>
 
                     <div class="contact-info-grid">
@@ -189,7 +192,7 @@
                                 </a>
                                 <a href="https://www.facebook.com/Base48.cz/" target="_blank" class="button">
                                     <i class="fab fa-facebook"></i>
-                                    <span>Facebook <span class="hide-on-mobile">/Base48.cz</span></span>
+                                    <span>Facebook <span class="hide-on-mobile">Base48.cz</span></span>
                                 </a>
                                 <a href="https://www.instagram.com/base48cz/" target="_blank" class="button">
                                     <i class="fab fa-instagram"></i>
@@ -198,39 +201,42 @@
                                 <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank"
                                     class="button">
                                     <i class="fab fa-youtube"></i>
-                                    <span>Youtube <span class="hide-on-mobile">/Base48</span></span>
+                                    <span>Youtube <span class="hide-on-mobile">Base48</span></span>
+                                </a>
+                                <a href="https://lists.base48.cz/" target="_blank" class="button">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Mailing listy <span class="hide-on-mobile">lists.base48.cz</span></span>
                                 </a>
                             </div>
-
-                            <p class="note">Naše další komunikační kanály a aktuální informace najdeš na <a
+                            <p class="note left">Naše další komunikační kanály a aktuální informace najdeš na <a
                                     href="https://wiki.base48.cz/wiki/Hackerspace" target="_blank">wiki</a>.</p>
+                            <div class="map-info" id="map-info">
+                                <h3>Mapy</h3>
+                                <div class="button-container"
+                                    style="flex-wrap:wrap; justify-content:center; gap: 20px;">
+                                    <a href="https://www.openstreetmap.org/node/11247964718" target="_blank"
+                                        class="button">
+                                        <i class="fas fa-map"></i>
+                                        <span class="button-inner">OpenStreetMap</span>
+                                    </a>
+                                    <a href="https://mapy.cz/s/bosesamuva" target="_blank" class="button">
+                                        <i class="fas fa-map"></i>
+                                        <span class="button-inner">Mapy.cz</span>
+                                    </a>
+                                    <a href="https://www.google.com/maps/dir//Mojm%C3%ADrovo+n%C3%A1m.+17,+612+00+Brno-Kr%C3%A1lovo+Pole/@49.2243066,16.5939131,343m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x47129440c7cff175:0x746297c25f280f66!2m2!1d16.595491!2d49.2242141?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
+                                        target="_blank" class="button">
+                                        <i class="fas fa-map"></i>
+                                        <span class="button-inner">Google</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="contact-card location">
-                            <h3>Adresa</h3>
-                            <div class="addresses"
-                                style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px;">
-                                <div class="address-block primary">
-                                    <address>
-                                        Mojmírovo náměstí 17<br>
-                                        Brno 612 00
-                                    </address>
-                                </div>
-                                <div class="address-block secondary">
-                                    <address class="">
-                                        Palackého třída 742/82<br>
-                                        (průchod z Palackého třídy.)
-                                    </address>
-
-                                </div>
-                            </div>
-                            <p style="margin-top: 10px;" class="note">
-                                Pro průchod z Palackého může být potřeba upozornit někoho v hackerspace,
-                                aby
-                                přišel otevřít. Brána z Palackého není vždy otevřená a nemáme tam zvonek.
-                            </p>
+                            <h3>Jak se k nám dostat?</h3>
+                            
                             <div class="transport-info">
-                                <h4>Doprava 🐉</h4>
+                                <h4>Veřejná doprava 🐉</h4>
                                 <div class="transport-grid" style="font-size: .9rem;">
                                     <div class="transport-item">
                                         <i class="fas fa-map-marker-alt"></i>
@@ -250,25 +256,41 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="contact-card" style="align-items: center;">
-                        <h3>Mapy</h3>
-                        <div class="button-container"
-                            style="flex-direction: row; flex-wrap:wrap; justify-content:center; gap: 20px;">
-                            <a href="https://www.openstreetmap.org/node/11247964718" target="_blank" class="button">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="button-inner">OpenStreetMap</span>
-                            </a>
-                            <a href="https://mapy.cz/s/bosesamuva" target="_blank" class="button">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="button-inner">Mapy.cz</span>
-                            </a>
-                            <a href="https://www.google.com/maps/dir//Mojm%C3%ADrovo+n%C3%A1m.+17,+612+00+Brno-Kr%C3%A1lovo+Pole/@49.2243066,16.5939131,343m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x47129440c7cff175:0x746297c25f280f66!2m2!1d16.595491!2d49.2242141?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
-                                target="_blank" class="button">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="button-inner">Google</span>
-                            </a>
+                            <div class="addresses"
+                                style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px;">
+                                <h4>Adresa a jak na to</h4>
+                                <div class="address-block" style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                                    <i class="fas fa-door-open"
+                                        style="position: absolute; top: 20px; right: 20px; font-size: 2rem; color: var(--primary-color);"></i>
+                                    <address>
+                                        <strong>Palackého třída 742/82</strong><br>
+                                        (průchod z Palackého třídy.)
+                                    </address>
+                                    <p style="margin-top: 10px;" class="note light">
+                                        Sídlíme ve vnitrobloku mezi Palackého třídou a Mojmírovo náměstím. K Base48
+                                        se dá
+                                        dostat z obou stran.
+                                        Průchodem z Palackého (hned vedle Amici, vpravo) je to rychlejší, ale průchod
+                                        bývá zavřený,
+                                        pokud se to stane,
+                                        zkus napsat někomu v hackerspace, aby přišel otevřít.
+                                    </p>
+                                </div>
+
+                                <div class="address-block" style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                                    <i class="fas fa-map-marker-alt address-icon"></i>
+                                    <address>
+                                        <strong>Mojmírovo náměstí 17</strong><br>
+                                        Brno, Česká republika
+                                    </address>
+                                    <p style="margin-top: 10px;" class="note light">
+                                        Z Mojmírova náměstí je potřeba projít průjezdem vedle hudebního klubu Fičák
+                                        směrem nahoru,
+                                        Base48 poznáš tak, že máme velká červená vrata a banner s logem.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -396,8 +418,8 @@
                                 Pro více informací o možnostech podpory nás neváhejte
                                 kontaktovat.</p>
 
-                            <div class="container">
-                                <div class="container" style="flex-direction: column; justify-content: flex-start;">
+                            <div class="container" style="flex-direction: row; justify-content: space-evenly;">
+                                <div class="container" style="flex-direction: column; justify-content: space-evenly;">
                                     <h3>Způsoby podpory</h3>
                                     <ul>
                                         <li>Finanční dary</li>

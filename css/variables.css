@@ -20,6 +20,7 @@
     --footer-bg: var(--section-bg);
     --footer-color: #1F1F1F88;
     --card-bg: rgba(220, 220, 220, 1.0);
+    --card-note-bg: rgba(255, 255, 255, .4);
     --border-color: #eee;
     --overlay-color: rgba(245, 245, 245, 0.7);
     --address-bg: rgba(0, 119, 204, 0.1);
@@ -37,16 +38,8 @@
     --footer-bg: var(--section-bg);
     --footer-color: #e0e0e088;
     --card-bg: rgba(40, 40, 40, 1);
+    --card-note-bg: rgba(0, 0, 0, .4);
     --border-color: #333;
     --overlay-color: rgba(20, 20, 20, 0.8);
     --address-bg: rgba(75, 171, 247, 0.15);
 }
-
-/* Font Styles - example*/
-
-.rubik-400 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
