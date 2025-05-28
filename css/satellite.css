@@ -1,7 +1,19 @@
+/* Satellite container to prevent overflow */
+.satellite-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
 /* Satellite sprite and popup */
 .satellite-sprite {
     position: absolute;
-    top: 80px;
+    top: 50px;
     right: -60px;
     width: 56px;
     height: auto;
@@ -12,6 +24,7 @@
     cursor: pointer;
     transition: filter 0.3s ease;
     transform-origin: center center;
+    pointer-events: auto;
 }
 
 .satellite-sprite:hover {

@@ -189,16 +189,18 @@ document.addEventListener('DOMContentLoaded', function () {
         // Function to update popup position to follow satellite
         function updatePopupPosition() {
             if (satellitePopup.classList.contains('show')) {
-                // Get satellite position
+                // Get satellite position relative to its container
                 const satelliteRect = satellite.getBoundingClientRect();
+                const containerRect = satellite.parentElement.getBoundingClientRect();
 
-                // Position popup relative to satellite's document position
-                // Place it at the center-bottom of the satellite
-                const satelliteCenter = satelliteRect.left + (satelliteRect.width / 2);
+                // Calculate position relative to the satellite container
+                const satelliteRelativeLeft = satelliteRect.left - containerRect.left;
+                const satelliteRelativeTop = satelliteRect.top - containerRect.top;
+                const satelliteCenter = satelliteRelativeLeft + (satelliteRect.width / 2);
 
-                // Update popup position
-                satellitePopup.style.top = (window.scrollY + satelliteRect.bottom) + 'px';
-                satellitePopup.style.left = (window.scrollX + satelliteCenter) + 'px';
+                // Update popup position relative to container
+                satellitePopup.style.top = (satelliteRelativeTop + satelliteRect.height + 15) + 'px';
+                satellitePopup.style.left = satelliteCenter + 'px';
 
                 // Request next animation frame
                 requestAnimationFrame(updatePopupPosition);
@@ -208,8 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
         satellite.addEventListener('click', function (e) {
             satellitePopup.classList.add('show');
 
-            // Attach popup to satellite
-            satellitePopup.style.position = 'absolute';
+            // Position popup relative to satellite
             updatePopupPosition();
 
             // Pause satellite animation and size updates
@@ -258,8 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.key === 's' && !satellitePopup.classList.contains('show')) {
                 satellitePopup.classList.add('show');
 
-                // Attach popup to satellite
-                satellitePopup.style.position = 'absolute';
+                // Position popup relative to satellite
                 updatePopupPosition();
 
                 // Pause satellite animation
