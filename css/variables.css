@@ -1,10 +1,10 @@
 /* Theme variables and color schemes */
 :root {
     /* Common variables */
-    --padding-small: .5rem;
-    --padding-medium: 1rem;
-    --padding-large: 2rem;
-    --border-radius: 5px;
+    --padding-small: 1rem;
+    --padding-medium: 2rem;
+    --padding-large: 4rem;
+    --border-radius: 4px;
 
     /* Light theme (default) */
     --primary-color: #cb0000;
@@ -21,7 +21,7 @@
     --card-bg: rgba(255, 255, 255, .4);
     --border-color: #eee;
     --overlay-color: rgba(245, 245, 245, 0.7);
-    --address-bg: rgba(0, 119, 204, 0.1);
+    --button-bg: rgba(0, 119, 204, 0.1);
 }
 
 /* Dark theme */
@@ -38,5 +38,5 @@
     --card-bg: rgba(0, 0, 0, .4);
     --border-color: #333;
     --overlay-color: rgba(20, 20, 20, 0.8);
-    --address-bg: rgba(75, 171, 247, 0.15);
+    --button-bg: rgba(75, 171, 247, 0.15);
 }

@@ -14,8 +14,8 @@
 body {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    font-size: 1.05rem;
-    line-height: 1.1;
+    font-size: 1.15rem;
+    line-height: 1.25;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -38,6 +38,7 @@ img {
 }
 
 p {
+    max-width: 800px;
     line-height: 1.4;
     padding: 0 0 var(--padding-small) 0;
 }

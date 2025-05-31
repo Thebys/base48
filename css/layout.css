@@ -25,7 +25,6 @@ header {
 .container {
     display: flex;
     gap: var(--padding-medium);
-    margin: var(--padding-medium) 0;
 
 
     @media (max-width: 768px) {
@@ -131,14 +130,14 @@ main {
 @media screen and (max-width: 768px) {
     .sections {
         grid-template-columns: 100%;
-        gap: calc(var(--padding-large) * 2);
+        gap: var(--padding-large);
     }
 }
 
 section {
     border-radius: var(--border-radius);
     background-color: var(--section-bg);
-    padding: var(--padding-small);
+    padding: var(--padding-small) var(--padding-medium);
 }
 
 .column {
@@ -146,11 +145,18 @@ section {
     flex-direction: column;
     max-width: 100%;
     border-top: none;
-    overflow: visible;
+    overflow: visible;    
+    gap: var(--padding-large);
 }
 
-@media (max-width: 768px) {
-    .column {}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--padding-large);
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--padding-small);
 }
 
 .grid-zamereni,
@@ -158,8 +164,20 @@ section {
 .column.vs-60 {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: var(--padding-large);
 }
+
+@media (max-width: 768px) {
+    .column {
+        gap: var(--padding-small);
+    }
+    .grid-zamereni,
+    .vs-60,
+    .column.vs-60 {
+        gap: var(--padding-small);
+    }
+}
+
 
 section ul {
     list-style-type: circle;
@@ -243,7 +261,12 @@ footer p {
 .grid-zamereni-item {
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    justify-content: center;
+    gap: var(--padding-large);
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--padding-small);
+
 }
 
 .grid-zamereni-item:nth-of-type(2n) {
@@ -269,7 +292,7 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    justify-content: start;
+    justify-content: center;
     max-width: 55%;
 }
 
