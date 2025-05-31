@@ -130,9 +130,9 @@ We welcome contributions to improve the website! Please:
 
 ## 📄 Credits
 
-[![GitHub contributors](https://img.shields.io/github/contributors/base48/website?color=brightgreen)](https://github.com/base48/website/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/base48/website)](https://github.com/base48/website/commits/main)
-[![GitHub stars](https://img.shields.io/github/stars/base48/website?style=social)](https://github.com/base48/website/stargazers)
+[![GitHub contributors](https://img.shields.io/github/contributors/Thebys/base48?color=brightgreen)](https://github.com/Thebys/base48/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Thebys/base48)](https://github.com/Thebys/base48/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/Thebys/base48?style=social)](https://github.com/Thebys/base48/stargazers)
 
 ©left Base48, z.s. Some rights reserved.
 
