@@ -1,12 +1,12 @@
 # Base48 - Brněnský hackerspace
 
-[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A//base48.cz)](https://base48.cz)
-[![License](https://img.shields.io/badge/license-copyleft-blue.svg)](https://github.com/base48/website/blob/main/README.md#credits)
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A//b48.iver.cz)](https://b48.iver.cz)
+[![License](https://img.shields.io/badge/license-copyleft-blue.svg)](https://github.com/Thebys/base48/blob/main/README.md#credits)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Responsive](https://img.shields.io/badge/responsive-mobile%20friendly-brightgreen)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-[![No Build](https://img.shields.io/badge/build-not%20required-success)](https://github.com/base48/website)
+[![No Build](https://img.shields.io/badge/build-not%20required-success)](https://github.com/Thebys/base48)
 [![Accessibility](https://img.shields.io/badge/a11y-accessible-brightgreen)](https://www.w3.org/WAI/WCAG21/quickref/)
 
 🔧 **Modern responsive website for Base48 hackerspace in Brno, Czech Republic**
@@ -91,8 +91,8 @@ Base48 is a community-driven hackerspace and maker workshop located in Brno, Cze
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/base48/website.git
-   cd website
+   git clone https://github.com/Thebys/base48.git
+   cd base48
    ```
 
 2. **Open in browser**
