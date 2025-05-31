@@ -279,7 +279,14 @@
         flex: 1;
     }
 }
-
+.hero-list{
+    font-size: 1.6rem;
+}
+@media (max-width: 768px) {
+    .hero-list{
+        font-size: 1.1rem;
+    }
+}
 /* VPSFree.cz promo */
 .orange {
     color: var(--vpsf-orange);

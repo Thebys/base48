@@ -146,7 +146,7 @@ section {
     max-width: 100%;
     border-top: none;
     overflow: visible;    
-    gap: var(--padding-large);
+    gap: var(--padding-small);
 }
 
 .box{

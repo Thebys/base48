@@ -137,30 +137,30 @@
                         <div class="container" style="flex-direction: column;">
                             <div class="container"
                                 style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: flex-start;">
-                                <ul style="font-size: 1.6rem; margin-top: 0;">
+                                <ul class="hero-list" style="margin-top: 0;">
                                     <li>Skupina lidí se společnými zájmy</li>
                                     <li>Místo pro setkávání a přednášky</li>
                                     <li>Dobře vybavená laboratoř a dílna</li>
                                     <li>Klub a third place</li>
                                 </ul>
-                                <div>
-                                    <div class="button-container" style="display: flex; flex-direction: column;">
-                                        <a href="#zamereni" class="button">
-                                            <i class="fas fa-sun"></i>
-                                            <span class="button-inner">Zaměření <span
-                                                    class="hide-on-mobile">hackerspace</span> Base48</span></span>
-                                        </a>
-                                        <a href="#clenstvi" class="button">
-                                            <i class="fas fa-user"></i>
-                                            <span class="button-inner">Výhody členství <span
-                                                    class="hide-on-mobile">v Base48</span></span>
-                                        </a>
-                                        <a href="#kontakt" class="button">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="button-inner">Kontakty a Mapa</span>
-                                        </a>
-                                    </div>
+
+                                <div class="button-container" style="display: flex; flex-direction: column;">
+                                    <a href="#zamereni" class="button">
+                                        <i class="fas fa-sun"></i>
+                                        <span class="button-inner">Zaměření <span
+                                                class="hide-on-mobile">hackerspace</span> Base48</span></span>
+                                    </a>
+                                    <a href="#clenstvi" class="button">
+                                        <i class="fas fa-user"></i>
+                                        <span class="button-inner">Výhody členství <span
+                                                class="hide-on-mobile">v Base48</span></span>
+                                    </a>
+                                    <a href="#kontakt" class="button">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="button-inner">Kontakty a Mapa</span>
+                                    </a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -304,10 +304,12 @@
                                     v provozu. Klasické i experimentální materiály a stroje. K dispozici pro opravy,
                                     návrhy, rapidní prototypování. Udržujeme zásobu
                                     komunitního filamentu.</p>
-                                <a href="#kontakt" class="button">
-                                    <i class="fas fa-print"></i>
-                                    <span class="button-inner">Chci tisknout</span>
-                                </a>
+                                <div class="button-container">
+                                    <a href="#kontakt" class="button">
+                                        <i class="fas fa-print"></i>
+                                        <span class="button-inner">Chci tisknout</span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="frame-container portrait flipped">
                                 <img src="/img/frame/43_frame_6_cctv.webp" alt="CRT Frame" class="frame-frame">
@@ -377,92 +379,89 @@
             <section id="clenstvi">
                 <h2>Výhody členství v Base48</h2>
                 <div class="column">
-                    <div>
-                        <div class="benefits-grid">
-                            <div class="benefit-item">
-                                <i class="fas fa-key"></i>
-                                <p>Získáš neomezený přístup k naší fyzické i virtuální infrastruktuře.</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-tools"></i>
-                                <p>Můžeš využívat naše vybavení a materiál pro svoje projekty.</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-archive"></i>
-                                <p>Podle našich pravidel si můžeš v prostoru uložit svoje věci.</p>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-ticket-alt"></i>
-                                <p>Díky členství často získáš pozvánky na zajímavé akce.</p>
-                            </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-key"></i>
+                            <p>Získáš neomezený přístup k naší fyzické i virtuální infrastruktuře.</p>
                         </div>
-                        <ul>
-                            <li>Měsíční členský příspěvek je 1000 Kč. Pro studenty 600 Kč.</li>
-                            <li>Finanční prostředky používáme na pokrytí provozních nákladů a nákup nového
-                                vybavení.</li>
-                            <li>V individuálních případech může rada rozhodnout o snížení nebo prominutí
-                                příspěvku.</li>
-                            <li>Široká veřejnost může navštěvovat hackerspace prakticky bez omezení, nejlépe
-                                v doprovodu existujících členů.</li>
-                        </ul>
-                        <p></p>
-                        <div class="button-container"
-                            style="flex-direction: row; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
-                            <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" class="button">
-                                <i class="fas fa-user"></i>
-                                <span class="button-inner">Chci se stát členem</span>
-                            </a>
-                            <a href="https://m.base48.cz/auth/login" target="_blank" class="button">
-                                <i class="fas fa-user"></i>
-                                <span class="button-inner">Členský portál</span>
-                            </a>
+                        <div class="benefit-item">
+                            <i class="fas fa-tools"></i>
+                            <p>Můžeš využívat naše vybavení a materiál pro svoje projekty.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-archive"></i>
+                            <p>Podle našich pravidel si můžeš v prostoru uložit svoje věci.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-ticket-alt"></i>
+                            <p>Díky členství často získáš pozvánky na zajímavé akce.</p>
                         </div>
                     </div>
-
-                    <div>
-                        <h2>Podpoř Base48</h2>
-                        <p>Přijímáme finanční a materiální podporu (hodnotné vybavení, elektro, 3D tisk, dílna,
-                            ...). Zakládáme si na neutralitě a nezaručujeme žádnou protislužbu nebo protiplnění.
-                            Pro více informací o možnostech podpory nás neváhejte kontaktovat.</p>
-
-                        <div class="container" style="flex-direction: row; justify-content: space-between;">
-                            <div style="display: flex; flex-direction: column; justify-content: center;">
-                                <h3>Způsoby podpory</h3>
-                                <ul>
-                                    <li>Finanční dary</li>
-                                    <li>Darování vybavení</li>
-                                    <li>Dobrovolnictví</li>
-                                    <li>Sdílení znalostí</li>
-                                </ul>
-                                <div class="button-container">
-                                    <a href="#kontakt" class="button">
-                                        <i class="fas fa-arrow-right"></i>
-                                        <span class="button-inner">Podpořit Base48</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="frame-container portrait" style="flex: 1;"> <img
-                                    src="/img/frame/43_frame_1_crt.webp" alt="CRT Frame: 43_frame_1_crt.webp"
-                                    class="frame-frame">
-                                <div class="frame-content scanlines"> <img src="/img/screen/qr_dar_12345.webp"
-                                        alt="Screen Content: qr_dar_12345.webp" class="frame-content-image"> </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div>
-                        <h2>Spolek VPSFree.cz</h2>
-                        <a href="https://vpsfree.cz" target="_blank">
-                            <div class="vpsf-promo">
-                                <div style="text-align: center; ">
-                                    <h3><span class="orange">vps</span>Free.cz</h3>
-                                    <img class="img-responsive" src="/img/logo/vpsfree_milujeme.png"
-                                        alt="VPSFree.cz - milujeme servery">
-                                    <h3>milujeme servery</h3>
-                                </div>
-                            </div>
+                    <ul>
+                        <li>Měsíční členský příspěvek je 1000 Kč. Pro studenty 600 Kč.</li>
+                        <li>Finanční prostředky používáme na pokrytí provozních nákladů a nákup nového
+                            vybavení.</li>
+                        <li>V individuálních případech může rada rozhodnout o snížení nebo prominutí
+                            příspěvku.</li>
+                        <li>Široká veřejnost může navštěvovat hackerspace prakticky bez omezení, nejlépe
+                            v doprovodu existujících členů.</li>
+                    </ul>
+                    <div class="button-container"
+                        style="flex-direction: row; flex-wrap: wrap; gap: 10px; margin: 0 0 var(--padding-large) 0;">
+                        <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" class="button">
+                            <i class="fas fa-user"></i>
+                            <span class="button-inner">Chci se stát členem</span>
+                        </a>
+                        <a href="https://m.base48.cz/auth/login" target="_blank" class="button">
+                            <i class="fas fa-user"></i>
+                            <span class="button-inner">Členský portál</span>
                         </a>
                     </div>
+                </div>
+
+                <div>
+                    <h2>Podpoř Base48</h2>
+                    <p>Přijímáme finanční a materiální podporu (hodnotné vybavení, elektro, 3D tisk, dílna,
+                        ...). Zakládáme si na neutralitě a nezaručujeme žádnou protislužbu nebo protiplnění.
+                        Pro více informací o možnostech podpory nás neváhejte kontaktovat.</p>
+
+                    <div class="container" style="flex-direction: row; justify-content: space-between;">
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <h3>Způsoby podpory</h3>
+                            <ul>
+                                <li>Finanční dary</li>
+                                <li>Darování vybavení</li>
+                                <li>Dobrovolnictví</li>
+                                <li>Sdílení znalostí</li>
+                            </ul>
+                            <div class="button-container">
+                                <a href="#kontakt" class="button">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="button-inner">Podpořit Base48</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="frame-container portrait" style="flex: 1;"> <img
+                                src="/img/frame/43_frame_1_crt.webp" alt="CRT Frame: 43_frame_1_crt.webp"
+                                class="frame-frame">
+                            <div class="frame-content scanlines"> <img src="/img/screen/qr_dar_12345.webp"
+                                    alt="Screen Content: qr_dar_12345.webp" class="frame-content-image"> </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin-top: var(--padding-large);">
+                    <h2>Partnerský spolek VPSFree.cz</h2>
+                    <a href="https://vpsfree.cz" target="_blank">
+                        <div class="vpsf-promo">
+                            <div style="text-align: center; ">
+                                <h3><span class="orange">vps</span>Free.cz</h3>
+                                <img class="img-responsive" src="/img/logo/vpsfree_milujeme.png"
+                                    alt="VPSFree.cz - milujeme servery">
+                                <h3>milujeme servery</h3>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>
