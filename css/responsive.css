@@ -126,8 +126,10 @@
 
     .logo {
         margin: 0 auto;
-        width: 60vw;
-        max-height: 33vh;
+        width: 50vw;
+        max-width: 200px;
+        max-height: 80px;
+        /* Fit within header height */
     }
 
     nav ul {
@@ -159,7 +161,7 @@
     footer {
         flex-direction: column;
         padding: 30px 15px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .footer-container {
@@ -188,10 +190,13 @@
     header {
         justify-content: space-between;
         /* Align logo left, button right */
-        padding-right: 15px;
-        /* Add some padding for the button */
+        padding: 15px 15px 15px 20px;
+        /* Consistent padding for static height */
         position: sticky;
         top: 0;
+        min-height: 120px;
+        /* Ensure consistent header height */
+        box-sizing: border-box;
     }
 
     a.button {
@@ -207,12 +212,18 @@
         display: none;
         /* Hide nav wrapper by default on mobile */
         position: absolute;
-        top: 144px;
-        /* Adjust based on header height */
-        left: 0;
-        right: 0;
+        top: 135px;
+        /* Static header height */
+        left: 50%;
+        transform: translateX(-50%);
+        /* Center the container */
+        width: auto;
+        max-width: 300px;
+        /* Limit container width */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: var(--background-color);
+        border: 2px solid var(--primary-color);
+        border-radius: var(--border-radius);
         z-index: 1000;
     }
 
@@ -224,12 +235,20 @@
     header nav ul {
         flex-direction: column;
         /* Stack nav items vertically */
-        align-items: center;
+        align-items: flex-start;
+        /* Left align the items */
+        padding: var(--padding-small);
+        margin: 0;
+        list-style: none;
     }
 
     header nav ul li {
-        margin: 10px 0;
+        margin: 8px 0;
         /* Add vertical spacing */
+        width: auto;
+        /* Don't force full width */
+        text-align: left;
+        /* Left align text */
     }
 }
 

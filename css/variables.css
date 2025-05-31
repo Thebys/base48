@@ -22,6 +22,8 @@
     --border-color: #eee;
     --overlay-color: rgba(245, 245, 245, 0.7);
     --button-bg: rgba(0, 119, 204, 0.1);
+    --vpsf-blue: #16273f;
+    --vpsf-orange: #f6914b;
 }
 
 /* Dark theme */

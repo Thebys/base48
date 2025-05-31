@@ -190,10 +190,6 @@ section ul li {
     list-style-type: square;
 }
 
-section a:hover {
-    text-decoration: underline;
-}
-
 address {
     display: inline-block;
     height: 100%;
