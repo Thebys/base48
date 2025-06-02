@@ -15,9 +15,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    max-width: 40%;
     /* Hide content overflow */
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
 }
 
 .frame-container:hover {
@@ -37,6 +37,7 @@
 @media screen and (max-width: 768px) {
     .frame-container {
         max-width: 100%;
+        align-self: center;
     }
 }
 
@@ -49,14 +50,26 @@
 }
 
 .frame-container.portrait {
-    width: 800px;
+    width: 45%;
+    max-width: 400px;
+    height: auto;
     aspect-ratio: 4 / 3;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    min-width: 200px;
+    max-height: none;
 }
 
 .frame-container.landscape {
-    width: 800px;
-    height: 450px;
+    width: 45%;
+    max-width: 400px;
     aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    min-width: 200px;
+    max-height: none;
 }
 
 .frame-frame {
