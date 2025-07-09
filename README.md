@@ -115,11 +115,7 @@ Base48 is a community-driven hackerspace and maker workshop located in Brno, Cze
 
 We welcome contributions to improve the website! Please:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test across different devices/browsers
-5. Submit a pull request
+1. Submit a pull request
 
 ### Development Guidelines
 - Follow existing code style and organization
