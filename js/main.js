@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault(); // Only prevent default for same-page links
 
             const targetId = this.hash; // Gets the # part (e.g., #clenstvi)
-            if (!targetId) {        
+            if (!targetId) {
                 return; // Exit if hash is somehow empty
             }
 
@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Use a custom smooth scroll implementation for better control
                 smoothScrollTo(targetPosition, 800);
-            } else {                
+            } else {
             }
-        } else {            
+        } else {
             // Let the browser handle navigation to a different page
         }
     }
@@ -291,8 +291,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Rely on default display:none from CSS, just control opacity/visibility for transition
                 scrollToTopButton.style.opacity = '0';
                 scrollToTopButton.style.visibility = 'hidden';
-                 // Optional: Set display back to none after transition if needed, but might not be necessary
-                 // setTimeout(() => { scrollToTopButton.style.display = 'none'; }, 300);
+                // Optional: Set display back to none after transition if needed, but might not be necessary
+                // setTimeout(() => { scrollToTopButton.style.display = 'none'; }, 300);
             }
         });
 
@@ -319,9 +319,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional: Close menu when clicking outside of it
         document.addEventListener('click', (event) => {
             if (!navWrapper.contains(event.target) && !hamburgerButton.contains(event.target) && navWrapper.classList.contains('is-active')) {
-                 hamburgerButton.setAttribute('aria-expanded', 'false');
-                 navWrapper.classList.remove('is-active');
-                 // document.body.classList.remove('no-scroll');
+                hamburgerButton.setAttribute('aria-expanded', 'false');
+                navWrapper.classList.remove('is-active');
+                // document.body.classList.remove('no-scroll');
             }
         });
 
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeButton = lightbox.querySelector('.lightbox-close');
     const prevButton = lightbox.querySelector('.lightbox-prev');
     const nextButton = lightbox.querySelector('.lightbox-next');
-    
+
     let currentGroup = null;
     let currentIndex = 0;
     let currentImages = [];
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initLightbox() {
         // Add click handlers to all gallery links
         document.querySelectorAll('[data-gallery]').forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
                 const galleryId = this.dataset.gallery;
                 const gallery = document.querySelector(`.gallery[data-gallery-id="${galleryId}"]`);
@@ -368,12 +368,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Close lightbox handlers
         closeButton.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', function(e) {
+        lightbox.addEventListener('click', function (e) {
             if (e.target === lightbox) {
                 closeLightbox();
             }
         });
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && lightbox.classList.contains('active')) {
                 closeLightbox();
             } else if (e.key === 'ArrowLeft' && lightbox.classList.contains('active')) {
@@ -392,10 +392,10 @@ document.addEventListener('DOMContentLoaded', function () {
         currentGroup = galleryId;
         currentImages = images;
         currentIndex = 0;
-        
+
         // Preload the first image before showing lightbox
         const firstImage = new Image();
-        firstImage.onload = function() {
+        firstImage.onload = function () {
             updateLightbox();
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -412,33 +412,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateLightbox() {
         const image = currentImages[currentIndex];
-        
+
         // Pre-calculate image size before showing
         const tempImage = new Image();
-        tempImage.onload = function() {
+        tempImage.onload = function () {
             const viewportHeight = window.innerHeight;
             const viewportWidth = window.innerWidth;
             const isLandscape = viewportWidth > viewportHeight;
-            
+
             // Adjust max height based on orientation
-            const maxImageHeight = isLandscape 
+            const maxImageHeight = isLandscape
                 ? viewportHeight * 0.85  // Use more height in landscape
                 : viewportHeight * 0.6;  // Keep current height in portrait
-            
+
             // Set the size immediately without animation
             if (this.naturalHeight > maxImageHeight) {
                 lightboxImage.style.maxHeight = maxImageHeight + 'px';
             } else {
                 lightboxImage.style.maxHeight = 'none';
             }
-            
+
             // Set image source after size is calculated
             lightboxImage.src = image.src;
             lightboxImage.alt = image.alt;
             lightboxCaption.textContent = image.alt;
         };
         tempImage.src = image.src;
-        
+
         // Update navigation buttons visibility
         prevButton.classList.toggle('visible', currentIndex > 0);
         nextButton.classList.toggle('visible', currentIndex < currentImages.length - 1);
@@ -460,4 +460,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize lightbox
     initLightbox();
+
+    // Base status functionality
+    function updateBaseStatus() {
+        const statusElement = document.getElementById('base-status');
+        if (!statusElement) return;
+
+        // Detect language from HTML lang attribute
+        const htmlLang = document.documentElement.lang || 'cs';
+        const isCzech = htmlLang === 'cs';
+
+        // Language-specific text
+        const texts = {
+            czech: {
+                open: 'nyní otevřeno',
+                closed: 'nyní zavřeno',
+                unknown: 'stav neznámý'
+            },
+            english: {
+                open: 'now open',
+                closed: 'now closed',
+                unknown: 'status unknown'
+            }
+        };
+
+        const lang = isCzech ? 'czech' : 'english';
+        // Note on how to obtain the following JSON file, CURL example:
+        // curl -k -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "Content-Type: application/json" https://ha.base48.cz:8443/api/states/sensor.base_status -o api/base_status.json
+
+        // Try to fetch the base status (with cache busting)
+        const cacheBuster = Date.now();
+        fetch(`api/base_status.json?t=${cacheBuster}`, {
+            cache: 'no-cache',
+            headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Status file not found');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Check if the base is open based on the state field
+                // State can be "True", "true", true, "False", "false", false, etc.
+                const isOpen = data.state === true ||
+                    data.state === 'true' ||
+                    data.state === 'True' ||
+                    data.state === '1';
+
+                statusElement.textContent = isOpen ? texts[lang].open : texts[lang].closed;
+                statusElement.className = `base-status ${isOpen ? 'open' : 'closed'}`;
+                statusElement.style.display = 'inline-block';
+            })
+            .catch(error => {
+                // Default to closed/unknown if file doesn't exist or there's an error
+                console.log('Base status not available:', error.message);
+                statusElement.textContent = texts[lang].unknown;
+                statusElement.className = 'base-status unknown';
+                statusElement.style.display = 'inline-block';
+            });
+    }
+
+    // Update status on page load
+    updateBaseStatus();
+
+    // Optionally update status every 30 seconds
+    setInterval(updateBaseStatus, 20 * 1000);
 }); 

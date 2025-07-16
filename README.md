@@ -33,6 +33,7 @@ Base48 is a community-driven hackerspace and maker workshop located in Brno, Cze
 - **Interactive photo galleries** with lightbox functionality
 - **CRT-style frame displays** showcasing different areas of the hackerspace
 - **Smooth scrolling navigation** between sections
+- **Status indicator** showing current Base48 location status
 - **Hamburger menu** for mobile navigation
 
 ### 📱 Modern Web Technologies
@@ -55,6 +56,8 @@ Base48 is a community-driven hackerspace and maker workshop located in Brno, Cze
 
 ```
 ├── index.html             # Main HTML file
+├── api/                   # Cached HA API JSON responses
+│   ├── base_status.json    # Base status indicator provided by HA.
 ├── css/                   # Stylesheets
 │   ├── main.css            # Main CSS imports
 │   ├── variables.css       # CSS custom properties

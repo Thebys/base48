@@ -1,0 +1,17 @@
+{
+    "comment": "This is an example of JSON returned by the Base48 Home Assistant API, specifically the activity status...",
+    "entity_id": "sensor.base_status",
+    "state": "True",
+    "attributes": {
+      "device_class": "enum",
+      "friendly_name": "Base status"
+    },
+    "last_changed": "2025-07-14T23:17:12.767894+00:00",
+    "last_reported": "2025-07-15T09:15:32.565746+00:00",
+    "last_updated": "2025-07-14T23:17:12.767894+00:00",
+    "context": {
+      "id": "01K05KMRXZ9JPXG0P9BHC21JHR",
+      "parent_id": null,
+      "user_id": null
+    }
+  }

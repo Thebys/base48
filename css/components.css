@@ -309,3 +309,27 @@
 section a:hover .vpsf-promo {
     text-decoration: none !important;
 }
+
+/* Base status indicator */
+.base-status {
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.base-status.open {
+    background-color: #28a745;
+    color: white;
+}
+
+.base-status.closed {
+    background-color: #dc3545;
+    color: white;
+}
+
+.base-status.unknown {
+    background-color: #6c757d;
+    color: white;
+}
