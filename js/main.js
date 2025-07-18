@@ -505,11 +505,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 // Check if the base is open based on the state field
-                // State can be "True", "true", true, "False", "false", false, etc.
-                const isOpen = data.state === true ||
-                    data.state === 'true' ||
-                    data.state === 'True' ||
-                    data.state === '1';
+                // New API format: "on" means open, "off" means closed
+                const isOpen = data.state === 'on';
 
                 statusElement.textContent = isOpen ? texts[lang].open : texts[lang].closed;
                 statusElement.className = `base-status ${isOpen ? 'open' : 'closed'}`;
