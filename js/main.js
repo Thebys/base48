@@ -22,13 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Check for saved theme preference or use system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (savedTheme === null && prefersDarkScheme.matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+    const initialTheme = document.documentElement.getAttribute('data-theme');
+    if (initialTheme === 'dark') {
         themeIcon.classList.replace('fa-moon', 'fa-sun');
         updateLogo('dark');
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
         themeIcon.classList.replace('fa-sun', 'fa-moon');
         updateLogo('light');
     }
