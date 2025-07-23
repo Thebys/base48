@@ -9,6 +9,23 @@
     <meta name="description" content="Base48 is a Brno hackerspace and community workshop. We offer space, equipment and community for your electronics, 3D printing, DIY and other projects. Learn more about us, our focus and membership.">
     <meta name="keywords" content="hackerspace, makerspace, South Moravian region, Brno, Base48, DIY, 3D printing, electronics, workshop, community, projects, membership">
 
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {
+                // In case of any error, default to light theme
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
     <link rel="stylesheet" href="/vendor/fa/all.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/lightbox.css">
