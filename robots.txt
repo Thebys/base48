@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Vyloučení prezentačních assetů z indexace
+Disallow: /img/frame/
+Disallow: /img/screen/
+Disallow: /img/satellite_pixel_1.webp
+Disallow: /img/police.webp
+Disallow: /img/bg_sil_brno_dawn.png
+
+# Povolit důležité obrázky pro SEO
+Allow: /img/logo/
+Allow: /img/og/
+Allow: /img/gallery/
+
+# Technické soubory
+Disallow: /vendor/
+Disallow: /css/
+Disallow: /js/
+
+# Povolit hlavní stránky
+Allow: /index.html
+Allow: /index_eng.html
+
+# API endpoints
+Disallow: /api/
+
+Sitemap: https://base48.cz/sitemap.xml
