@@ -47,6 +47,13 @@
     <meta property="twitter:description"
         content="Base48 je brněnský hackerspace a komunitní dílna. Nabízíme prostor, vybavení a komunitu pro tvoje elektro, 3D tisk, DIY a další projekty.">
     <meta property="twitter:image" content="/img/og/base48_og_01.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://base48.cz/">
+
+    <!-- Language alternatives -->
+    <link rel="alternate" hreflang="cs" href="https://base48.cz/">
+    <link rel="alternate" hreflang="en" href="https://base48.cz/index_eng.html">
 </head>
 
 <body>
@@ -72,12 +79,12 @@
                     <li><a href="/#zamereni">Zaměření</a></li>
                     <li><a href="/#clenstvi">Členství a podpora</a></li>
                     <li><a href="/#kontakt">Kontakty</a></li>
-                    <span class="hide-on-mobile hide-on-tablet">|</span>
-                    <li class="small hide-on-tablet"><a href="https://wiki.base48.cz/" target="_blank">Wiki <i
+                    <span class="hide-on-mobile hide-on-tablet" aria-hidden="true">|</span>
+                    <li class="small hide-on-tablet"><a href="https://wiki.base48.cz/" target="_blank" rel="noopener">Wiki <i
                                 class="fas fa-external-link-alt"></i></a></li>
-                    <li class="small hide-on-tablet"><a href="https://m.base48.cz/" target="_blank">Členský portál <i
+                    <li class="small hide-on-tablet"><a href="https://m.base48.cz/" target="_blank" rel="noopener">Členský portál <i
                                 class="fas fa-external-link-alt"></i></a></li>
-                    <span class="hide-on-mobile hide-on-tablet">|</span>
+                    <span class="hide-on-mobile hide-on-tablet" aria-hidden="true">|</span>
                     <li class="small"><a href="/index_eng.html">English</a></li>
                 </ul>
             </nav>
@@ -85,8 +92,8 @@
     </header>
 
     <!-- Satellite sprite container -->
-    <div class="satellite-container">
-        <img src="/img/satellite_pixel_1.webp" alt="Satellite" class="satellite-sprite">
+    <div class="satellite-container" aria-hidden="true">
+        <img src="/img/satellite_pixel_1.webp" alt="" class="satellite-sprite">
         <div class="satellite-popup" id="satellite-popup">
             <span class="close-popup">&times;</span>
             <h3>Proč číslo 48?</h3>
@@ -102,7 +109,7 @@
                 <div class="column">
                     <div class="frame-grid" id="intro-frames" style="order: 2;">
                         <a href="#" class="frame-container portrait glow" data-gallery="space">
-                            <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame">
+                            <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame" aria-role="presentation">
                             <div class="frame-content scanlines">
                                 <span class="frame-title">Prostor </span>
                                 <img src="/img/screen/43_base48_prostor.webp" alt="Base48 Prostor"
@@ -110,7 +117,7 @@
                             </div>
                         </a>
                         <a href="#" class="frame-container portrait glow" data-gallery="chill">
-                            <img src="/img/frame/43_frame_2_crt_vintage.webp" alt="CRT Frame" class="frame-frame">
+                            <img src="/img/frame/43_frame_2_crt_vintage.webp" alt="CRT Frame" class="frame-frame" aria-role="presentation">
                             <div class="frame-content scanlines">
                                 <span class="frame-title">Chill</span>
                                 <img src="/img/screen/43_zahradka_grilovacka.webp" alt="Base48 Chill"
@@ -210,7 +217,7 @@
                             </div>
                             <div class="addresses"
                                 style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; padding-top: 20px;">
-                                <h3>Jak se dostat do Base48 <span id="base-status" class="base-status" style="display: none;"></span></h3>
+                                <h3>Jak se dostat do Base48 <span id="base-status" class="base-status" style="display: none;" role="status" aria-live="polite"></span></h3>
                                 <div class="address-block"
                                     style="position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
                                     <i class="fas fa-door-open"
@@ -248,38 +255,38 @@
                         <div class="contact-card communication">
                             <div class="buttons">
                                 <h3>Užitečné odkazy</h3>
-                                <a href="https://wiki.base48.cz" target="_blank" class="button">
+                                <a href="https://wiki.base48.cz" target="_blank" rel="noopener" class="button">
                                     <i class="fas fa-book"></i>
                                     <span>wiki<span class="hide-on-mobile">.base48.cz</span></span>
                                 </a>
                                 <a href="https://signal.group/#CjQKIHBQ1JXOJ0momxbQIsaBet-gPgFRq9hUQyvVk-BV785AEhBC8WvwTDodUmPzfBrcfbHN"
-                                    target="_blank" class="button">
+                                    target="_blank" rel="noopener" class="button">
                                     <i class="fas fa-comments"></i>
                                     <span>Signal - veřejný</span>
                                 </a>
                                 <a href="https://signal.group/#CjQKIFfa1_drdrVA8tzfolFIZVAbCSvg4cUCn5zx-czVGvUsEhDwl_MecwpNt4xC1kIujc49"
-                                    target="_blank" class="button">
+                                    target="_blank" rel="noopener" class="button">
                                     <i class="fas fa-comments"></i>
                                     <span>Signal - pro členy</span>
                                 </a>
-                                <a href="https://github.com/base48" target="_blank" class="button">
+                                <a href="https://github.com/base48" target="_blank" rel="noopener" class="button">
                                     <i class="fab fa-github"></i>
                                     <span>Github <span class="hide-on-mobile">base48</span></span>
                                 </a>
-                                <a href="https://www.facebook.com/Base48.cz/" target="_blank" class="button">
+                                <a href="https://www.facebook.com/Base48.cz/" target="_blank" rel="noopener" class="button">
                                     <i class="fab fa-facebook"></i>
                                     <span>Facebook <span class="hide-on-mobile">Base48.cz</span></span>
                                 </a>
-                                <a href="https://www.instagram.com/base48cz/" target="_blank" class="button">
+                                <a href="https://www.instagram.com/base48cz/" target="_blank" rel="noopener" class="button">
                                     <i class="fab fa-instagram"></i>
                                     <span>Instagram <span class="hide-on-mobile">@base48cz</span></span>
                                 </a>
-                                <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank"
+                                <a href="https://www.youtube.com/channel/UCyBFShxrgO1QkRqs7EEM04A" target="_blank" rel="noopener"
                                     class="button">
                                     <i class="fab fa-youtube"></i>
                                     <span>Youtube <span class="hide-on-mobile">Base48</span></span>
                                 </a>
-                                <a href="https://lists.base48.cz/" target="_blank" class="button">
+                                <a href="https://lists.base48.cz/" target="_blank" rel="noopener" class="button">
                                     <i class="fas fa-envelope"></i>
                                     <span>Mailing listy <span class="hide-on-mobile">lists.base48.cz</span></span>
                                 </a>
@@ -287,17 +294,17 @@
                             <div class="map-info" id="map-info">
                                 <h3>Mapy</h3>
                                 <div class="buttons">
-                                    <a href="https://www.openstreetmap.org/node/11247964718" target="_blank"
+                                    <a href="https://www.openstreetmap.org/node/11247964718" target="_blank" rel="noopener"
                                         class="button">
                                         <i class="fas fa-map"></i>
                                         <span class="button-inner">OpenStreetMap</span>
                                     </a>
-                                    <a href="https://mapy.cz/s/bosesamuva" target="_blank" class="button">
+                                    <a href="https://mapy.cz/s/bosesamuva" target="_blank" rel="noopener" class="button">
                                         <i class="fas fa-map"></i>
                                         <span class="button-inner">Mapy.cz</span>
                                     </a>
                                     <a href="https://www.google.com/maps/dir//Mojm%C3%ADrovo+n%C3%A1m.+17,+612+00+Brno-Kr%C3%A1lovo+Pole/@49.2243066,16.5939131,343m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x47129440c7cff175:0x746297c25f280f66!2m2!1d16.595491!2d49.2242141?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
-                                        target="_blank" class="button">
+                                        target="_blank" rel="noopener" class="button">
                                         <i class="fas fa-map"></i>
                                         <span class="button-inner">Google</span>
                                     </a>
@@ -328,7 +335,7 @@
                                 </div>
                             </div>
                             <div class="frame-container portrait flipped">
-                                <img src="/img/frame/43_frame_6_cctv.webp" alt="CRT Frame" class="frame-frame">
+                                <img src="/img/frame/43_frame_6_cctv.webp" alt="CRT Frame" class="frame-frame" aria-role="presentation">
                                 <div class="frame-content scanlines">
                                     <span class="frame-title">3D tisk </span>
                                     <img src="/img/screen/43_base48_3d_tisk.webp" alt="Placeholder Content"
@@ -346,7 +353,7 @@
                                 </p>
                             </div>
                             <div class="frame-container portrait">
-                                <img src="/img/frame/43_frame_4_mcu.webp" alt="CRT Frame" class="frame-frame">
+                                <img src="/img/frame/43_frame_4_mcu.webp" alt="CRT Frame" class="frame-frame" aria-role="presentation">
                                 <div class="frame-content scanlines">
                                     <span class="frame-title">Elektrolab </span>
                                     <img src="/img/screen/43_elektro_laborator.webp" alt="Placeholder Content"
@@ -363,7 +370,7 @@
                             </div>
 
                             <div class="frame-container portrait">
-                                <img src="/img/frame/43_frame_3_crt_tony.webp" alt="CRT Frame" class="frame-frame">
+                                <img src="/img/frame/43_frame_3_crt_tony.webp" alt="CRT Frame" class="frame-frame" aria-role="presentation">
                                 <div class="frame-content scanlines">
                                     <span class="frame-title">Dílna </span>
                                     <img src="/img/screen/43_base48_dilna.webp" alt="Placeholder Content"
@@ -380,7 +387,7 @@
                                     vše, co potřebuješ k tomu, abys mohl/a začít se svým novým projektem!</p>
                             </div>
                             <div class="frame-container portrait flipped">
-                                <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame">
+                                <img src="/img/frame/43_frame_5_lcd_panel.webp" alt="CRT Frame" class="frame-frame" aria-role="presentation">
                                 <div class="frame-content scanlines">
                                     <span class="frame-title">Tvůj projekt</span>
                                     <img src="/img/screen/43_otaznik.webp" alt="Placeholder Content"
@@ -424,11 +431,11 @@
                     </ul>
                     <div class="button-container"
                         style="flex-direction: row; flex-wrap: wrap; gap: 10px; margin: 0 0 var(--padding-large) 0;">
-                        <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" class="button">
+                        <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" rel="noopener" class="button">
                             <i class="fas fa-user"></i>
                             <span class="button-inner">Chci se stát členem</span>
                         </a>
-                        <a href="https://m.base48.cz/auth/login" target="_blank" class="button">
+                        <a href="https://m.base48.cz/auth/login" target="_blank" rel="noopener" class="button">
                             <i class="fas fa-user"></i>
                             <span class="button-inner">Členský portál</span>
                         </a>
@@ -459,16 +466,16 @@
                         </div>
                         <div class="frame-container portrait" style="flex: 1;"> <img
                                 src="/img/frame/43_frame_1_crt.webp" alt="CRT Frame: 43_frame_1_crt.webp"
-                                class="frame-frame">
-                            <div class="frame-content scanlines"> <img src="/img/screen/qr_dar_12345.webp"
-                                    alt="Screen Content: qr_dar_12345.webp" class="frame-content-image"> </div>
+                                class="frame-frame" aria-role="presentation">
+                            <div class="frame-content scanlines"> <a href="https://ib.fio.cz/ib/transparent?a=2900086515" target="_blank" rel="noopener"><img src="/img/screen/qr_dar_12345.webp"
+                                    alt="QR kód pro transparentní účet Base48" class="frame-content-image"></a> </div>
                         </div>
                     </div>
 
                 </div>
                 <div style="margin-top: var(--padding-large);">
                     <h2>Partnerský spolek VPSFree.cz</h2>
-                    <a href="https://vpsfree.cz" target="_blank">
+                    <a href="https://vpsfree.cz" target="_blank" rel="noopener">
                         <div class="vpsf-promo">
                             <div style="text-align: center; ">
                                 <h3><span class="orange">vps</span>Free.cz</h3>
@@ -487,7 +494,7 @@
         <p>
             Base48, z.s., IČ: 22859802, registrováno: 6. srpna 2010.
         </p>
-        <p>Bankovní účet: <a href="https://ib.fio.cz/ib/transparent?a=2900086515" target="_blank"
+        <p>Bankovní účet: <a href="https://ib.fio.cz/ib/transparent?a=2900086515" target="_blank" rel="noopener"
                 style="color: var(--footer-color); font-weight: normal;">2900086515/2010</a>
         </p>
         <p>&copy;left Base48, z.s. Některá práva vyhrazena.
@@ -497,7 +504,7 @@
 
     <div class="fixed-action-buttons">
         <!-- Scroll to Top -->
-        <button id="scroll-to-top" class="scroll-to-top fixed-action-button js-only" title="Nahoru">
+        <button id="scroll-to-top" class="scroll-to-top fixed-action-button js-only" aria-label="Posunout nahoru" title="Nahoru">
             <i class="fas fa-arrow-up"></i>
         </button>
         <!-- Theme Toggle -->
@@ -505,7 +512,7 @@
             <i class="fas fa-sun"></i>
         </button>
         <!-- New Pixel CTA Button -->
-        <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" class="main-cta-button" title="Přidej se k nám">
+        <a href="https://wiki.base48.cz/wiki/Join_us" target="_blank" rel="noopener" class="main-cta-button" title="Přidej se k nám">
             <span>Přidej se k nám</span>
         </a>
 
@@ -513,7 +520,7 @@
     <script src="/js/main.js"></script>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie obrázků">
         <div class="lightbox-content">
             <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
             <img class="lightbox-image" src="" alt="">
