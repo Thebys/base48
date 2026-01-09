@@ -1,6 +1,6 @@
 # Base48 - Brněnský hackerspace
 
-[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A//b48.iver.cz)](https://b48.iver.cz)
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A//baseb48.cz)](https://base48.cz)
 [![License](https://img.shields.io/badge/license-copyleft-blue.svg)](https://github.com/Thebys/base48/blob/main/README.md#credits)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
